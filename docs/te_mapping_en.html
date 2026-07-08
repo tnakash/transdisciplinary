@@ -159,9 +159,10 @@
       <svg id="barSvg" viewBox="0 0 560 340" style="width:100%; height:auto; display:block;"></svg>
     </div>
     <div class="card">
-      <h2>Year-over-Year Trend: Average TE-Index</h2>
-      <p class="desc">Average TE-Index by year across the ISTE TE conference proceedings (2016–2025).</p>
+      <h2>Year-over-Year Trend: Average TE-Index / Average DSI</h2>
+      <p class="desc">Average TE-Index and average DSI (Disciplinary Span Index) by year across the ISTE TE conference proceedings (2016–2025).</p>
       <svg id="lineSvg" viewBox="0 0 480 340" style="width:100%; height:auto; display:block;"></svg>
+      <div class="legend" id="lineLegend"></div>
     </div>
   </div>
 
@@ -298,7 +299,7 @@ function renderScatter() {
   const rows = filteredPapers();
   const W = 720, H = 480, PAD_L = 46, PAD_B = 40, PAD_T = 16, PAD_R = 16;
   const plotW = W - PAD_L - PAD_R, plotH = H - PAD_T - PAD_B;
-  const X_MAX = 5, Y_MAX = 4; // TE-Index: 1-5 points, DSI: average of spans 1-4
+  const X_MAX = 5, Y_MAX = 3; // TE-Index: 1-5 points, DSI: display cap 3
   const xScale = v => PAD_L + ((v - 0.5) / X_MAX) * plotW;
   const yScale = v => PAD_T + plotH - ((v - 0.5) / Y_MAX) * plotH;
 
@@ -428,19 +429,26 @@ function renderBar() {
   svg.appendChild(g);
 }
 
+const LINE_SERIES = [
+  { key: "avgTE", label: "Average TE-Index", color: "var(--seq-450)" },
+  { key: "avgDSI", label: "Average DSI", color: "var(--series-multiple)" }
+];
+
 function renderLine() {
   const svg = document.getElementById("lineSvg");
   svg.innerHTML = "";
-  const domainFilter = state.domain;
-  let years;
-  if (domainFilter === "ALL" && !state.search) {
-    years = PAYLOAD.yearAvg;
-  } else {
-    const rows = filteredPapers().filter(r => r.year >= 2016 && r.year <= 2025);
-    const byYear = {};
-    rows.forEach(r => { (byYear[r.year] = byYear[r.year] || []).push(r.TE); });
-    years = Object.keys(byYear).map(Number).sort((a,b)=>a-b).map(y => ({year:y, avg: byYear[y].reduce((a,b)=>a+b,0)/byYear[y].length, n: byYear[y].length}));
-  }
+  const rows = filteredPapers().filter(r => r.year >= 2016 && r.year <= 2025);
+  const byYear = {};
+  rows.forEach(r => { (byYear[r.year] = byYear[r.year] || []).push(r); });
+  const years = Object.keys(byYear).map(Number).sort((a,b)=>a-b).map(y => {
+    const list = byYear[y];
+    return {
+      year: y,
+      avgTE: list.reduce((a,r)=>a+r.TE,0)/list.length,
+      avgDSI: list.reduce((a,r)=>a+r.DSI,0)/list.length,
+      n: list.length
+    };
+  });
   if (years.length === 0) { svg.innerHTML = '<text x="20" y="20">No data</text>'; return; }
 
   const W = 480, H = 340, PAD_L = 40, PAD_R = 20, PAD_T = 16, PAD_B = 34;
@@ -470,33 +478,46 @@ function renderLine() {
     g.appendChild(xt);
   });
 
-  let d = "";
-  years.forEach((y,i) => { d += (i===0?"M":"L") + xScale(i) + "," + yScale(y.avg) + " "; });
-  const path = document.createElementNS(ns, "path");
-  path.setAttribute("d", d.trim());
-  path.setAttribute("fill", "none");
-  path.setAttribute("stroke", "var(--seq-450)");
-  path.setAttribute("stroke-width", "2");
-  path.setAttribute("stroke-linejoin", "round");
-  path.setAttribute("stroke-linecap", "round");
-  g.appendChild(path);
+  for (const series of LINE_SERIES) {
+    let d = "";
+    years.forEach((y,i) => { d += (i===0?"M":"L") + xScale(i) + "," + yScale(y[series.key]) + " "; });
+    const path = document.createElementNS(ns, "path");
+    path.setAttribute("d", d.trim());
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", series.color);
+    path.setAttribute("stroke-width", "2");
+    path.setAttribute("stroke-linejoin", "round");
+    path.setAttribute("stroke-linecap", "round");
+    g.appendChild(path);
 
-  years.forEach((y,i) => {
-    const dot = document.createElementNS(ns, "circle");
-    dot.setAttribute("cx", xScale(i)); dot.setAttribute("cy", yScale(y.avg)); dot.setAttribute("r", 4);
-    dot.setAttribute("fill", "var(--seq-450)");
-    dot.setAttribute("stroke", "var(--surface-1)"); dot.setAttribute("stroke-width","2");
-    g.appendChild(dot);
-    if (i === years.length-1) {
-      const lbl = document.createElementNS(ns, "text");
-      lbl.setAttribute("x", xScale(i)); lbl.setAttribute("y", yScale(y.avg) - 10);
-      lbl.setAttribute("text-anchor","middle"); lbl.setAttribute("fill","var(--text-primary)");
-      lbl.textContent = y.avg.toFixed(2);
-      g.appendChild(lbl);
-    }
-  });
+    years.forEach((y,i) => {
+      const dot = document.createElementNS(ns, "circle");
+      dot.setAttribute("cx", xScale(i)); dot.setAttribute("cy", yScale(y[series.key])); dot.setAttribute("r", 4);
+      dot.setAttribute("fill", series.color);
+      dot.setAttribute("stroke", "var(--surface-1)"); dot.setAttribute("stroke-width","2");
+      g.appendChild(dot);
+      if (i === years.length-1) {
+        const lbl = document.createElementNS(ns, "text");
+        lbl.setAttribute("x", xScale(i)); lbl.setAttribute("y", yScale(y[series.key]) - 10);
+        lbl.setAttribute("text-anchor","middle"); lbl.setAttribute("fill","var(--text-primary)");
+        lbl.textContent = y[series.key].toFixed(2);
+        g.appendChild(lbl);
+      }
+    });
+  }
 
   svg.appendChild(g);
+
+  const legend = document.getElementById("lineLegend");
+  if (legend) {
+    legend.innerHTML = "";
+    for (const series of LINE_SERIES) {
+      const item = document.createElement("div");
+      item.className = "legend-item";
+      item.innerHTML = `<span class="legend-swatch" style="background:${series.color}"></span>${series.label}`;
+      legend.appendChild(item);
+    }
+  }
 }
 
 function sortRows(rows) {
