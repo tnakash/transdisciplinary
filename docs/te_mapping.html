@@ -146,8 +146,8 @@
   </div>
 
   <div class="card">
-    <h2>TEランドスケープ：Integration × Collaboration</h2>
-    <p class="desc">横軸=統合の深さ(I)、縦軸=協働の幅(C)、円の大きさ=TE-Index（G・C・Iの総合スコア）、色=適用領域(Domain)。点は重なり回避のため微小にジッタリング。</p>
+    <h2>TEランドスケープ：TE-Index × 分野横断度(DSI)</h2>
+    <p class="desc">横軸=TE-Index（G・C・Iの総合スコア）、縦軸=DSI（Author・Method・Objective分野横断度の統合値、<a href="./rubric.html#author-method-objective-add-on" style="color:inherit;">ルーブリック該当節</a>参照）、色=適用領域(Domain)。点は重なり回避のため微小にジッタリング。</p>
     <svg id="scatterSvg" viewBox="0 0 720 480" style="width:100%; height:auto; max-width:720px; display:block; margin:0 auto;"></svg>
     <div class="legend" id="scatterLegend"></div>
   </div>
@@ -277,7 +277,7 @@ function showTooltip(evt, p) {
   tooltip.innerHTML = `
     <div class="tt-title"></div>
     <div class="tt-meta"></div>
-    <div class="tt-scores">G ${p.G} ・ C ${p.C} ・ I ${p.I} ・ TE-Index <strong>${p.TE.toFixed(1)}</strong> ・ M ${p.M} ・ V ${p.V}</div>
+    <div class="tt-scores">G ${p.G} ・ C ${p.C} ・ I ${p.I} ・ TE-Index <strong>${p.TE.toFixed(1)}</strong> ・ M ${p.M} ・ V ${p.V} ・ DSI <strong>${p.DSI.toFixed(2)}</strong></div>
   `;
   tooltip.querySelector(".tt-title").textContent = p.title;
   tooltip.querySelector(".tt-meta").textContent = `${p.authors} (${p.year}) — ${p.venue}`;
@@ -298,27 +298,30 @@ function renderScatter() {
   const rows = filteredPapers();
   const W = 720, H = 480, PAD_L = 46, PAD_B = 40, PAD_T = 16, PAD_R = 16;
   const plotW = W - PAD_L - PAD_R, plotH = H - PAD_T - PAD_B;
-  const xScale = v => PAD_L + ((v - 0.5) / 5) * plotW;
-  const yScale = v => PAD_T + plotH - ((v - 0.5) / 5) * plotH;
+  const X_MAX = 5, Y_MAX = 4; // TE-Index: 1-5点, DSI: span 1-4の平均
+  const xScale = v => PAD_L + ((v - 0.5) / X_MAX) * plotW;
+  const yScale = v => PAD_T + plotH - ((v - 0.5) / Y_MAX) * plotH;
 
   const ns = "http://www.w3.org/2000/svg";
   const g = document.createElementNS(ns, "g");
 
-  for (let v = 1; v <= 5; v++) {
+  for (let v = 1; v <= X_MAX; v++) {
     const gl = document.createElementNS(ns, "line");
     gl.setAttribute("x1", xScale(v)); gl.setAttribute("x2", xScale(v));
     gl.setAttribute("y1", PAD_T); gl.setAttribute("y2", PAD_T + plotH);
     gl.setAttribute("class", "gridline");
     g.appendChild(gl);
+    const xt = document.createElementNS(ns, "text");
+    xt.setAttribute("x", xScale(v)); xt.setAttribute("y", PAD_T + plotH + 18);
+    xt.setAttribute("text-anchor", "middle"); xt.textContent = v;
+    g.appendChild(xt);
+  }
+  for (let v = 1; v <= Y_MAX; v++) {
     const hl = document.createElementNS(ns, "line");
     hl.setAttribute("y1", yScale(v)); hl.setAttribute("y2", yScale(v));
     hl.setAttribute("x1", PAD_L); hl.setAttribute("x2", PAD_L + plotW);
     hl.setAttribute("class", "gridline");
     g.appendChild(hl);
-    const xt = document.createElementNS(ns, "text");
-    xt.setAttribute("x", xScale(v)); xt.setAttribute("y", PAD_T + plotH + 18);
-    xt.setAttribute("text-anchor", "middle"); xt.textContent = v;
-    g.appendChild(xt);
     const yt = document.createElementNS(ns, "text");
     yt.setAttribute("x", PAD_L - 10); yt.setAttribute("y", yScale(v) + 4);
     yt.setAttribute("text-anchor", "end"); yt.textContent = v;
@@ -327,13 +330,13 @@ function renderScatter() {
   const xAxisTitle = document.createElementNS(ns, "text");
   xAxisTitle.setAttribute("x", PAD_L + plotW/2); xAxisTitle.setAttribute("y", H - 4);
   xAxisTitle.setAttribute("text-anchor", "middle"); xAxisTitle.setAttribute("class","axis-title");
-  xAxisTitle.textContent = "Integration Depth (統合の深さ) →";
+  xAxisTitle.textContent = "TE-Index (G・C・Iの総合スコア) →";
   g.appendChild(xAxisTitle);
   const yAxisTitle = document.createElementNS(ns, "text");
   yAxisTitle.setAttribute("x", -(PAD_T + plotH/2)); yAxisTitle.setAttribute("y", 14);
   yAxisTitle.setAttribute("text-anchor", "middle"); yAxisTitle.setAttribute("class","axis-title");
   yAxisTitle.setAttribute("transform", "rotate(-90)");
-  yAxisTitle.textContent = "Collaboration Breadth (協働の幅) →";
+  yAxisTitle.textContent = "DSI (分野横断度の統合値) →";
   g.appendChild(yAxisTitle);
 
   const baseX = document.createElementNS(ns, "line");
@@ -348,9 +351,9 @@ function renderScatter() {
   g.appendChild(baseY);
 
   for (const p of rows) {
-    const jx = hashJitter(p.id, "x"), jy = hashJitter(p.id, "y");
-    const cx = xScale(p.I + jx), cy = yScale(p.C + jy);
-    const r = 5 + (p.TE - 1) * 2.2;
+    const jx = hashJitter(p.id, "x") * 0.5, jy = hashJitter(p.id, "y") * 0.5;
+    const cx = xScale(p.TE + jx), cy = yScale(p.DSI + jy);
+    const r = 6;
     const color = DOMAIN_COLOR[p.domain] || "var(--text-muted)";
 
     const hit = document.createElementNS(ns, "circle");
