@@ -1,0 +1,673 @@
+<title>Transdisciplinary Engineering Literature Mapping</title>
+<style>
+  :root {
+    --surface-1: #fcfcfb;
+    --page: #f9f9f7;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #898781;
+    --gridline: #e1e0d9;
+    --baseline: #c3c2b7;
+    --border: rgba(11,11,11,0.10);
+    --series-research: #2a78d6;
+    --series-practice: #1baf7a;
+    --series-multiple: #eda100;
+    --series-education: #008300;
+    --seq-100: #cde2fb; --seq-300: #6da7ec; --seq-450: #2a78d6; --seq-600: #184f95;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface-1: #1a1a19;
+      --page: #0d0d0d;
+      --text-primary: #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted: #898781;
+      --gridline: #2c2c2a;
+      --baseline: #383835;
+      --border: rgba(255,255,255,0.10);
+      --series-research: #3987e5;
+      --series-practice: #199e70;
+      --series-multiple: #c98500;
+      --series-education: #008300;
+      --seq-100: #184f95; --seq-300: #256abf; --seq-450: #3987e5; --seq-600: #86b6ef;
+    }
+  }
+  :root[data-theme="dark"] {
+    --surface-1: #1a1a19; --page: #0d0d0d; --text-primary: #ffffff; --text-secondary: #c3c2b7;
+    --text-muted: #898781; --gridline: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+    --series-research: #3987e5; --series-practice: #199e70; --series-multiple: #c98500; --series-education: #008300;
+    --seq-100: #184f95; --seq-300: #256abf; --seq-450: #3987e5; --seq-600: #86b6ef;
+  }
+  :root[data-theme="light"] {
+    --surface-1: #fcfcfb; --page: #f9f9f7; --text-primary: #0b0b0b; --text-secondary: #52514e;
+    --text-muted: #898781; --gridline: #e1e0d9; --baseline: #c3c2b7; --border: rgba(11,11,11,0.10);
+    --series-research: #2a78d6; --series-practice: #1baf7a; --series-multiple: #eda100; --series-education: #008300;
+    --seq-100: #cde2fb; --seq-300: #6da7ec; --seq-450: #2a78d6; --seq-600: #184f95;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--page);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 24px 20px 60px;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .subtitle { color: var(--text-secondary); font-size: 14px; margin: 0 0 20px; max-width: 760px; }
+
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+  .stat-tile {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .stat-tile .label { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; }
+  .stat-tile .value { font-size: 28px; font-weight: 600; }
+  .stat-tile .sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+  .filter-row { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+  .filter-row .flabel { font-size: 12px; color: var(--text-secondary); margin-right: 4px; }
+  .fbtn {
+    font-family: inherit; font-size: 13px; padding: 6px 12px; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--surface-1); color: var(--text-secondary);
+    cursor: pointer;
+  }
+  .fbtn[data-active="1"] { color: var(--text-primary); border-color: currentColor; font-weight: 600; }
+  .fbtn:hover { background: var(--gridline); }
+
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px; margin-bottom: 18px;
+  }
+  .card h2 { font-size: 15px; margin: 0 0 2px; }
+  .card .desc { font-size: 12px; color: var(--text-secondary); margin: 0 0 14px; }
+
+  .two-col { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px; }
+  @media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } }
+
+  svg text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; fill: var(--text-muted); font-size: 11px; }
+  svg .axis-title { fill: var(--text-secondary); font-size: 11px; }
+  .gridline { stroke: var(--gridline); stroke-width: 1; }
+  .baseline { stroke: var(--baseline); stroke-width: 1; }
+
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; font-size: 12px; color: var(--text-secondary); }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-swatch { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+  .tooltip {
+    position: fixed; pointer-events: none; z-index: 50;
+    background: var(--text-primary); color: var(--surface-1);
+    font-size: 12px; padding: 8px 10px; border-radius: 8px; max-width: 300px;
+    opacity: 0; transition: opacity 0.08s ease; line-height: 1.45;
+  }
+  .tooltip .tt-title { font-weight: 600; margin-bottom: 3px; }
+  .tooltip .tt-meta { color: var(--baseline); font-size: 11px; margin-bottom: 4px; }
+  .tooltip .tt-scores { font-variant-numeric: tabular-nums; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    text-align: left; font-size: 11px; color: var(--text-secondary); font-weight: 600;
+    padding: 8px 10px; border-bottom: 1px solid var(--baseline); cursor: pointer; white-space: nowrap;
+  }
+  thead th:hover { color: var(--text-primary); }
+  tbody td { padding: 8px 10px; border-bottom: 1px solid var(--gridline); vertical-align: top; }
+  tbody tr:hover { background: var(--gridline); cursor: pointer; }
+  .num { font-variant-numeric: tabular-nums; text-align: right; }
+  .ttl { max-width: 340px; }
+  .ttl .t-main { color: var(--text-primary); }
+  .ttl .t-sub { color: var(--text-muted); font-size: 11px; }
+  .pill {
+    display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 999px;
+    border: 1px solid var(--border); color: var(--text-secondary);
+  }
+  .detail-row td { background: var(--page); font-size: 12px; color: var(--text-secondary); padding: 12px 16px; }
+  .detail-row .rationale { color: var(--text-primary); margin-top: 6px; }
+
+  .search-box {
+    font-family: inherit; font-size: 13px; padding: 7px 12px; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--page); color: var(--text-primary);
+    width: 260px; margin-bottom: 12px;
+  }
+  .table-scroll { overflow-x: auto; }
+  footer { color: var(--text-muted); font-size: 11px; margin-top: 24px; }
+  a { color: inherit; }
+</style>
+
+<div class="wrap">
+  <h1>Transdisciplinary Engineering Literature Mapping</h1>
+  <p class="subtitle">Papers whose Title, Abstract, or Keywords contain "transdisciplinary engineering" were collected from the ISTE (formerly ISPE) Transdisciplinary Engineering international conference proceedings (2016–2025, IOS Press, open access) and related journals, then evaluated and mapped on three indicators — Goal, Collaboration, and Integration — based on the framework of Lattanzio et al. (2021). <a href="./te_mapping.html" style="color:inherit;">日本語版はこちら</a></p>
+
+  <div class="stat-row" id="statRow"></div>
+
+  <div class="filter-row" id="filterRow">
+    <span class="flabel">Filter by Domain:</span>
+  </div>
+
+  <div class="card">
+    <h2>TE Landscape: Integration × Collaboration</h2>
+    <p class="desc">X-axis = Integration Depth (I), Y-axis = Collaboration Breadth (C), bubble size = TE-Index (composite of G, C, I), color = application Domain. Points are jittered slightly to reduce overlap.</p>
+    <svg id="scatterSvg" viewBox="0 0 720 480" style="width:100%; height:auto; max-width:720px; display:block; margin:0 auto;"></svg>
+    <div class="legend" id="scatterLegend"></div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h2>Paper Count by Application Theme</h2>
+      <p class="desc">Number of collected papers per Application Theme (reflects the current filter selection).</p>
+      <svg id="barSvg" viewBox="0 0 560 340" style="width:100%; height:auto; display:block;"></svg>
+    </div>
+    <div class="card">
+      <h2>Year-over-Year Trend: Average TE-Index</h2>
+      <p class="desc">Average TE-Index by year across the ISTE TE conference proceedings (2016–2025).</p>
+      <svg id="lineSvg" viewBox="0 0 480 340" style="width:100%; height:auto; display:block;"></svg>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Disciplinary Span: Author × Method × Objective</h2>
+    <p class="desc">An add-on metric showing how far each paper's Author, Method, and Objective cross the 8-category discipline taxonomy. Higher values mean that axis spans more disciplines (see the <a href="../evaluation/rubric_en.md#add-on-metric-disciplinary-span-author--method--objective" style="color:inherit;">corresponding rubric section</a>).</p>
+    <div class="stat-row" id="dsiStatRow" style="margin-bottom:16px;"></div>
+    <svg id="discBarSvg" viewBox="0 0 640 460" style="width:100%; height:auto; display:block;"></svg>
+    <div class="legend" id="discLegend"></div>
+  </div>
+
+  <div class="card">
+    <h2>Paper List (Evaluation Results Table)</h2>
+    <p class="desc">Click a column header to sort. Click a row to expand its details (abstract and scoring rationale — rationale text remains in Japanese, the language it was originally scored in).</p>
+    <input class="search-box" id="searchBox" placeholder="Search by title or author…" />
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th data-key="year">Year</th>
+            <th data-key="title">Title / Authors</th>
+            <th data-key="domain">Domain</th>
+            <th data-key="theme">Theme</th>
+            <th class="num" data-key="G">G</th>
+            <th class="num" data-key="C">C</th>
+            <th class="num" data-key="I">I</th>
+            <th class="num" data-key="TE">TE-Index</th>
+            <th class="num" data-key="authorSpan" title="Author disciplinary span">A-span</th>
+            <th class="num" data-key="methodSpan" title="Method disciplinary span">M-span</th>
+            <th class="num" data-key="objectiveSpan" title="Objective disciplinary span">O-span</th>
+            <th data-key="pdf">PDF</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    Data source: IOS Press "Advances in Transdisciplinary Engineering" (ISTE/ISPE TE Conference Proceedings, CC BY-NC 4.0) and various journals. See the <a href="../evaluation/rubric_en.md">evaluation rubric</a> for indicator definitions. 122 papers total (79 with full-text PDF; the remainder evaluated from abstract only).
+  </footer>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const PAYLOAD = {"papers": [{"id": "C1-001", "title": "Complex Project Management", "authors": "Paulo Edy Nakamura", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 2, "C": 3, "I": 3, "TE": 2.7, "M": 2, "V": 3, "domain": "Practice", "theme": "Other", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "政府規制や下請け問題など組織的複雑性への言及はあるが技術的プロジェクト管理課題が中心で、System Dynamicsという経営科学的手法をエンジニアリングPMOの単一事例に適用した実践報告に留まる。", "authorSpan": 2, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-002", "title": "Managing Risks in Knowledge Exchange: Trade-Offs Interdependencies", "authors": "Nel Wognum, Mark Wever, Josip Stjepandić", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 3, "C": 4, "I": 3, "TE": 3.3, "M": 3, "V": 1, "domain": "Research", "theme": "Other", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "TEチーム内の企業間知識交換リスクを、技術的手段だけでなく契約という法務・経営的手段と組み合わせて論じており工学と経営の連携が明示的だが、検証は概念的議論に留まり今後の研究課題とされている。", "authorSpan": 2, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-003", "title": "Parallel Engineering: Our Next Step", "authors": "Shuichi Fukuda", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 3, "C": 2, "I": 2, "TE": 2.3, "M": 3, "V": 1, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "個人化・多様化する市場ニーズという産業的課題を背景にした新しい産業フレームワーク提案だが、単一著者によるビジョン提示的な論考で分野間の統合や検証は伴っていない。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-004", "title": "Assessing Producibility of Product Platforms Using Set-Based Concurrent Engineering", "authors": "Jonas Landahl, Christoffer Levandowski, Hans Johannesson, Ola Isaksson", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 4, "V": 3, "domain": "Research", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "設計と製造という工学内の専門分野を横断する新手法を提案し航空宇宙サブシステムの単一ケースで実証しているが、社会的関連性への言及がなく工学内統合にとどまる。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering"]}, {"id": "C1-005", "title": "Towards a Comparative Analysis of Interoperability Assessment Approaches for Collaborative Enterprise Systems", "authors": "Gabriel S.S. Leal, Wided Guedria, Hervé Panetto, Mario Lezoche", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 3, "C": 3, "I": 2, "TE": 2.7, "M": 1, "V": 1, "domain": "Research", "theme": "Systems Engineering", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "グローバル化するネットワーク化企業間の相互運用性という産業課題を扱うが、内容は既存評価手法の比較レビューであり新手法提案や実証には至っていない。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Data Science / CS"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-006", "title": "Scope Patterns for Projects Modeled as Sociotechnical Systems", "authors": "Bryan R. Moser", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 4, "V": 1, "domain": "Research", "theme": "Systems Engineering", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "プロジェクトをsociotechnical systemsとしてモデル化しシステム工学とプロジェクトマネジメントを統合する新しいスコープパターンを提案しているが、具体的な検証事例は示されていない。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-007", "title": "Advances in Smart Manufacturing Change Management", "authors": "Nils Macke, Stefan Rulhoff, Josip Stjepandić", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 3, "C": 3, "I": 4, "TE": 3.3, "M": 4, "V": 3, "domain": "Practice", "theme": "Industry 4.0", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "計画部門と現場という部門横断・業種横断の変更管理課題に対し、業務プロセスとソフトウェアプロトタイプを体系的に統合した新しい参照プロセス（PSI/VDA MCM）を提案しユースケースで検証している。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-008", "title": "Integrated Approach Bridging PLM, ERP, SCM in Automobile Industry", "authors": "Kazuo Hatakeyama, Marcelo Machado", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 2, "C": 4, "I": 3, "TE": 3.0, "M": 2, "V": 1, "domain": "Practice", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "PLM（工学）・ERP・SCM（経営）を跨ぐ統合を自動車産業の文脈で論じており工学と経営の連携は明確だが、内容は既存概念の統合的議論にとどまり新手法の検証はない。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-009", "title": "T-PROST: A Transdisciplinary Process Oriented Framework to Support the Product Design Phase in Systems Concurrent Engineering", "authors": "Renato Fernandez, Germano S. Kienbaum, Álvaro Augusto Neto, Mauricio Gonçalves Vieira Ferreira", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 3, "C": 3, "I": 4, "TE": 3.3, "M": 4, "V": 2, "domain": "Research", "theme": "Systems Engineering", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "システム工学・プロジェクトマネジメント・業務プロセス管理・シミュレーションという複数分野の手法を体系的に統合した新フレームワークを提案しているが、具体的な検証は限定的。", "authorSpan": 1, "methodSpan": 3, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Management / Business", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-010", "title": "A Transdisciplinary Process Oriented Framework to Support Generic PLM Implementation for Use by Small and Medium Enterprises", "authors": "Germano S. Kienbaum, Renato Fernandez, Elaino K.T. Silva, Rodrigo Maria, Marcelo Coicev, Eduardo Gartenkraut, Márcio Rodrigues, Alvaro Augusto Neto, Maurício Ferreira", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 3, "C": 3, "I": 4, "TE": 3.3, "M": 3, "V": 2, "domain": "Practice", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "前論文（T-ProST）の中小企業向け実装として、複数分野の手法を統合したPLM支援環境を構築しており実践への応用が具体化されているが、定量的検証は乏しい。", "authorSpan": 1, "methodSpan": 3, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Management / Business", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-011", "title": "Amorphous Transdisciplinary Engineering: Object Orientation Meets Service Orientation with Emergent Multifidelity Management", "authors": "Michael Sobolewski", "year": 2016, "venue": "23rd ISPE Inc. International Conference on Transdisciplinary Engineering (TE2016): Crossing Boundaries", "G": 1, "C": 1, "I": 1, "TE": 1.0, "M": 4, "V": 1, "domain": "Research", "theme": "Other", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "タイトルに「transdisciplinary」を含むが内容はソフトウェアのサービス指向アーキテクチャに関する純粋な計算機科学的技術論であり、社会的関連性や分野横断の協働・統合の要素はほぼ見られない。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.0, "authorDisc": ["Data Science / CS"], "methodDisc": ["Data Science / CS"], "objectiveDisc": ["Data Science / CS"]}, {"id": "C1-012", "title": "Zachman Framework in the Agile Digital Transformation", "authors": "Sergej Bondar, John C. Hsu, Alain Pfouga, Josip Stjepandić", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 3, "V": 2, "domain": "Practice", "theme": "Industry 4.0", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "エンタープライズアーキテクチャという経営戦略的領域とSysML/UML・エージェントベースシミュレーションという工学的手法をZachmanフレームワークで結び付けているが、検証は自動車サプライチェーンの例示的説明にとどまる。", "authorSpan": 2, "methodSpan": 3, "objectiveSpan": 2, "DSI": 2.33, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-013", "title": "Requirements Engineering in the New Product Development Process: Bibliometric and Systemic Analysis", "authors": "Jaqueline Sebastiany Iaksch, Milton Borsato, Juliana Schmidt, Arturo Vaine", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 2, "C": 1, "I": 1, "TE": 1.3, "M": 1, "V": 1, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "要求工学という単一分野内のビブリオメトリック文献レビューであり、分野横断の協働や方法論統合はなく既存研究の整理・分析にとどまる。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.0, "authorDisc": ["Engineering"], "methodDisc": ["Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C1-014", "title": "Globalisation of Concurrent Engineering Activities: Transferring-, Translating- and Transforming Approach", "authors": "John Bang Mathiasen", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 3, "V": 4, "domain": "Practice", "theme": "Design Methodology", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "高賃金国と低賃金国の拠点間でのコンカレントエンジニアリングという組織的・文化的相互理解の課題を6件のCEプロジェクト事例から分析し、3つの理解獲得アプローチを提示しており実証水準は比較的高い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 3, "DSI": 2.33, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Social Science", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business", "Social Science"]}, {"id": "C1-015", "title": "A Concurrent Design Architecture for Electronic Product Design and Test", "authors": "C.B. Richard Ng, Cees Bil, Pier Marzocca", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 2, "C": 2, "I": 2, "TE": 2.0, "M": 3, "V": 2, "domain": "Multiple", "theme": "Design Methodology", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "航空宇宙分野のConcurrent Design Facilityアーキテクチャを電子製品設計・テストへ拡張し教育応用も論じているが、統合は工学内（設計×製造×テスト）にとどまり社会的関連性は薄い。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering"]}, {"id": "C1-016", "title": "Applying Connectivism to Engineering Knowledge to Support the Automated Business", "authors": "Joel Johansson, Fredrik Elgh", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 2, "C": 3, "I": 2, "TE": 2.3, "M": 2, "V": 1, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "コネクティビズムという学習理論を工学的知識の自動化・理解可能性の課題に適用する試みで工学と教育学の接点はあるが、短い抄録から判断する限り統合の具体性・検証は乏しい。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Humanities"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-017", "title": "Integration of Knowledge Based Approach and Multi-Criteria Optimization in Multi-Disciplinary Machine Design", "authors": "Jerzy Pokojski", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 1, "C": 2, "I": 3, "TE": 2.0, "M": 3, "V": 2, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "知識ベースソフトウェアと多基準最適化を機械設計の多分野問題に統合する手法論であるが、社会的関連性の言及はなく工学内の複数専門分野統合にとどまる。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C1-018", "title": "Firm's Potential for Co-Creation", "authors": "Faisol Rasool, Pisut Koomsap, Meghla Clara Costa", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 3, "C": 4, "I": 3, "TE": 3.3, "M": 4, "V": 3, "domain": "Practice", "theme": "Social Innovation", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "エンドユーザーの製品開発への能動的関与（co-creation）という顧客協働を扱い、企業のco-creation準備度を測る新しい定量ツールを3社の靴メーカー事例で検証している。", "authorSpan": 2, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-019", "title": "Identifying Firm Characteristics for Successful Co-Creation – Literature Review", "authors": "Faisol Rasool, Pisut Koomsap, Meghla Clara Costa", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 2, "C": 3, "I": 1, "TE": 2.0, "M": 1, "V": 1, "domain": "Research", "theme": "Social Innovation", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "マーケティング・イノベーションマネジメント・製品開発という複数分野をレビューしているが、統合や新規手法の提案がなく文献レビューにとどまる（C1-018の前段研究）。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Management / Business", "Engineering"], "objectiveDisc": ["Management / Business"]}, {"id": "C1-020", "title": "Transdisciplinary Innovation: Connecting Ideas from Professional and Community Networks", "authors": "Ronald C. Beckett, Hardik Vachhrajani", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 4, "C": 5, "I": 3, "TE": 4.0, "M": 3, "V": 4, "domain": "Multiple", "theme": "Social Innovation", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "インドで社会便益をもたらす先端技術導入という社会的課題を、専門家・コミュニティという多様なステークホルダーの共創プロセスとして3つの豪印共同研究事例から分析している点で協働の幅が非常に広い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 3, "DSI": 2.33, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Social Science", "Management / Business"], "objectiveDisc": ["Social Science", "Engineering", "Management / Business"]}, {"id": "C1-021", "title": "Trans-Disciplinary Systems as Complex Systems", "authors": "Nel Wognum, Wim J.C. Verhagen, Josip Stjepandić", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 2, "V": 2, "domain": "Research", "theme": "Systems Engineering", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "一般システム理論の歴史的文脈を踏まえ分野横断的なシステム概念を理論的に整理しているが、新しい枠組みの提案というより概念的考察であり、例示は2件にとどまる。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering"]}, {"id": "C1-022", "title": "A Pattern Based Approach to Human Motion Control", "authors": "Shuichi Fukuda", "year": 2017, "venue": "24th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2017): A Paradigm Shift", "G": 2, "C": 4, "I": 3, "TE": 3.0, "M": 3, "V": 1, "domain": "Research", "theme": "Other", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "身体運動制御という工学的課題を身体化認知（embodied cognition）という心理学・認知科学の知見から捉え直すパターンベースアプローチであり分野越境性は高いが、検証を伴わない概念的論考。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Humanities"], "objectiveDisc": ["Engineering", "Medicine / Health"]}, {"id": "C1-023", "title": "Industry 4.0 Through Organizational Interoperability Perspective: A Multicriteria Decision Analysis", "authors": "Pedro F.O. Gomes, Giovani A. Bordini, Eduardo F.R. Loures, Eduardo A.P. Santos", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 3, "C": 4, "I": 3, "TE": 3.3, "M": 3, "V": 3, "domain": "Multiple", "theme": "Industry 4.0", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "Industry 4.0導入という産業課題に対し、学術・産業双方の専門家を対象にした調査データを用いてPrometheeとDEMATELという意思決定分析手法を組織相互運用性の観点と統合しており産学協働の実証を伴う。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Data Science / CS", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-024", "title": "An Analysis of the State of Framework Development for Reasoning in Smart Cyber-Physical Systems", "authors": "Sirsak Tepjit, Imre Horváth, Zoltán Rusák", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 2, "C": 1, "I": 2, "TE": 1.7, "M": 1, "V": 1, "domain": "Research", "theme": "Systems Engineering", "pairing": "Engineering×Engineering", "pdf": "abstract_only", "rationale": "スマートサイバーフィジカルシステムの推論フレームワークに関する既存研究の状態分析（レビュー）であり、社会的関連性の言及がなく新フレームワークの提案・検証もされていない。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Data Science / CS"], "methodDisc": ["Data Science / CS", "Engineering"], "objectiveDisc": ["Engineering", "Data Science / CS"]}, {"id": "C1-025", "title": "Engineering Collaboration in Product Development of Modular Products", "authors": "Sergej Bondar, Josip Stjepandić", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 3, "C": 4, "I": 3, "TE": 3.3, "M": 3, "V": 4, "domain": "Practice", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "世界中の顧客企業とのエンジニアリングデータ交換という産業間協働課題に対し、実際に企業で運用されているOpenDESC.comサービスを用いて解決策を示しており実装レベルの実証がある。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-026", "title": "Knowledge Representation and Reasoning Methods in the Concept Development of Product Design: A State-of-the-Art Review", "authors": "Zuoxu Wang, Pai Zheng, Ching-Hung Lee, Chun-Hsien Chen", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 2, "C": 1, "I": 1, "TE": 1.3, "M": 1, "V": 1, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Engineering", "pdf": "abstract_only", "rationale": "製品設計コンセプト開発における知識表現・推論手法の網羅的レビュー論文であり、単一分野内の文献整理にとどまり分野統合や実証は行われていない。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Data Science / CS"], "methodDisc": ["Data Science / CS", "Engineering"], "objectiveDisc": ["Engineering"]}, {"id": "C1-027", "title": "Adaptable Design – Towards Smart One-of-a-Kind Product Development", "authors": "Mitja Varl, Jožef Duhovnik, Jože Tavčar", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 3, "C": 2, "I": 3, "TE": 2.7, "M": 4, "V": 3, "domain": "Practice", "theme": "Industry 4.0", "pairing": "Engineering×Engineering", "pdf": "abstract_only", "rationale": "スマートファクトリーにおける個別受注生産の俊敏性向上という産業課題を扱い、変更容易性・堅牢性・コンカレントデザインを統合した一般化可能なフレームワークを事例研究で示している。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-028", "title": "Engineering Tomorrow Will be a Game of Soccer", "authors": "Shuichi Fukuda", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 3, "C": 4, "I": 2, "TE": 3.0, "M": 1, "V": 1, "domain": "Research", "theme": "Other", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "著者自身が「研究論文ではない」と明言するビジョンエッセイで、Maslowの自己実現理論やRyan & Deciの内発的動機づけ理論を引用し工学の将来像をユーザー中心に論じるが、体系的な方法論統合や検証はない。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Humanities"], "objectiveDisc": ["Engineering", "Humanities"]}, {"id": "C1-029", "title": "Supporting Innovation and Knowledge Transfer from Individual to Corporate Level", "authors": "Dag Raudberget, Mikael Ström, Fredrik Elgh", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 2, "C": 3, "I": 3, "TE": 2.7, "M": 4, "V": 2, "domain": "Practice", "theme": "Design Methodology", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "個人の設計知識が組織レベルで共有されない問題に対し、設計工学と企業のワークフロー管理システムを統合した新ツール（Concept Dashboard）を提案しているが、定量的な検証は示されていない。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C1-030", "title": "Transdisciplinary Engineering Research Challenges", "authors": "Nel Wognum, Cees Bil, Fredrik Elgh, Margherita Peruzzini, Josip Stjepandić, Wim Verhagen", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 5, "C": 4, "I": 3, "TE": 4.0, "M": 2, "V": 1, "domain": "Multiple", "theme": "Education", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "オープンイノベーションや新技術採用などill-definedな工学課題を明示的にwicked problemとして扱い、工学分野と社会科学分野を含む長期の学際チームによるTDER・TDEE（教育）の課題を論じる、TEの中核概念そのものを扱うメタ的論考。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Social Science", "Engineering"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C1-031", "title": "Architectural Knowledge Integration in a Social Innovation Context", "authors": "John P.T. Mo, Ronald C. Beckett", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 4, "C": 4, "I": 4, "TE": 4.0, "M": 3, "V": 3, "domain": "Multiple", "theme": "Social Innovation", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "遠隔医療システムという社会イノベーション事例において社会科学・医学・物理科学の知識を複数レベルで統合しており、ISO 42010という既存標準を新たな学際的文脈へ適用し実証している。", "authorSpan": 2, "methodSpan": 1, "objectiveSpan": 4, "DSI": 2.33, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Social Science", "Medicine / Health", "Natural Science"]}, {"id": "C1-032", "title": "Improving Online Visibility and Information Sharing Through the Culturalisation Process of the Product and Website", "authors": "Sylvain Sagot, Egon Ostrosi, Alain-Jérôme Fougeres", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 2, "C": 3, "I": 3, "TE": 2.7, "M": 3, "V": 1, "domain": "Practice", "theme": "Other", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "製品・ウェブサイトのSEOと異文化対応（culturalisation）を組み合わせるアプローチで工学・マーケティング・文化研究の要素を統合しているが、検証事例は示されていない。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 3, "DSI": 2.33, "authorDisc": ["Engineering", "Data Science / CS"], "methodDisc": ["Data Science / CS", "Social Science"], "objectiveDisc": ["Engineering", "Management / Business", "Social Science"]}, {"id": "C1-033", "title": "Enacted Affordance when Doing Transdisciplinary Engineering", "authors": "John Bang Mathiasen, Lars Bækgaard, Jacob Steendahl Nielsen", "year": 2018, "venue": "25th ISPE Inc. International Conference on Transdisciplinary Engineering (TE2018): Transdisciplinary Engineering Methods for Social Innovation of Industry 4.0", "G": 3, "C": 4, "I": 4, "TE": 3.7, "M": 4, "V": 3, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "生態心理学由来のアフォーダンス概念を工学的境界横断相互作用研究に橋渡しし、エスノグラフィー調査を通じて3種類のアフォーダンス（shared/collective/pragmatic）という新概念を実証的に導出しており知識統合の深さが高い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Social Science", "Humanities"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C2-001", "title": "When and Where Is Transdisciplinary Engineering Applied in Projects? A Case Study", "authors": "Alexander Kharlamov, Glenn Parry, Linda Newnes", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 4, "C": 4, "I": 4, "TE": 4.0, "M": 4, "V": 3, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "がん医療機器開発という社会的に重要な複数大学共同プロジェクトを対象に、コミュニケーション理論と戦略的パラドックス理論を統合した分析枠組みを提示し、インタビューによる単一事例検証を行っている点でG・C・Iともに高い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Social Science", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-002", "title": "Smart Product-Service Systems: A Novel Transdisciplinary Sociotechnical Paradigm", "authors": "Pai Zheng, Zuoxu Wang, Chun-Hsien Chen", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 3, "C": 3, "I": 2, "TE": 2.7, "M": 2, "V": 1, "domain": "Research", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "Smart PSSを技術・社会・ビジネスの3側面から概観する文献要約型の論文であり、統合は並置にとどまり実証もないため、IとVは低い。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 3, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Social Science", "Management / Business"]}, {"id": "C2-003", "title": "Applying Transdisciplinary Engineering (TE) Design Research Methodology to the Challenge of Managing Decision Support Tool Performance", "authors": "Susan Lattanzio, Linda B. Newnes, Marcelle McManus, Alex Hultin, Derrick Dunkley", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 4, "C": 4, "I": 4, "TE": 4.0, "M": 4, "V": 3, "domain": "Multiple", "theme": "Design Methodology", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "電力会社(NGET)の意思決定支援ツール管理という実務課題に対し、TDとDesign Research Methodologyを統合した新フレームワークを提案し、産業専門家による評価まで行っている点で協働性・統合度が高い。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-004", "title": "Ill-Defined Knowledge Boundaries; A Battlefield for Transdisciplinary Engineering", "authors": "Nikki Kaasgaard Jepsen, John Bang Mathiasen", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 5, "C": 4, "I": 3, "TE": 4.0, "M": 3, "V": 3, "domain": "Research", "theme": "Social Innovation", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "難民キャンプ向け製品開発という人道的課題を対象に、アフォーダンス理論と実務家の知識境界を突き合わせた1年間の縦断研究であり、社会的目標志向は非常に高いが統合は理論適用レベルにとどまる。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Social Science", "Humanities"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C2-005", "title": "A Platform-Based OEM-Supplier Collaboration Ecosystem Development", "authors": "Alain Biahmou, Tomislava Majić, Josip Stjepandić, Nel Wognum", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 2, "C": 3, "I": 2, "TE": 2.3, "M": 2, "V": 1, "domain": "Practice", "theme": "Industry 4.0", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "OEM-サプライヤー間のIT共有プラットフォーム構築という実務事例であり、TDと位置づけているが方法論の統合や実証の記述は乏しく概念的説明にとどまる。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-006", "title": "Sociotechnical Systems for High Rise Detention", "authors": "Hugh D. Lester, Graham B. McKay, Ellyn A. Lester", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 4, "C": 4, "I": 4, "TE": 4.0, "M": 3, "V": 4, "domain": "Practice", "theme": "Other", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "1200床・14億ドル規模の実在する拘置所建設における建築・工学・運用統合を扱う事例研究で、社会技術システムとして正義制度という社会的課題を扱い、実プロジェクトとしての実証水準も高い。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C2-007", "title": "Engineering of Complex Social Realities", "authors": "German Urrego-Giraldo, Gloria-Lucia Giraldo, Diana-Margot  López", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 5, "C": 4, "I": 3, "TE": 4.0, "M": 2, "V": 1, "domain": "Research", "theme": "Social Innovation", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "工学を社会そのものへ介入させる「Supra Disciplinary Engineering」という概念を提唱する哲学的・思想的論考であり、目標志向は極めて高いが具体的な統合方法論や実証は伴わない。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Humanities"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C2-008", "title": "The New World IoT Is Bringing Forth", "authors": "Shuichi Fukuda", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 3, "C": 2, "I": 2, "TE": 2.3, "M": 1, "V": 1, "domain": "Research", "theme": "Industry 4.0", "pairing": "Engineering×Data Science", "pdf": "full_text", "rationale": "IoTによる人間と機械の協調に関するFukudaの思想的エッセイであり、具体的な分野横断の協働や方法論の統合、実証は行われていない。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Data Science / CS"]}, {"id": "C2-009", "title": "Development of Workshop Environment for Supporting Collaborative Problem Framing", "authors": "Shinnosuke Wanaka, Kazuo Hiekata, Bryan R. Moser", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 4, "V": 3, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "異文化間チームの協働的問題設定を支援するワークショップ環境とモニタリングシステムを開発し、実験によるデモンストレーションを行っている新規性の高い研究。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C2-010", "title": "Problem Exploration with Bias Breaking Ideation for Maritime Emissions Reduction", "authors": "Sixiong Peng, Lorena Pelegrin, Patricia Arnal Luna, Hideyuki Horii, Bryan R. Moser", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 4, "C": 3, "I": 3, "TE": 3.3, "M": 3, "V": 3, "domain": "Research", "theme": "Sustainability/Resilience", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "海事排出削減という環境課題を題材に、バイアス崩しのアイデア創出手法を用いた準実験を実施しており、目標の社会的意義と実証データはあるが分野統合は行動科学的手法の適用にとどまる。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Natural Science"]}, {"id": "C2-011", "title": "Modular Approach to Technical Risk Management in Product Lifecycle Management", "authors": "Roberto Riascos, Tomislava Majić, Egon Ostrosi, Josip Stjepandić", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 2, "C": 2, "I": 2, "TE": 2.0, "M": 2, "V": 2, "domain": "Practice", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "PLMシステムへのリスク管理モジュール追加という技術的インテグレーションであり、単一分野内の技術的課題でTEらしさは低い。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-012", "title": "Roles of MSIE Graduates to Support Thailand Sustainable Smart Industry", "authors": "Pisut Koomsap, Huynh T. Luong, Rui M. Lima, Tomasz Nitkiewicz, Wichai Chattinnawat, Duangthida Hussadintorn Na Ayutthaya", "year": 2019, "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)", "G": 3, "C": 4, "I": 2, "TE": 3.0, "M": 3, "V": 3, "domain": "Education", "theme": "Education", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "タイと欧州企業への産業調査に基づき、Industry 4.0に対応した大学院教育のあり方を検討しており、産学連携の幅は広いが統合は調査結果のマッピングにとどまる。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-013", "title": "Transdisciplinary System of Systems Development in the Trend to X4.0", "authors": "John P.T. Mo, Ronald C. Beckett", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 2, "V": 1, "domain": "Research", "theme": "Industry 4.0", "pairing": "Engineering×Data Science", "pdf": "full_text", "rationale": "Industry 4.0の派生形(X4.0)におけるシステムオブシステムズの観点から人・プロセス要素の欠如を論じる概念的考察であり、実証は伴わない。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C2-014", "title": "Mapping the Competencies of Design Engineers Against the Jantsch’s Hierarchical System", "authors": "Jana Sajdakova, Linda Newnes, Emily Carey, Vimal Dhokia", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 3, "C": 2, "I": 2, "TE": 2.3, "M": 1, "V": 1, "domain": "Research", "theme": "Education", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "TD人材に必要なコンピテンシーについての系統的文献レビューであり、Jantschの階層構造へのマッピングは行うが、実際の協働や統合の実証はない。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Humanities"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C2-015", "title": "Classifying the Disciplinarity of Engineering Academic Literature", "authors": "Susan Lattanzio, Nataliya Mogles, Emily Carey, Alex Kharlamov, Glenn Parry, Ben Hicks, Linda Newnes", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 3, "V": 3, "domain": "Research", "theme": "Other", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "177本のTD論文をJantschの枠組みで分類したメタ分析であり、TDと自称する文献の大半が実際にはIDにとどまることを明らかにした点で方法論的な貢献はあるが、対象自体が文献であり協働・統合の実践ではない。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Data Science / CS", "Humanities"], "objectiveDisc": ["Engineering", "Humanities"]}, {"id": "C2-016", "title": "TRansdisciplinary ENgineering Design (TREND): Towards a Transdisciplinary Engineering Index", "authors": "Linda Newnes, Susan Lattanzio, Emily Carey, Ben Hicks, Aydin Nassehi, Glenn Parry", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 2, "C": 2, "I": 2, "TE": 2.0, "M": 2, "V": 1, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "TREND研究グループの概要とTE指標構築に向けた予備的研究を紹介する序論的論文であり、具体的な統合や実証はまだ提示されていない。", "authorSpan": 2, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.33, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering"]}, {"id": "C2-017", "title": "An Appraisal and Classification of the Transdisciplinarity of Existing Design Tools", "authors": "Mark Goudswaard, Ben Hicks, Linda Newnes", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 3, "V": 2, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "41種のデザインツールをJantschの基準で分類し、真にTDなツールが存在しないことを明らかにした体系的な評価研究。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Humanities"], "objectiveDisc": ["Engineering"]}, {"id": "C2-018", "title": "Transdisciplinary Approach to Hyper-Transparency", "authors": "Mark Wever, Nel Wognum, Munir Shah, Mostafa Sharifi, Marlon M. Reis", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 4, "C": 4, "I": 3, "TE": 3.7, "M": 3, "V": 2, "domain": "Practice", "theme": "Sustainability/Resilience", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "農産物サプライチェーンにおける小規模生産者と消費者を含む透明性システム(SIMS)を設計しており、多様なステークホルダーのエンパワーメントを目指す点で協働性・目標志向が高い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 3, "DSI": 2.33, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering", "Social Science", "Management / Business"]}, {"id": "C2-019", "title": "Towards a Practical Approach for TE Education: A Pilot Study at the University of Bath", "authors": "Susan Lattanzio, Jana Sajdakova, Richard Burke, Glenn Parry, Linda Newnes", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 2, "C": 3, "I": 2, "TE": 2.3, "M": 3, "V": 2, "domain": "Education", "theme": "Education", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "バース大学でのTE教育セッションのパイロット実施であり、8名の学生アンケートによる小規模な予備的評価にとどまる。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C2-020", "title": "evoDash – A Transdisciplinary Vision for an Education Platform and a Simulation-Based Vehicle Development Process", "authors": "Lucas Kuentzer, Marcel Schwarzenbarth, Daniel Siladjev, Georg Rock", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 3, "V": 3, "domain": "Education", "theme": "Education", "pairing": "Engineering×Engineering", "pdf": "abstract_only", "rationale": "学生プロジェクトによる都市型モビリティ車両開発のための教育プラットフォームで、産業志向の実プロトタイプ開発を伴うが、目標は主に教育・技術面に限定される。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C2-021", "title": "Transdisciplinary Assessment Matrix to Design Human-Machine Interaction", "authors": "Fabio Grandi, Margherita Peruzzini, Roberto Raffaeli, Marcello Pellicciari", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 2, "C": 3, "I": 3, "TE": 2.7, "M": 4, "V": 3, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "生理・姿勢・システムデータを統合したTransdisciplinary Assessment Matrixを提案し、農業機械のHMI評価に適用して検証しており、新規指標(UXI)の開発という方法論的貢献が高い。", "authorSpan": 1, "methodSpan": 3, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Medicine / Health", "Data Science / CS"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C2-022", "title": "Transdisciplinary Design Aspects of an Air Mobile Stroke Unit", "authors": "David Chipperfield, Michael Cheesman, Cees Bil, Greg Hanlon", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 5, "C": 4, "I": 3, "TE": 4.0, "M": 2, "V": 1, "domain": "Practice", "theme": "Other", "pairing": "Other", "pdf": "abstract_only", "rationale": "都市部と地方の脳卒中治療格差という深刻な社会的課題に対し、医療と航空工学の要求の衝突を論じる概念設計研究であり、目標志向は非常に高いが実証はまだない。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 3, "DSI": 2.33, "authorDisc": ["Engineering", "Medicine / Health"], "methodDisc": ["Engineering", "Medicine / Health"], "objectiveDisc": ["Medicine / Health", "Engineering", "Social Science"]}, {"id": "C2-023", "title": "Design Entropy Theory: A Novel Transdisciplinary Design Methodology for Smart PSS Development", "authors": "Jingchen Cong, Pai Zheng, Chun-Hsien Chen", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 2, "C": 3, "I": 4, "TE": 3.0, "M": 4, "V": 1, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Data Science", "pdf": "abstract_only", "rationale": "シャノンの情報理論をSmart PSSデザインに応用した新しい設計理論(Design Entropy Theory)を提案しており、方法論的独自性は高いが実証的検証はない。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-024", "title": "From Control to Coordination: Mahalanobis Distance – Pattern Approach to Strategic Decision Making", "authors": "Shuichi Fukuda", "year": 2020, "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 4, "V": 1, "domain": "Research", "theme": "Systems Engineering", "pairing": "Engineering×Data Science", "pdf": "abstract_only", "rationale": "マハラノビス距離とパターン認識を組み合わせた戦略的意思決定指標を提案するFukudaの理論的論考であり、新規性はあるが実証や分野横断の協働実績は乏しい。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-025", "title": "Towards a Transdisciplinary Approach to Systemic Risk Detection", "authors": "Mark Wever, Nel Wognum, Munir Shah, Niall O’Leary, George Onofrei", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 5, "C": 4, "I": 4, "TE": 4.3, "M": 4, "V": 1, "domain": "Research", "theme": "Sustainability/Resilience", "pairing": "Other", "pdf": "abstract_only", "rationale": "経済・産業の破綻連鎖等のシステミックリスク検知という国連レベルの重大な社会的課題に対し、複数分野の理論・手法を統合するTD枠組みを提案しているが、まだ概念段階で実証はない。", "authorSpan": 2, "methodSpan": 3, "objectiveSpan": 3, "DSI": 2.67, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Management / Business", "Social Science", "Natural Science"], "objectiveDisc": ["Management / Business", "Natural Science", "Social Science"]}, {"id": "C2-026", "title": "Infrastructuring Transdisciplinary Problem Solving in Translational Research", "authors": "Santosh Basapur, Keiichi Sato, Raj C. Shah, Sherry Robison", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 4, "C": 4, "I": 4, "TE": 4.0, "M": 4, "V": 4, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "がん臨床試験の被験者募集という実務課題に対し、Quality手法とDesign手法を組み合わせた10件のスタジオ実践を報告しており、複数事例による実証と手法統合の両面で高評価。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Medicine / Health"], "methodDisc": ["Engineering", "Medicine / Health"], "objectiveDisc": ["Medicine / Health"]}, {"id": "C2-027", "title": "Foraging for Transdisciplinary Challenges: Emergent Industrial Themes", "authors": "Emily Carey, Linda Newnes, Susan Lattanzio, Alex Hultin, Nataliya Mogles", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 3, "C": 4, "I": 2, "TE": 3.0, "M": 2, "V": 3, "domain": "Multiple", "theme": "Industry 4.0", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "TREND研究の一環として13件の産業インタビューを行い、TDという用語の産業界での認知度や実践の実態を明らかにした探索的研究。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Social Science"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-028", "title": "Transdisciplinary Engineering for Market Development", "authors": "Shuichi Fukuda", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 2, "C": 2, "I": 2, "TE": 2.0, "M": 2, "V": 1, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Data Science", "pdf": "abstract_only", "rationale": "市場開発における分析から総合への転換を論じるFukudaの概念的論考であり、非ユークリッド空間アプローチを提起するが具体的方法論の実装や実証はない。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-029", "title": "The Transdisciplinary Engineering Index: Towards a Disciplinary Maturity Grid", "authors": "Susan Lattanzio, Emily Carey, Alex Hultin, Reza Imani Asrai, Aydin Nassehi, Glenn Parry, Linda Newnes", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 3, "V": 2, "domain": "Research", "theme": "Industry 4.0", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "英国製造業のレジリエンス向上を目的に、12名の学術専門家によるワークショップでDisciplinary Maturity Gridの予備設計を行っており、産業実装はまだ将来課題。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-030", "title": "A Transdisciplinary Approach for the Design Optimization of Medical Simulations", "authors": "Agnese Brunzini, Margherita Peruzzini, Michele Germani, Daniele Messi, Pamela Barbadoro", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 3, "C": 4, "I": 4, "TE": 3.7, "M": 4, "V": 3, "domain": "Multiple", "theme": "Education", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "医療シミュレーションの最適化のため、エンジニア・臨床家・訓練担当者・人間工学専門家が協働する枠組みを提案し、実際の低忠実度シミュレーションで検証している点で協働性・統合度・実証水準がバランス良く高い。", "authorSpan": 2, "methodSpan": 3, "objectiveSpan": 2, "DSI": 2.33, "authorDisc": ["Engineering", "Medicine / Health"], "methodDisc": ["Engineering", "Medicine / Health", "Humanities"], "objectiveDisc": ["Medicine / Health", "Engineering"]}, {"id": "C2-031", "title": "Fostering Design Thinking in Transdisciplinary Engineering Education", "authors": "Jo-Yu Kuo, Xue Ting Song, Chun-Hsien Chen, Chandrakant D. Patel", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 2, "C": 3, "I": 2, "TE": 2.3, "M": 2, "V": 1, "domain": "Education", "theme": "Education", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "デザイン思考をTE教育に取り入れる事例を紹介する論考であり、具体的な検証や新規手法の提示は限定的。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Humanities"], "objectiveDisc": ["Engineering", "Humanities"]}, {"id": "C2-032", "title": "Product Lifecycle Management and Sustainable Development in the Context of Industry 4.0: A Systematic Literature Review", "authors": "Michele Marcos De Oliveira, Luisa Geraldi Andreatta, Josip Stjepandić, Osiris Canciglieri Junior", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 3, "C": 2, "I": 2, "TE": 2.3, "M": 1, "V": 1, "domain": "Research", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "Industry 4.0下でのPLMと持続可能な開発に関する系統的文献レビューであり、既存文献の整理にとどまり実証や統合の新規性は低い。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Natural Science"]}, {"id": "C2-033", "title": "Benchmark on Human Simulation Tools: A Transdisciplinary Approach", "authors": "Fabio Grandi, Sara Cavallaro, Margherita Peruzzini, Roberto Raffaeli, Marcello Pellicciari", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 2, "C": 3, "I": 3, "TE": 2.7, "M": 2, "V": 3, "domain": "Practice", "theme": "Industry 4.0", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "農業機械の組立作業を対象に2種のデジタルヒューマンシミュレーションツール(Jack, Process Simulate)を比較するベンチマーク研究で、人間工学と技術評価を統合しているが手法自体は既存ツールの適用比較にとどまる。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Medicine / Health"]}, {"id": "C2-034", "title": "Integration Across Knowledge Boundaries During New Product Introduction", "authors": "Paraskeva Wlazlak, Daniel Hussmo, Kristina Säfsten", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 3, "V": 4, "domain": "Practice", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "スウェーデン大手3社の事例をもとに、新製品導入時の知識境界(統語的・意味的)を横断する統合プロセスを分析しており、複数の実企業データによる実証水準は高い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C2-035", "title": "Enhancing Human Perspectives in CPS Models: Application to Collaborative Problem-Solving in Translational Medicine", "authors": "Keiichi Sato, Fei Hu, Santosh Basapur, Raj C. Shah, Gunnar Hartvigsen", "year": 2021, "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)", "G": 4, "C": 4, "I": 4, "TE": 4.0, "M": 4, "V": 2, "domain": "Research", "theme": "Systems Engineering", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "医療機関間の橋渡し研究における協調的問題解決基盤の構築に向け、記号論的フレームワークをCPS/HSIに統合する提案を行っているが、プロジェクトはまだ初期段階で実証は限定的。", "authorSpan": 2, "methodSpan": 3, "objectiveSpan": 2, "DSI": 2.33, "authorDisc": ["Engineering", "Medicine / Health"], "methodDisc": ["Engineering", "Humanities", "Data Science / CS"], "objectiveDisc": ["Medicine / Health", "Engineering"]}, {"id": "C3-001", "title": "A Transdisciplinary Method for Requirements and BOMs Engineering and Their Chaining Toward CAD Models", "authors": "Alain-Jérôme Fougères, Egon Ostrosi, Josip Stjepandić", "year": 2022, "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)", "G": 2, "C": 3, "I": 3, "TE": 2.7, "M": 4, "V": 2, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Data Science", "pdf": "full_text", "rationale": "要求工学とCADモデルを繋ぐマルチエージェント手法の技術提案であり、社会的関連性への言及がなく問題設定はGoalが低い。工学とマルチエージェント情報科学の統合はあるが実証は概念的なデモンストレーションにとどまる。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Data Science / CS"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C3-002", "title": "Requirements Handling in Multidisciplinary Product Development – A Company Study", "authors": "Roland Stolt, Samuel André", "year": 2022, "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)", "G": 2, "C": 2, "I": 2, "TE": 2.0, "M": 2, "V": 3, "domain": "Practice", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "単一製造企業内の要求管理の実態調査であり、社会的関連性や分野を超えた真の統合の記述が乏しく、複数工学分野内の並置的な比較にとどまる。単一企業ケーススタディとしての実証水準は中程度。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering"]}, {"id": "C3-003", "title": "Challenges of a Transdisciplinary Team in the Design of a Lithium-Ion Battery Pack for Small Urban Electric Vehicles: Lessons Learned", "authors": "Samuel Henrique Werlich, Joelton Deonei Gotz, Fernanda Cristina Corrêa, Milton Borsato", "year": 2022, "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)", "G": 4, "C": 4, "I": 3, "TE": 3.7, "M": 3, "V": 3, "domain": "Practice", "theme": "Sustainability/Resilience", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "EVによる排出削減という社会的関連性を持つ課題に対し、3大学と2自動車会社29名という産学連携の広い協働が明示されている一方、統合は専門知識の標準化・すり合わせのレベルにとどまり単一ケースの教訓としての報告である。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Natural Science"], "methodDisc": ["Engineering", "Natural Science"], "objectiveDisc": ["Engineering"]}, {"id": "C3-004", "title": "Modelling for the UK's Utility-Scale Solar Regulation Change: Lessons for Transdisciplinary Engineering in Policy Practice", "authors": "Laurent Liote", "year": 2022, "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)", "G": 5, "C": 4, "I": 4, "TE": 4.3, "M": 3, "V": 3, "domain": "Practice", "theme": "Sustainability/Resilience", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "net-zero目標という明確に社会・環境に関わるwicked problemを扱い、政府内の政策担当者と技術者間の相互信頼・相互作用的知識の生成をエスノグラフィで実証しており統合の深さも高い。ただし単一の政策事例研究であり方法論としての一般化はやや弱い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C3-005", "title": "Instrumenting Weick's Seven Properties to Measure Collective Sensemaking in Engineering Teams", "authors": "Ignacio Vazquez, Fahim Faruque, Bryan Moser", "year": 2022, "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)", "G": 2, "C": 4, "I": 3, "TE": 3.0, "M": 4, "V": 3, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "組織心理学（Weickのセンスメイキング理論）を工学チームの計測に応用する新しい測定枠組みを提案しており分野統合の質は高いが、対象課題自体は社会的関連性の明示がなく技術的なチーム運営の問題にとどまる。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C3-006", "title": "Simultaneous Interdisciplinary Teamwork on Digital Twins in a 3D Collaborative Environment", "authors": "Nicolai Beisheim, Matthias Rädle, Julian Reichwald, Markus Linde, Tobias Ott, Sebastian Amann, Kevin Kastner", "year": 2022, "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 3, "V": 2, "domain": "Practice", "theme": "Digital Twin", "pairing": "Engineering×Data Science", "pdf": "full_text", "rationale": "社内複数部門のデジタルツイン共同作業を支えるUnity3D基盤の技術的ソリューションであり、社会的課題としての設定は薄く、実証も開発段階のデモンストレーションにとどまる。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Data Science / CS"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C3-007", "title": "Transdisciplinary Evaluation of Simulation Software for Industry 4.0 Assembly Lines", "authors": "Jacopo Lettori, Milton Borsato, Roberto Raffaeli, Marcello Pellicciari, Fabio Grandi, Margherita Peruzzini", "year": 2022, "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)", "G": 3, "C": 3, "I": 4, "TE": 3.3, "M": 4, "V": 3, "domain": "Research", "theme": "Industry 4.0", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "生産効率・人間工学・安全性など複数の学際的設計原則を体系的にAHPで統合するフレームワークを提案し、プロトタイプ組立ラインで検証している点で統合深度と方法論的貢献が高い。ただし単一プロトタイプでの検証に限定される。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C3-008", "title": "Community Biology Labs in Practice: A Pasteur's Quadrant Perspective", "authors": "Ibrahim Aldulijan, S. Nisa Asgarali-Hoffman, Foad Hamidi, Lydia Stamato, Justice Walker, Mo Mansouri, Lisa Scheifele", "year": 2022, "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)", "G": 3, "C": 5, "I": 2, "TE": 3.3, "M": 2, "V": 3, "domain": "Research", "theme": "Social Innovation", "pairing": "Other", "pdf": "full_text", "rationale": "市民参加型のコミュニティバイオラボという学術・市民の多様なステークホルダーの共創の場を扱い協働の幅は非常に広いが、既存のPasteur's Quadrantという枠組みを当てはめる位置づけ分析にとどまり方法論統合は限定的である。", "authorSpan": 2, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Natural Science", "Social Science"], "methodDisc": ["Social Science"], "objectiveDisc": ["Natural Science", "Social Science"]}, {"id": "C3-009", "title": "The Impact of Cultural Change: A Transdisciplinary Engineering Case Study", "authors": "Harley Beattie, Linda B. Newnes, Vimal Dhokia, David Nickerson, Paul Crabtree", "year": 2023, "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)", "G": 3, "C": 4, "I": 3, "TE": 3.3, "M": 3, "V": 4, "domain": "Practice", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "エンジニアリング変更管理に人・文化という社会科学的観点を明示的に取り入れ、産業的な課題を背景に据えている。実際の英国自動車企業での定量的な効果測定（工程時間短縮、コスト削減）を伴う点で実証水準は比較的高い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C3-010", "title": "Design of a Lithium-Ion Battery Pack for a Small Urban Electric Vehicle: Challenges and Lessons Learned by a Transdisciplinary Team", "authors": "Samuel Henrique Werlich, Joelton Deonei Gotz, Fernanda Cristina Corrêa, Milton Borsato", "year": 2023, "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)", "G": 4, "C": 3, "I": 2, "TE": 3.0, "M": 2, "V": 3, "domain": "Practice", "theme": "Sustainability/Resilience", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "C3-003と同一プロジェクトの関連報告で、EV普及という社会的関連性は高いが、本稿は情報収集の困難さや設計上の複雑さを記述するにとどまり方法論の統合や新規性は限定的である。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Natural Science"], "methodDisc": ["Engineering", "Natural Science"], "objectiveDisc": ["Engineering"]}, {"id": "C3-011", "title": "Transdisciplinary Setup Guide for Automated Maintenance Training Generation in Virtual Reality from Virtual Commissioning", "authors": "Sascha Quast, Kathrin Konkol", "year": 2023, "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)", "G": 2, "C": 3, "I": 3, "TE": 2.7, "M": 4, "V": 2, "domain": "Practice", "theme": "Industry 4.0", "pairing": "Engineering×Data Science", "pdf": "full_text", "rationale": "自動化保全トレーニング生成のためのVR自動化システムを新規提案し、コミッショナー・トレーナー・訓練生という複数の役割を統合する枠組みを持つが、社会的関連性は限定的で検証も現場ユーザーの初期フィードバックに留まる。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Data Science / CS"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C3-012", "title": "Team Composition, Recomposition, and Role Selection in Long-Term Educational Programs: A Theoretical Framework Using Multiple Criteria Approach", "authors": "Krissada Chalermsook, Chutiporn Anutariya", "year": 2023, "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)", "G": 2, "C": 4, "I": 3, "TE": 3.0, "M": 4, "V": 1, "domain": "Education", "theme": "Education", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "パーソナリティ心理学・アジャイル・ゲーミフィケーションを組み合わせた理論的フレームワークを新規提案しており分野統合の企図は明確だが、実証データによる検証がなく概念的議論の段階にとどまる。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.33, "authorDisc": ["Data Science / CS"], "methodDisc": ["Humanities", "Data Science / CS"], "objectiveDisc": ["Social Science"]}, {"id": "C3-013", "title": "Engagement Mechanisms in Workshops for Sustainable Community Development", "authors": "Bruce A. Hecht, Ted Halsey, Mai Nguyen, Bryan R. Moser", "year": 2023, "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)", "G": 4, "C": 5, "I": 4, "TE": 4.3, "M": 4, "V": 3, "domain": "Research", "theme": "Sustainability/Resilience", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "社会的公平性・経済・環境レジリエンスという都市の複雑な課題に対し、住民の地域知と計画専門家の専門知を統合するワークショップシステムモデルを提案しており、市民参加による共創プロセスを含む点で協働の幅・統合深度ともに高い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C3-014", "title": "Leveraging Transdisciplinary Engineering Through the Coalescence of Digital Twins and XR-Technologies", "authors": "Kevin Kastner, Joel Lehmann, Felix Wuehler, Sebastian Amann, Nicolai Beisheim, Matthias Raedle, Julian Reichwald", "year": 2023, "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 4, "V": 2, "domain": "Research", "theme": "Digital Twin", "pairing": "Engineering×Data Science", "pdf": "full_text", "rationale": "デジタルツインとXR技術を複数プラットフォーム間で双方向連携させる新規システムを開発しており技術統合の水準は高いが、対象課題自体は技術デモンストレーションであり社会的関連性への言及は薄く、検証も1教室での実演にとどまる。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Data Science / CS"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C3-015", "title": "Leveraging Digital Twin Based on Artificial Intelligence as a Service in Digital Business Ecosystem", "authors": "Sergej Bondar, Philipp Kremer, Johannes Lützenberger, Josip Stjepandić", "year": 2023, "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)", "G": 2, "C": 4, "I": 3, "TE": 3.0, "M": 2, "V": 1, "domain": "Research", "theme": "Digital Twin", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "デジタルツイン技術とビジネスキャンバス手法という経営学的手法を組み合わせた概念的戦略提案であり工学×経営の統合は見られるが、検証を伴わない概念的議論にとどまる。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C3-016", "title": "Digital Twin as Enabler of Sustainability and Risk Management of Medical Devices", "authors": "Roberto Riascos, Tomislava Majić, Egon Ostrosi, Jean-Claude Sagot, Josip Stjepandić", "year": 2023, "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)", "G": 3, "C": 4, "I": 3, "TE": 3.3, "M": 3, "V": 2, "domain": "Practice", "theme": "Digital Twin", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "医療機器のリスク管理・サステナビリティという産業的・社会的課題を扱い、サプライヤー・医療従事者・患者という多様な関係者への影響を論じている点で協働特性は高いが、実証は概念的な導入事例の紹介にとどまる。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Medicine / Health"]}, {"id": "C3-017", "title": "Adapting a Transdisciplinary Approach to Regional Development in the Case of Facilitating Planning of Energy Systems", "authors": "Magnus Fredricson, Gary Linnéusson, Tehseen Aslam", "year": 2024, "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)", "G": 5, "C": 5, "I": 4, "TE": 4.7, "M": 4, "V": 3, "domain": "Multiple", "theme": "Sustainability/Resilience", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "15市町村・21配電事業者にまたがる地域エネルギー政策という明確なwicked problemを扱い、政治家・行政職員・エンジニアという多様なステークホルダーのメタガバナンスをデザインサイエンスリサーチで支援する三つの成果物を統合的に提案している。単一地域の事例検証にとどまる点でVはやや控えめ。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C3-018", "title": "Building Consensus in the Circular Economy: A Transdisciplinary Framework for Developing Collaborative Decision-Making Tools", "authors": "Mohamed Elnourani, Anna Öhrwall Rönnbäck", "year": 2024, "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)", "G": 4, "C": 4, "I": 4, "TE": 4.0, "M": 4, "V": 2, "domain": "Research", "theme": "Sustainability/Resilience", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "サーキュラーエコノミーという環境・経済にまたがる社会的課題に対し、製品開発の要求管理手法とサーキュラーエコノミー原則を橋渡しする新規フレームワークを提案している。ただし検証はワークショップと文献分析による例示にとどまり、実データでの実証はない。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C3-019", "title": "Engineering Community Resilience: A Transdisciplinary Early Career Researcher's Journey in Cultivating Bottom-Up Energy Initiatives Amidst Uncertainty", "authors": "Vanja Djinlev", "year": 2024, "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)", "G": 4, "C": 4, "I": 3, "TE": 3.7, "M": 3, "V": 3, "domain": "Research", "theme": "Sustainability/Resilience", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "コミュニティ主導のエネルギー移行という社会・経済・環境にまたがる課題を扱い、工学と社会科学の橋渡しを明示しているが、北マケドニアの単一事例に基づく実践的課題の記述が中心で方法論の一般化までは至っていない。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C3-020", "title": "ARCTIC: Empowering Transdisciplinary Engineering Education Through Immersive Augmented Reality Experiences", "authors": "Kevin Kastner, Felix Wuehler, Florian Kolb, Julian Reichwald, Matthias Raedle, René Eiswirth", "year": 2024, "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)", "G": 2, "C": 4, "I": 3, "TE": 3.0, "M": 4, "V": 3, "domain": "Multiple", "theme": "Education", "pairing": "Engineering×Data Science", "pdf": "full_text", "rationale": "化学・プロセス工学の学生とAEC企業の実務者が参加する教育用ARアプリを新規開発し、実際の授業条件下でアンケート評価まで行っている点で実証水準・方法論的貢献ともに一定の水準がある一方、課題設定自体の社会的関連性は限定的。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Data Science / CS"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C3-021", "title": "A Transdisciplinary Approach to Holographic Indoor Navigation Using Mixed Reality and Cloud Computing", "authors": "Alessio Morganti, Fabio Grandi, Riccardo Karim Khamaisi, Margherita Peruzzini", "year": 2024, "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)", "G": 2, "C": 2, "I": 2, "TE": 2.0, "M": 4, "V": 3, "domain": "Practice", "theme": "Industry 4.0", "pairing": "Engineering×Data Science", "pdf": "full_text", "rationale": "複合現実とクラウド技術を用いた屋内ナビゲーション手法という技術寄りの提案であり、社会的関連性への言及がなく分野統合も単一の技術領域内にとどまる。倉庫案内の単一ケースで検証されている。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Data Science / CS"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C3-022", "title": "The Digital Transformation Competences for Brazilian Automotive Managers: A Transdisciplinary Engineering Approach", "authors": "Vagner Batista Ribeiro, Jorge Muniz Jr., Elaine Mosconi, Davi Nakano", "year": 2024, "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)", "G": 3, "C": 4, "I": 3, "TE": 3.3, "M": 3, "V": 4, "domain": "Practice", "theme": "Industry 4.0", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "デジタル化人材のマネジメント能力という工学×経営学の融合課題を扱い、6社35名へのインタビューとAHP分析という複数企業の実データに基づく検証を行っている点で実証水準は高いが、統合はAHPという既存手法の適用にとどまる。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C3-023", "title": "Supporting Transdisciplinary Research: Combining Design Research with Interactive Research", "authors": "Kristina Säfsten, Fredrik Elgh, Roland Stolt, Gary Linneusson, Joel Johansson", "year": 2024, "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)", "G": 2, "C": 4, "I": 4, "TE": 3.3, "M": 4, "V": 3, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "13名の研究者・5製造企業・1ソフトウェア供給企業からなる産学連携プロジェクトにおいて、インタラクティブリサーチとデザインリサーチという異なる研究方法論を体系的に統合した「IDEAL work procedure」を提案している。研究運営プロセスそのものが対象のため課題設定の社会的関連性はやや弱い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C3-024", "title": "Topological Analysis to Enhance the Understanding of Transdisciplinary Engineering", "authors": "Lauren E.J. Thomas-Seale, Barnaby Hawthorn, Sabrina Kombrink, Tony Samuel, John R. Bryson, Harriet Thomson, Thomas D. Montenegro-Johnson", "year": 2024, "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)", "G": 3, "C": 4, "I": 2, "TE": 3.0, "M": 2, "V": 1, "domain": "Research", "theme": "Design Methodology", "pairing": "Other", "pdf": "full_text", "rationale": "工学と社会経済的知識の間の情報伝達という課題に純粋数学（トポロジー）を橋渡しする可能性を探る探索的論文であり、分野の組み合わせは独創的だが、業界インタビューで現状のギャップを示すのみで実際の統合手法の適用や検証には至っていない。", "authorSpan": 3, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.33, "authorDisc": ["Engineering", "Social Science", "Natural Science"], "methodDisc": ["Social Science", "Natural Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C3-025", "title": "Transdisciplinary Platform Assets – A Boundary Object Perspective", "authors": "Daniel Hussmo, Dag Raudberget", "year": 2024, "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 3, "V": 2, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "科学技術社会論由来の境界オブジェクト概念を製品プラットフォームの資産管理に応用する概念的提案であり分野を跨いだ理論の転用は見られるが、社会的課題としての設定は薄く、検証もA3テンプレートの例示的議論にとどまる。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering"]}, {"id": "C3-026", "title": "Functional Complexity Quantification for Transdisciplinary Engineered Systems", "authors": "Lal Bahadur, Eric Rebentisch", "year": 2025, "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 4, "V": 1, "domain": "Research", "theme": "Systems Engineering", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "システム開発初期段階の機能的複雑性を定量化する新規フレームワークを提案しているが、社会的関連性への言及はなく、シナリオによる仮想的な適用可能性の議論にとどまり実データでの検証はない。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering"]}, {"id": "C3-027", "title": "Enhancing Consensus for Transdisciplinary Engineering Design Challenges: A Delphi Study Voting Schema", "authors": "Ella Maule, Mark Goudswaard, Hemma Philamore", "year": 2025, "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)", "G": 2, "C": 3, "I": 3, "TE": 2.7, "M": 4, "V": 2, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "複数分野の専門家合意形成のためのデルファイ法投票スキーマという方法論的貢献自体は新規性が高いが、対象課題自体は合意形成の手続きに関するメタ的な研究であり、社会的課題そのものへの言及は薄く11名の参加者による小規模検証にとどまる。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "C3-028", "title": "A Transdisciplinary Approach to Reducing Transportation Costs and Enhancing Production Planning in Industrial Chemical Services", "authors": "Ricardo Rodriguez Ramirez, Adrian Ramirez-Nafarrate, Agustin Perez-Araos", "year": 2025, "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)", "G": 2, "C": 3, "I": 4, "TE": 3.0, "M": 3, "V": 4, "domain": "Practice", "theme": "Other", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "方針管理(Hoshin Kanri)・プロジェクトマネジメント・時系列分析・管理図といった複数の方法論を体系的に統合して実企業の輸送コスト20-25%削減という定量的成果を実データで実証している点で統合深度・実証水準は高いが、課題自体は一企業の業務改善であり社会的関連性は限定的。", "authorSpan": 2, "methodSpan": 3, "objectiveSpan": 2, "DSI": 2.33, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C3-029", "title": "A Transdisciplinary Framework for Handling Disruptions in Vehicle Routing with Customer Time Windows", "authors": "Max Otto Berth, Federico Trigos", "year": 2025, "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 4, "V": 3, "domain": "Practice", "theme": "Sustainability/Resilience", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "車両配送計画の混乱対応に経営学と工学の複数分野のステークホルダーを組み込んだ新規フレームワークを提案し、カーボンフットプリントというサステナビリティへの含意にも触れているが、実証は単一の産業ケーススタディにとどまる。", "authorSpan": 2, "methodSpan": 3, "objectiveSpan": 2, "DSI": 2.33, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business", "Data Science / CS"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C3-030", "title": "A Systematic Framework for Measuring Team Performance and Group Decision-Making: Pitfalls, Solutions, and Transdisciplinary Insights", "authors": "Ignacio Vazquez, Hüseyin Akdogan, Marc-Olivier del Grosso, Natalia Zwarts", "year": 2025, "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)", "G": 2, "C": 4, "I": 4, "TE": 3.3, "M": 4, "V": 3, "domain": "Research", "theme": "Other", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "認知科学的測定・統計的手法・メタ分析を体系的に統合したチームパフォーマンス評価フレームワークを提案し2件の実験データで検証しているが、課題設定自体はチーム運営という組織内の技術的問題であり社会的関連性は薄い。", "authorSpan": 1, "methodSpan": 3, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Humanities", "Data Science / CS"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C3-031", "title": "Addressing Challenges of Teamworking and Communication Skills in International Transdisciplinary Projects Contexts", "authors": "Mauryn C. Nweke, Lillian Luk, Irina Lazar, Chen Ye", "year": 2025, "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)", "G": 2, "C": 4, "I": 2, "TE": 2.7, "M": 2, "V": 1, "domain": "Education", "theme": "Education", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "英中の国際教育連携における文化差・言語コミュニケーションという教育上の課題を扱い工学教育と異文化理解の連携は見られるが、比較・観察的な考察が中心で統合手法は明確でなく、今後の手法開発は将来課題として述べられるにとどまる。", "authorSpan": 2, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "C3-032", "title": "Managing Interfaces in Wicked Problems: A Transdisciplinary Engineering Calling", "authors": "Gary Linnéusson, Ainhoa Goienetxea, Magnus Fredricson", "year": 2025, "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)", "G": 5, "C": 4, "I": 4, "TE": 4.3, "M": 4, "V": 3, "domain": "Research", "theme": "Systems Engineering", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "グローバルな移行課題という明示的なwicked problemを扱い、より良い社会の共創を目標に掲げている点でGoalが最高水準。医療システムとエネルギー移行という異なる領域の事例を横断して関係的インターフェースという統合概念を適用しているが、それぞれ簡潔な事例紹介にとどまる。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 3, "DSI": 2.33, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science", "Medicine / Health"]}, {"id": "C3-033", "title": "Supporting Early-Career Researchers: Strategies in Transdisciplinary Project Design", "authors": "Susan Lattanzio, Annali Bamber-Jones, Yee Mey Goh, Linda Newnes", "year": 2025, "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)", "G": 2, "C": 4, "I": 2, "TE": 2.7, "M": 3, "V": 3, "domain": "Research", "theme": "Other", "pairing": "Engineering×Management", "pdf": "full_text", "rationale": "工学主導の500万ドル規模のTD研究センターにおける若手研究者支援策をフォーカスグループで検証した事例研究であり、産学連携の組織運営に関する知見を提供するが、対象課題は研究組織のマネジメント問題であり方法論の統合というより組織的施策の記述が中心。", "authorSpan": 2, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Social Science"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "C3-034", "title": "Transformative Outcomes, Engineering Policy and Engineering Education: Strengthening the Impact of TE on Socially-Relevant Problems", "authors": "Adam Cooper, Bipashyee Ghosh, Irina Lazar", "year": 2025, "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)", "G": 5, "C": 4, "I": 3, "TE": 4.0, "M": 2, "V": 1, "domain": "Research", "theme": "Other", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "環境サステナビリティと社会正義という明示的なwicked problemに対しエンジニアリングの再構成を論じ、イノベーション研究由来のTransformative Outcomes Frameworkを政策・教育の文脈に適用しているが、既存フレームワークの適用可能性を探る概念的議論であり実証データは伴わない。", "authorSpan": 2, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "J-001", "title": "Transdisciplinary systems engineering: implications, challenges and research agenda", "authors": "Nel Wognum, Cees Bil, Fredrik Elgh, Margherita Peruzzini, Josip Stjepandić, Wim J.C. Verhagen", "year": 2019, "venue": "International Journal of Agile Systems and Management, Vol. 12, No. 1, pp. 58-89", "G": 5, "C": 4, "I": 3, "TE": 4.0, "M": 4, "V": 1, "domain": "Multiple", "theme": "Systems Engineering", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "ill-defined・社会関連性の高い課題解決を目指す越境的プロセスとしてTEを明示的に定義し、研究・実務・教育の3領域とIndustry 4.0・工学教育にわたる協働の必要性を包括的にレビューしている。ただし文献レビュー・研究アジェンダの提示にとどまり実証は伴わない。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "J-002", "title": "Concepts of transdisciplinary engineering: a transdisciplinary landscape", "authors": "S. Lattanzio, A. Nassehi, G. Parry, L.B. Newnes", "year": 2021, "venue": "International Journal of Agile Systems and Management, Vol. 14, No. 2, pp. 292-312", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 4, "V": 2, "domain": "Research", "theme": "Other", "pairing": "Other", "pdf": "abstract_only", "rationale": "TEの定義そのものをTE2020会議参加者34名への調査で明らかにするメタ研究であり、対象は工学研究者コミュニティに限定され実際のwicked problemへの取り組みではないが、goal/collaboration/integrationの3軸による新たなランドスケープ・マッピング枠組みを提案している。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering"]}, {"id": "J-003", "title": "Transdisciplinarity within the academic engineering literature", "authors": "S. Lattanzio, E. Carey, A. Hultin, R. Imani Asrai, M. McManus, N. Mogles, G. Parry, L.B. Newnes", "year": 2020, "venue": "International Journal of Agile Systems and Management, Vol. 13, No. 2, pp. 213-232", "G": 2, "C": 2, "I": 2, "TE": 2.0, "M": 3, "V": 3, "domain": "Research", "theme": "Other", "pairing": "Other", "pdf": "abstract_only", "rationale": "工学分野のTD文献を一般のTD文献とベンチマークするビブリオメトリクス・テキスト分析であり、実際の分野横断協働や方法論統合は行われず、既存の書誌分析手法をTE文献という新たな対象コーパスに適用したにとどまる。", "authorSpan": 2, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Data Science / CS"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "J-004", "title": "Practicing Transdisciplinary Engineering in a Global Development Context: The Transferring, Translating and Transforming Approaches", "authors": "John Bang Mathiasen, Rasmus Munksgaard Mathiasen", "year": 2017, "venue": "Journal of Industrial Integration and Management, Vol. 2, No. 4, 1750017", "G": 4, "C": 3, "I": 4, "TE": 3.7, "M": 4, "V": 4, "domain": "Practice", "theme": "Other", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "デンマーク本社と海外拠点間のグローバル開発における知識移転という産業的に重要な課題を扱い、実践知理論と工学実務を統合したtransferring/translating/transformingという新アプローチを、成功・失敗を含む6件の実プロジェクトで検証している。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 2, "DSI": 2.0, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Social Science", "Management / Business"], "objectiveDisc": ["Engineering", "Management / Business"]}, {"id": "J-005", "title": "Modeling of transdisciplinary engineering assets using the design platform approach for improved customization ability", "authors": "Samuel André, Fredrik Elgh", "year": 2018, "venue": "Advanced Engineering Informatics, Vol. 38, pp. 277-290", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 3, "V": 2, "domain": "Research", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Engineering", "pdf": "full_text", "rationale": "OESのカスタマイズ性向上という技術的な設計プラットフォーム課題が中心で社会的関連性への言及は乏しく、工学内の複数専門知識を設計プラットフォームへ体系的にモデル化する手法を提示しているが検証範囲は限定的とみられる。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering"]}, {"id": "J-006", "title": "How to manage and balance uncertainty by transdisciplinary engineering methods focusing on digital transformations of complex systems", "authors": "Amy J.C. Trappey, Fan Li, Ching-Hung Lee, John P.T. Mo, Josip Stjepandić, Jianxin Jiao", "year": 2024, "venue": "Advanced Engineering Informatics, Vol. 59, 102330", "G": 3, "C": 3, "I": 3, "TE": 3.0, "M": 3, "V": 2, "domain": "Research", "theme": "Digital Twin", "pairing": "Engineering×Data Science", "pdf": "abstract_only", "rationale": "アブストラクトが空欄のためタイトルのみから判断（信頼度低）。複雑システムのデジタル変革に伴う不確実性管理へのTE的手法という産業的課題設定は読み取れるが、協働の幅や検証内容の詳細は不明。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Data Science / CS"], "objectiveDisc": ["Engineering"]}, {"id": "J-007", "title": "Transdisciplinary systems approach to realization of digital transformation", "authors": "Muhammad Adnan Hashmi, John P.T. Mo, Ronald C. Beckett", "year": 2021, "venue": "Advanced Engineering Informatics, Vol. 49, 101316", "G": 4, "C": 4, "I": 4, "TE": 4.0, "M": 4, "V": 3, "domain": "Multiple", "theme": "Industry 4.0", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "Industry 4.0移行に伴う社会・技術・コミュニケーション課題という複数ステークホルダーに関わる産業的問いを扱い、system of systemsモデルとTDシステム設計を統合した新フレームワークをEducation 4.0とRetail 4.0の2事例で例証している。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 3, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Management / Business", "Social Science"]}, {"id": "J-008", "title": "Transdisciplinary Engineering Education and Research Model", "authors": "A. Ertas, M.M. Tanik, T.T. Maxwell", "year": 2000, "venue": "Journal of Integrated Design and Process Science, Vol. 4, No. 4, pp. 1-11", "G": 2, "C": 3, "I": 2, "TE": 2.3, "M": 1, "V": 1, "domain": "Multiple", "theme": "Education", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "科学・工学・経営を融合した新しいTE概念を提唱するビジョナリーな論説であり、具体的な問題設定・統合手法・検証は示されず、方法論的貢献・実証水準ともに極めて低い。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 3, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Natural Science", "Management / Business"]}, {"id": "J-009", "title": "A transdisciplinary engineering framework for analysing initial public offerings' financial behaviour", "authors": "Carlos Mario Aldana, Federico Trigos", "year": 2025, "venue": "International Journal of Agile Systems and Management, Vol. 18, No. 1, pp. 112-132", "G": 3, "C": 4, "I": 4, "TE": 3.7, "M": 4, "V": 3, "domain": "Research", "theme": "Other", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "IPOの不確実性という産業的意思決定課題に対し、工学の制御理論と行動ファイナンスを統合した意思決定支援フレームワークを新たに提案し、実際のIPO2件で例証している点で統合深度・方法論的貢献ともに高い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.67, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Management / Business"], "objectiveDisc": ["Management / Business"]}, {"id": "J-010", "title": "Transdisciplinary engineering development and integrated water management: an Australian case example", "authors": "Ronald C. Beckett, John P.T. Mo", "year": 2026, "venue": "International Journal of Agile Systems and Management, Vol. 19, No. 1, pp. 106-133", "G": 5, "C": 5, "I": 4, "TE": 4.7, "M": 4, "V": 4, "domain": "Practice", "theme": "Sustainability/Resilience", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "水資源管理と気候変動レジリエンスという明示的なwicked problemを扱い、社会集団・行政・産業・物理/生態/社会科学者という多様なステークホルダーの共創プロセスを、豪州における長期縦断ケーススタディの実データで実証している。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 3, "DSI": 2.33, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science", "Natural Science"]}, {"id": "J-011", "title": "A Framework for Transdisciplinary Engineering Research: Integrating Interactive Research and Design Methodologies", "authors": "Kristina Säfsten, Fredrik Elgh, Gary Linnéusson, Roland Stolt, Paraskeva Wlazlak", "year": 2025, "venue": "Journal of Integrated Design and Process Science, Vol. 28, No. 4", "G": 2, "C": 4, "I": 4, "TE": 3.3, "M": 4, "V": 3, "domain": "Research", "theme": "Design Methodology", "pairing": "Engineering×Management", "pdf": "abstract_only", "rationale": "TE研究プロセスそのものを対象化するメタ的な研究方法論論文で、産学連携による大規模4年プロジェクトで実装され協働・統合の水準は高いが、扱う対象自体は社会的wicked problemではなく研究プロセス設計であるためgoal特性は控えめ。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 1, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering"]}, {"id": "J-012", "title": "Systems Engineering Transformation: Transdisciplinary Endeavor", "authors": "LynnDee Ford, Atila Ertas", "year": 2024, "venue": "Transdisciplinary Journal of Engineering & Science, Vol. 15", "G": 4, "C": 2, "I": 3, "TE": 3.0, "M": 3, "V": 2, "domain": "Practice", "theme": "Systems Engineering", "pairing": "Engineering×Engineering", "pdf": "abstract_only", "rationale": "地政学的な安全保障上の脅威という社会的重要性の高い課題を背景とするが、協働は主にシステムズエンジニアリング分野内にとどまり、国際顧客向け提案手法の開発という工学内的な貢献にとどまる。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "J-013", "title": "Revolutionizing Prosthetics: Extreme Transdisciplinary Systems Engineering", "authors": "Jim Burck, John Bigelow", "year": 2010, "venue": "INSIGHT, Vol. 13, No. 4, pp. 25-28", "G": 4, "C": 5, "I": 4, "TE": 4.3, "M": 2, "V": 2, "domain": "Practice", "theme": "Other", "pairing": "Other", "pdf": "abstract_only", "rationale": "アブストラクトが空欄のためタイトル（義肢工学の革新、Extreme Transdisciplinary Systems Engineering）とINSIGHT誌（実務者向け）の文脈から推測（信頼度低）。医療・神経科学・工学を横断する極めて広い協働が示唆されるが、具体的方法論・検証内容は短い実務誌記事のため限定的と推定。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Medicine / Health"]}, {"id": "J-014", "title": "Transdisciplinary System Engineering: Exploiting Convergence in a Hyper-Connected World", "authors": "William Miller", "year": 2019, "venue": "INSIGHT, Vol. 22, No. 2, pp. 77-78", "G": 2, "C": 2, "I": 2, "TE": 2.0, "M": 1, "V": 1, "domain": "Research", "theme": "Other", "pairing": "Other", "pdf": "abstract_only", "rationale": "アブストラクトが空欄で本文もごく短い（2頁）ため詳細不明（信頼度低）。タイトルから「ハイパーコネクテッドな世界での収斂」を論じる短い論説と推測され、具体的な統合手法や検証は含まれないと考えられる。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering"]}, {"id": "J-015", "title": "Toward Transdisciplinary Engineering Implications and Significance in ACS ES&T Engineering", "authors": "Nancy G. Love", "year": 2023, "venue": "ACS ES&T Engineering, Vol. 3, No. 3, pp. 306-307", "G": 3, "C": 2, "I": 1, "TE": 2.0, "M": 1, "V": 1, "domain": "Research", "theme": "Sustainability/Resilience", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "アブストラクトが空欄の環境科学・工学誌の巻頭言（信頼度低）。TEの意義を論じる短い論説と推測され、環境・社会的関連性は想定されるが具体的な統合や検証は含まれないと考えられる。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 2, "DSI": 1.33, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering", "Natural Science"]}, {"id": "J-016", "title": "Exploring Maker Innovation: A Transdisciplinary Engineering Design Perspective", "authors": "Wei Liu, Yancong Zhu, Min Liu, Yanru Li", "year": 2021, "venue": "Sustainability, Vol. 14, No. 1, 295", "G": 4, "C": 4, "I": 3, "TE": 3.7, "M": 2, "V": 3, "domain": "Education", "theme": "Social Innovation", "pairing": "Engineering×Social Science", "pdf": "abstract_only", "rationale": "メイカームーブメントを通じてコミュニティ開発・教育・環境保護等の社会的課題に取り組み、学生メイカー500名超との5年間にわたる産学・国際教育連携を示すが、提示される設計事例は今後さらなる反復が必要とされており方法論の成熟度はやや低い。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 3, "DSI": 2.33, "authorDisc": ["Engineering", "Social Science"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science", "Medicine / Health"]}, {"id": "J-017", "title": "Editorial: Transdisciplinary engineering for sustainability decisions", "authors": "Adam C. G. Cooper, Bryan Moser, Susan Krumdieck", "year": 2026, "venue": "Frontiers in Sustainability, Vol. 7", "G": 5, "C": 4, "I": 2, "TE": 3.7, "M": 1, "V": 1, "domain": "Multiple", "theme": "Sustainability/Resilience", "pairing": "Engineering×Social Science", "pdf": "full_text", "rationale": "持続可能性に関する意思決定という社会・環境・経済に関わる課題群（石油企業の事業転換、家畜排出、電子廃棄物、高齢化モビリティ、政策等）を広く扱うが、6論文を紹介する巻頭言であり、統合や実証は論説自体では行われていない。", "authorSpan": 2, "methodSpan": 3, "objectiveSpan": 3, "DSI": 2.67, "authorDisc": ["Engineering", "Management / Business"], "methodDisc": ["Engineering", "Social Science", "Management / Business"], "objectiveDisc": ["Engineering", "Social Science", "Management / Business"]}, {"id": "J-018", "title": "Transdisciplinary model-based systems engineering in the development of the Ruminant Farm Systems model", "authors": "Haowen Hu, Clifford A. Whitcomb, Thomas E. Ploetz, Kristan F. Reed", "year": 2025, "venue": "Frontiers in Sustainability, Vol. 6", "G": 4, "C": 3, "I": 4, "TE": 3.7, "M": 4, "V": 3, "domain": "Research", "theme": "Sustainability/Resilience", "pairing": "Other", "pdf": "full_text", "rationale": "畜産システムの温室効果ガス排出という環境・持続可能性課題に対し、MBSEプラットフォームを用いてステークホルダー要求・システム境界・サブシステムを体系的に統合し、複数のマニュア管理シナリオの実データで検証している先駆的な適用事例。", "authorSpan": 2, "methodSpan": 2, "objectiveSpan": 3, "DSI": 2.33, "authorDisc": ["Engineering", "Natural Science"], "methodDisc": ["Engineering", "Natural Science"], "objectiveDisc": ["Engineering", "Natural Science", "Management / Business"]}, {"id": "J-019", "title": "Exploring Transdisciplinarity in Systems Engineering to Develop Transdisciplinary Integration Capability and Process Meta-Level Conceptual Models", "authors": "Ali Asghar Bataleblu, John Arthur Poirier, Julia Taylor", "year": 2026, "venue": "Systems, Vol. 14, No. 5", "G": 4, "C": 3, "I": 4, "TE": 3.7, "M": 5, "V": 4, "domain": "Research", "theme": "Systems Engineering", "pairing": "Engineering×Engineering", "pdf": "abstract_only", "rationale": "複雑な問題解決のための形式化されたTransdisciplinary Integrationプロセスの欠如という課題に対し、TDI能力モデル・プロセスモデル・Disciplinarity Indexという新規モデル群を提案し、4つの社会技術的問題領域に適用して検証しており、方法論的貢献・統合深度ともに高い。", "authorSpan": 1, "methodSpan": 2, "objectiveSpan": 2, "DSI": 1.67, "authorDisc": ["Engineering"], "methodDisc": ["Engineering", "Social Science"], "objectiveDisc": ["Engineering", "Social Science"]}, {"id": "J-020", "title": "The Transdisciplinary Product Development Lifecycle model", "authors": "Bulent Gumus, Atila Ertas, Derrick Tate, Ismail Cicek", "year": 2008, "venue": "Journal of Engineering Design, Vol. 19, No. 3, pp. 185-200", "G": 2, "C": 2, "I": 3, "TE": 2.3, "M": 4, "V": 1, "domain": "Research", "theme": "Product Lifecycle/PLM", "pairing": "Engineering×Engineering", "pdf": "abstract_only", "rationale": "公理的設計を製品開発ライフサイクル全体に拡張する技術的な新モデルの提案であり、社会的関連性やステークホルダーの多様性への言及は乏しく、実証（ケーススタディ等）も明示されていない。", "authorSpan": 1, "methodSpan": 1, "objectiveSpan": 1, "DSI": 1.0, "authorDisc": ["Engineering"], "methodDisc": ["Engineering"], "objectiveDisc": ["Engineering"]}], "themeOrder": ["Design Methodology", "Other", "Industry 4.0", "Sustainability/Resilience", "Product Lifecycle/PLM", "Systems Engineering", "Education", "Social Innovation", "Digital Twin"], "themeCounts": {"Other": 19, "Design Methodology": 25, "Product Lifecycle/PLM": 12, "Systems Engineering": 12, "Industry 4.0": 15, "Social Innovation": 8, "Education": 11, "Sustainability/Resilience": 15, "Digital Twin": 5}, "yearAvg": [{"year": 2016, "avg": 2.75, "n": 11}, {"year": 2017, "avg": 2.72, "n": 12}, {"year": 2018, "avg": 2.89, "n": 12}, {"year": 2019, "avg": 3.19, "n": 14}, {"year": 2020, "avg": 2.68, "n": 13}, {"year": 2021, "avg": 3.16, "n": 14}, {"year": 2022, "avg": 3.08, "n": 8}, {"year": 2023, "avg": 2.99, "n": 9}, {"year": 2024, "avg": 3.21, "n": 11}, {"year": 2025, "avg": 3.23, "n": 12}], "stats": {"total": 122, "avg_te": 3.01, "full_text": 79, "year_min": 2000, "year_max": 2026}, "domainCounts": {"Practice": 34, "Research": 67, "Multiple": 14, "Education": 7}};
+
+const DOMAIN_COLOR = {
+  "Research": "var(--series-research)",
+  "Practice": "var(--series-practice)",
+  "Multiple": "var(--series-multiple)",
+  "Education": "var(--series-education)"
+};
+const DOMAIN_ORDER = ["Research","Practice","Multiple","Education"];
+
+let state = { domain: "ALL", search: "", sortKey: "TE", sortDir: -1, expandedId: null };
+
+function hashJitter(id, seed) {
+  let h = 0;
+  const s = id + seed;
+  for (let i = 0; i < s.length; i++) { h = (h * 31 + s.charCodeAt(i)) >>> 0; }
+  return ((h % 1000) / 1000 - 0.5) * 0.56; // -0.28..0.28
+}
+
+function filteredPapers() {
+  return PAYLOAD.papers.filter(p => {
+    if (state.domain !== "ALL" && p.domain !== state.domain) return false;
+    if (state.search) {
+      const s = state.search.toLowerCase();
+      if (!p.title.toLowerCase().includes(s) && !p.authors.toLowerCase().includes(s)) return false;
+    }
+    return true;
+  });
+}
+
+function renderStats() {
+  const rows = filteredPapers();
+  const avg = rows.length ? (rows.reduce((a,r)=>a+r.TE,0)/rows.length) : 0;
+  const ft = rows.filter(r=>r.pdf==="full_text").length;
+  const el = document.getElementById("statRow");
+  el.innerHTML = "";
+  const tiles = [
+    ["Papers shown", rows.length, `out of ${PAYLOAD.stats.total} total`],
+    ["Avg TE-Index", avg.toFixed(2), "Average of G, C, I (max 5)"],
+    ["Full-text PDF", ft, `${Math.round(ft/Math.max(rows.length,1)*100)}% of shown`],
+    ["Year range", `${PAYLOAD.stats.year_min}–${PAYLOAD.stats.year_max}`, "ISTE/ISPE TE conference + journals"]
+  ];
+  for (const [label, value, sub] of tiles) {
+    const d = document.createElement("div");
+    d.className = "stat-tile";
+    d.innerHTML = `<div class="label">${label}</div><div class="value">${value}</div><div class="sub">${sub}</div>`;
+    el.appendChild(d);
+  }
+}
+
+function renderFilters() {
+  const el = document.getElementById("filterRow");
+  el.querySelectorAll(".fbtn").forEach(b=>b.remove());
+  const opts = [["ALL","All"], ...DOMAIN_ORDER.map(d=>[d,d])];
+  for (const [key,label] of opts) {
+    const b = document.createElement("button");
+    b.className = "fbtn";
+    b.textContent = label + (key!=="ALL" ? ` (${PAYLOAD.domainCounts[key]||0})` : ` (${PAYLOAD.stats.total})`);
+    b.dataset.active = state.domain === key ? "1" : "0";
+    b.addEventListener("click", () => { state.domain = key; renderAll(); });
+    el.appendChild(b);
+  }
+}
+
+const tooltip = document.getElementById("tooltip");
+function showTooltip(evt, p) {
+  tooltip.innerHTML = `
+    <div class="tt-title"></div>
+    <div class="tt-meta"></div>
+    <div class="tt-scores">G ${p.G} · C ${p.C} · I ${p.I} · TE-Index <strong>${p.TE.toFixed(1)}</strong> · M ${p.M} · V ${p.V}</div>
+  `;
+  tooltip.querySelector(".tt-title").textContent = p.title;
+  tooltip.querySelector(".tt-meta").textContent = `${p.authors} (${p.year}) — ${p.venue}`;
+  tooltip.style.opacity = "1";
+  moveTooltip(evt);
+}
+function moveTooltip(evt) {
+  const x = evt.clientX, y = evt.clientY;
+  const vw = window.innerWidth;
+  tooltip.style.left = (x + 16 > vw - 300 ? x - 316 : x + 14) + "px";
+  tooltip.style.top = (y + 14) + "px";
+}
+function hideTooltip() { tooltip.style.opacity = "0"; }
+
+function renderScatter() {
+  const svg = document.getElementById("scatterSvg");
+  svg.innerHTML = "";
+  const rows = filteredPapers();
+  const W = 720, H = 480, PAD_L = 46, PAD_B = 40, PAD_T = 16, PAD_R = 16;
+  const plotW = W - PAD_L - PAD_R, plotH = H - PAD_T - PAD_B;
+  const xScale = v => PAD_L + ((v - 0.5) / 5) * plotW;
+  const yScale = v => PAD_T + plotH - ((v - 0.5) / 5) * plotH;
+
+  const ns = "http://www.w3.org/2000/svg";
+  const g = document.createElementNS(ns, "g");
+
+  for (let v = 1; v <= 5; v++) {
+    const gl = document.createElementNS(ns, "line");
+    gl.setAttribute("x1", xScale(v)); gl.setAttribute("x2", xScale(v));
+    gl.setAttribute("y1", PAD_T); gl.setAttribute("y2", PAD_T + plotH);
+    gl.setAttribute("class", "gridline");
+    g.appendChild(gl);
+    const hl = document.createElementNS(ns, "line");
+    hl.setAttribute("y1", yScale(v)); hl.setAttribute("y2", yScale(v));
+    hl.setAttribute("x1", PAD_L); hl.setAttribute("x2", PAD_L + plotW);
+    hl.setAttribute("class", "gridline");
+    g.appendChild(hl);
+    const xt = document.createElementNS(ns, "text");
+    xt.setAttribute("x", xScale(v)); xt.setAttribute("y", PAD_T + plotH + 18);
+    xt.setAttribute("text-anchor", "middle"); xt.textContent = v;
+    g.appendChild(xt);
+    const yt = document.createElementNS(ns, "text");
+    yt.setAttribute("x", PAD_L - 10); yt.setAttribute("y", yScale(v) + 4);
+    yt.setAttribute("text-anchor", "end"); yt.textContent = v;
+    g.appendChild(yt);
+  }
+  const xAxisTitle = document.createElementNS(ns, "text");
+  xAxisTitle.setAttribute("x", PAD_L + plotW/2); xAxisTitle.setAttribute("y", H - 4);
+  xAxisTitle.setAttribute("text-anchor", "middle"); xAxisTitle.setAttribute("class","axis-title");
+  xAxisTitle.textContent = "Integration Depth →";
+  g.appendChild(xAxisTitle);
+  const yAxisTitle = document.createElementNS(ns, "text");
+  yAxisTitle.setAttribute("x", -(PAD_T + plotH/2)); yAxisTitle.setAttribute("y", 14);
+  yAxisTitle.setAttribute("text-anchor", "middle"); yAxisTitle.setAttribute("class","axis-title");
+  yAxisTitle.setAttribute("transform", "rotate(-90)");
+  yAxisTitle.textContent = "Collaboration Breadth →";
+  g.appendChild(yAxisTitle);
+
+  const baseX = document.createElementNS(ns, "line");
+  baseX.setAttribute("x1", PAD_L); baseX.setAttribute("x2", PAD_L + plotW);
+  baseX.setAttribute("y1", PAD_T + plotH); baseX.setAttribute("y2", PAD_T + plotH);
+  baseX.setAttribute("class", "baseline");
+  g.appendChild(baseX);
+  const baseY = document.createElementNS(ns, "line");
+  baseY.setAttribute("x1", PAD_L); baseY.setAttribute("x2", PAD_L);
+  baseY.setAttribute("y1", PAD_T); baseY.setAttribute("y2", PAD_T + plotH);
+  baseY.setAttribute("class", "baseline");
+  g.appendChild(baseY);
+
+  for (const p of rows) {
+    const jx = hashJitter(p.id, "x"), jy = hashJitter(p.id, "y");
+    const cx = xScale(p.I + jx), cy = yScale(p.C + jy);
+    const r = 5 + (p.TE - 1) * 2.2;
+    const color = DOMAIN_COLOR[p.domain] || "var(--text-muted)";
+
+    const hit = document.createElementNS(ns, "circle");
+    hit.setAttribute("cx", cx); hit.setAttribute("cy", cy); hit.setAttribute("r", Math.max(r, 12));
+    hit.setAttribute("fill", "transparent");
+    hit.style.cursor = "pointer";
+    hit.addEventListener("mouseenter", (e) => { showTooltip(e, p); dot.setAttribute("stroke-width","3"); });
+    hit.addEventListener("mousemove", moveTooltip);
+    hit.addEventListener("mouseleave", () => { hideTooltip(); dot.setAttribute("stroke-width","2"); });
+    hit.addEventListener("click", () => { state.expandedId = p.id; renderTable(); document.getElementById(p.id)?.scrollIntoView({behavior:"smooth", block:"center"}); });
+
+    const dot = document.createElementNS(ns, "circle");
+    dot.setAttribute("cx", cx); dot.setAttribute("cy", cy); dot.setAttribute("r", r);
+    dot.setAttribute("fill", color);
+    dot.setAttribute("fill-opacity", "0.68");
+    dot.setAttribute("stroke", "var(--surface-1)");
+    dot.setAttribute("stroke-width", "2");
+
+    g.appendChild(dot);
+    g.appendChild(hit);
+  }
+  svg.appendChild(g);
+
+  const legend = document.getElementById("scatterLegend");
+  legend.innerHTML = "";
+  for (const d of DOMAIN_ORDER) {
+    const item = document.createElement("div");
+    item.className = "legend-item";
+    item.innerHTML = `<span class="legend-swatch" style="background:${DOMAIN_COLOR[d]}"></span>${d} (${PAYLOAD.domainCounts[d]||0})`;
+    legend.appendChild(item);
+  }
+}
+
+function renderBar() {
+  const svg = document.getElementById("barSvg");
+  svg.innerHTML = "";
+  const rows = filteredPapers();
+  const counts = {};
+  for (const t of PAYLOAD.themeOrder) counts[t] = 0;
+  for (const r of rows) counts[r.theme] = (counts[r.theme]||0) + 1;
+  const order = [...PAYLOAD.themeOrder].sort((a,b)=>counts[b]-counts[a]);
+  const max = Math.max(1, ...order.map(t=>counts[t]));
+
+  const W = 560, H = 340, PAD_L = 150, PAD_R = 40, PAD_T = 10, barH = 22, gap = 8;
+  const plotW = W - PAD_L - PAD_R;
+  const ns = "http://www.w3.org/2000/svg";
+  const g = document.createElementNS(ns, "g");
+
+  order.forEach((t, i) => {
+    const y = PAD_T + i * (barH + gap);
+    const w = (counts[t]/max) * plotW;
+    const label = document.createElementNS(ns, "text");
+    label.setAttribute("x", PAD_L - 8); label.setAttribute("y", y + barH*0.68);
+    label.setAttribute("text-anchor", "end");
+    label.textContent = t;
+    g.appendChild(label);
+
+    const rect = document.createElementNS(ns, "rect");
+    rect.setAttribute("x", PAD_L); rect.setAttribute("y", y);
+    rect.setAttribute("width", Math.max(w,1)); rect.setAttribute("height", barH);
+    rect.setAttribute("rx", 4);
+    rect.setAttribute("fill", "var(--seq-450)");
+    g.appendChild(rect);
+
+    const val = document.createElementNS(ns, "text");
+    val.setAttribute("x", PAD_L + w + 8); val.setAttribute("y", y + barH*0.68);
+    val.setAttribute("fill", "var(--text-primary)");
+    val.textContent = counts[t];
+    g.appendChild(val);
+  });
+  svg.setAttribute("viewBox", `0 0 ${W} ${Math.max(H, PAD_T + order.length*(barH+gap)+10)}`);
+  svg.appendChild(g);
+}
+
+function renderLine() {
+  const svg = document.getElementById("lineSvg");
+  svg.innerHTML = "";
+  const domainFilter = state.domain;
+  let years;
+  if (domainFilter === "ALL" && !state.search) {
+    years = PAYLOAD.yearAvg;
+  } else {
+    const rows = filteredPapers().filter(r => r.year >= 2016 && r.year <= 2025);
+    const byYear = {};
+    rows.forEach(r => { (byYear[r.year] = byYear[r.year] || []).push(r.TE); });
+    years = Object.keys(byYear).map(Number).sort((a,b)=>a-b).map(y => ({year:y, avg: byYear[y].reduce((a,b)=>a+b,0)/byYear[y].length, n: byYear[y].length}));
+  }
+  if (years.length === 0) { svg.innerHTML = '<text x="20" y="20">No data</text>'; return; }
+
+  const W = 480, H = 340, PAD_L = 40, PAD_R = 20, PAD_T = 16, PAD_B = 34;
+  const plotW = W - PAD_L - PAD_R, plotH = H - PAD_T - PAD_B;
+  const yMin = 1, yMax = 5;
+  const xScale = (i) => PAD_L + (i/(Math.max(years.length-1,1))) * plotW;
+  const yScale = (v) => PAD_T + plotH - ((v - yMin)/(yMax-yMin)) * plotH;
+  const ns = "http://www.w3.org/2000/svg";
+  const g = document.createElementNS(ns, "g");
+
+  [1,2,3,4,5].forEach(v => {
+    const hl = document.createElementNS(ns, "line");
+    hl.setAttribute("x1", PAD_L); hl.setAttribute("x2", PAD_L+plotW);
+    hl.setAttribute("y1", yScale(v)); hl.setAttribute("y2", yScale(v));
+    hl.setAttribute("class","gridline");
+    g.appendChild(hl);
+    const yt = document.createElementNS(ns, "text");
+    yt.setAttribute("x", PAD_L-8); yt.setAttribute("y", yScale(v)+4);
+    yt.setAttribute("text-anchor","end"); yt.textContent = v;
+    g.appendChild(yt);
+  });
+
+  years.forEach((y,i) => {
+    const xt = document.createElementNS(ns, "text");
+    xt.setAttribute("x", xScale(i)); xt.setAttribute("y", PAD_T+plotH+18);
+    xt.setAttribute("text-anchor","middle"); xt.textContent = y.year;
+    g.appendChild(xt);
+  });
+
+  let d = "";
+  years.forEach((y,i) => { d += (i===0?"M":"L") + xScale(i) + "," + yScale(y.avg) + " "; });
+  const path = document.createElementNS(ns, "path");
+  path.setAttribute("d", d.trim());
+  path.setAttribute("fill", "none");
+  path.setAttribute("stroke", "var(--seq-450)");
+  path.setAttribute("stroke-width", "2");
+  path.setAttribute("stroke-linejoin", "round");
+  path.setAttribute("stroke-linecap", "round");
+  g.appendChild(path);
+
+  years.forEach((y,i) => {
+    const dot = document.createElementNS(ns, "circle");
+    dot.setAttribute("cx", xScale(i)); dot.setAttribute("cy", yScale(y.avg)); dot.setAttribute("r", 4);
+    dot.setAttribute("fill", "var(--seq-450)");
+    dot.setAttribute("stroke", "var(--surface-1)"); dot.setAttribute("stroke-width","2");
+    g.appendChild(dot);
+    if (i === years.length-1) {
+      const lbl = document.createElementNS(ns, "text");
+      lbl.setAttribute("x", xScale(i)); lbl.setAttribute("y", yScale(y.avg) - 10);
+      lbl.setAttribute("text-anchor","middle"); lbl.setAttribute("fill","var(--text-primary)");
+      lbl.textContent = y.avg.toFixed(2);
+      g.appendChild(lbl);
+    }
+  });
+
+  svg.appendChild(g);
+}
+
+function sortRows(rows) {
+  const k = state.sortKey, dir = state.sortDir;
+  return [...rows].sort((a,b) => {
+    let av = a[k], bv = b[k];
+    if (typeof av === "string") { av = av.toLowerCase(); bv = bv.toLowerCase(); }
+    if (av < bv) return -1*dir;
+    if (av > bv) return 1*dir;
+    return 0;
+  });
+}
+
+function renderTable() {
+  const tbody = document.getElementById("tableBody");
+  tbody.innerHTML = "";
+  const rows = sortRows(filteredPapers());
+  for (const p of rows) {
+    const tr = document.createElement("tr");
+    tr.id = p.id;
+    tr.innerHTML = `
+      <td class="num">${p.year}</td>
+      <td class="ttl"><div class="t-main"></div><div class="t-sub"></div></td>
+      <td><span class="pill"></span></td>
+      <td></td>
+      <td class="num">${p.G}</td>
+      <td class="num">${p.C}</td>
+      <td class="num">${p.I}</td>
+      <td class="num"><strong>${p.TE.toFixed(1)}</strong></td>
+      <td class="num">${p.authorSpan}</td>
+      <td class="num">${p.methodSpan}</td>
+      <td class="num">${p.objectiveSpan}</td>
+      <td>${p.pdf === "full_text" ? "PDF" : "abstract"}</td>
+    `;
+    tr.querySelector(".t-main").textContent = p.title;
+    tr.querySelector(".t-sub").textContent = p.authors + " — " + p.venue;
+    tr.querySelector(".pill").textContent = p.domain;
+    tr.children[3].textContent = p.theme;
+    tr.addEventListener("click", () => {
+      state.expandedId = state.expandedId === p.id ? null : p.id;
+      renderTable();
+    });
+    tbody.appendChild(tr);
+    if (state.expandedId === p.id) {
+      const dtr = document.createElement("tr");
+      dtr.className = "detail-row";
+      const td = document.createElement("td");
+      td.colSpan = 12;
+      const pairingText = document.createElement("div");
+      pairingText.textContent = `Pairing: ${p.pairing} / M (Methodological Contribution): ${p.M} / V (Validation Level): ${p.V} / DSI (Disciplinary Span Index): ${p.DSI.toFixed(2)}`;
+      const discText = document.createElement("div");
+      discText.textContent = `Author disciplines: ${p.authorDisc.join(", ")} / Method disciplines: ${p.methodDisc.join(", ")} / Objective disciplines: ${p.objectiveDisc.join(", ")}`;
+      const rationaleDiv = document.createElement("div");
+      rationaleDiv.className = "rationale";
+      rationaleDiv.textContent = "Scoring rationale (recorded in Japanese): " + p.rationale;
+      td.appendChild(pairingText);
+      td.appendChild(discText);
+      td.appendChild(rationaleDiv);
+      dtr.appendChild(td);
+      tbody.appendChild(dtr);
+    }
+  }
+}
+
+const DISC_TAXONOMY = ["Engineering","Natural Science","Social Science","Management / Business","Data Science / CS","Humanities","Medicine / Health","Other"];
+const ROLE_COLOR = { "Author": "var(--series-research)", "Method": "var(--series-practice)", "Objective": "var(--series-multiple)" };
+const ROLE_ORDER = ["Author","Method","Objective"];
+
+function renderDisciplineStats() {
+  const rows = filteredPapers();
+  const el = document.getElementById("dsiStatRow");
+  if (!el) return;
+  el.innerHTML = "";
+  const avg = (key) => rows.length ? (rows.reduce((a,r)=>a+r[key],0)/rows.length) : 0;
+  const tiles = [
+    ["Avg Author span", avg("authorSpan").toFixed(2), "Disciplines spanned by authorship (1+)"],
+    ["Avg Method span", avg("methodSpan").toFixed(2), "Disciplines spanned by method (1+)"],
+    ["Avg Objective span", avg("objectiveSpan").toFixed(2), "Disciplines spanned by objective (1+)"],
+    ["Avg DSI", avg("DSI").toFixed(2), "Disciplinary Span Index (mean of the 3 axes)"]
+  ];
+  for (const [label, value, sub] of tiles) {
+    const d = document.createElement("div");
+    d.className = "stat-tile";
+    d.innerHTML = `<div class="label">${label}</div><div class="value">${value}</div><div class="sub">${sub}</div>`;
+    el.appendChild(d);
+  }
+}
+
+function renderDisciplineBar() {
+  const svg = document.getElementById("discBarSvg");
+  if (!svg) return;
+  svg.innerHTML = "";
+  const rows = filteredPapers();
+  const counts = {};
+  for (const disc of DISC_TAXONOMY) counts[disc] = { Author: 0, Method: 0, Objective: 0 };
+  for (const p of rows) {
+    (p.authorDisc||[]).forEach(d => { if (counts[d]) counts[d].Author++; });
+    (p.methodDisc||[]).forEach(d => { if (counts[d]) counts[d].Method++; });
+    (p.objectiveDisc||[]).forEach(d => { if (counts[d]) counts[d].Objective++; });
+  }
+  const max = Math.max(1, ...DISC_TAXONOMY.flatMap(d => ROLE_ORDER.map(r => counts[d][r])));
+
+  const W = 640, PAD_L = 160, PAD_R = 44, PAD_T = 10;
+  const groupH = 58, barH = 14, barGap = 3;
+  const plotW = W - PAD_L - PAD_R;
+  const ns = "http://www.w3.org/2000/svg";
+  const g = document.createElementNS(ns, "g");
+
+  DISC_TAXONOMY.forEach((disc, i) => {
+    const gy = PAD_T + i * groupH;
+    const label = document.createElementNS(ns, "text");
+    label.setAttribute("x", PAD_L - 8); label.setAttribute("y", gy + groupH/2 + 4);
+    label.setAttribute("text-anchor", "end");
+    label.textContent = disc;
+    g.appendChild(label);
+
+    ROLE_ORDER.forEach((role, j) => {
+      const y = gy + j * (barH + barGap);
+      const val = counts[disc][role];
+      const w = (val / max) * plotW;
+      const rect = document.createElementNS(ns, "rect");
+      rect.setAttribute("x", PAD_L); rect.setAttribute("y", y);
+      rect.setAttribute("width", Math.max(w, val > 0 ? 1 : 0)); rect.setAttribute("height", barH);
+      rect.setAttribute("rx", 3);
+      rect.setAttribute("fill", ROLE_COLOR[role]);
+      rect.setAttribute("fill-opacity", "0.85");
+      g.appendChild(rect);
+      if (val > 0) {
+        const vt = document.createElementNS(ns, "text");
+        vt.setAttribute("x", PAD_L + w + 6); vt.setAttribute("y", y + barH - 3);
+        vt.setAttribute("fill", "var(--text-primary)");
+        vt.textContent = val;
+        g.appendChild(vt);
+      }
+    });
+  });
+  const totalH = PAD_T + DISC_TAXONOMY.length * groupH + 8;
+  svg.setAttribute("viewBox", `0 0 ${W} ${totalH}`);
+  svg.appendChild(g);
+
+  const legend = document.getElementById("discLegend");
+  if (legend) {
+    legend.innerHTML = "";
+    for (const role of ROLE_ORDER) {
+      const item = document.createElement("div");
+      item.className = "legend-item";
+      item.innerHTML = `<span class="legend-swatch" style="background:${ROLE_COLOR[role]}; border-radius:3px;"></span>${role}`;
+      legend.appendChild(item);
+    }
+  }
+}
+
+function renderAll() {
+  renderStats();
+  renderFilters();
+  renderScatter();
+  renderBar();
+  renderLine();
+  renderDisciplineStats();
+  renderDisciplineBar();
+  renderTable();
+}
+
+document.querySelectorAll("thead th").forEach(th => {
+  th.addEventListener("click", () => {
+    const key = th.dataset.key;
+    if (state.sortKey === key) { state.sortDir *= -1; } else { state.sortKey = key; state.sortDir = -1; }
+    renderTable();
+  });
+});
+document.getElementById("searchBox").addEventListener("input", (e) => {
+  state.search = e.target.value;
+  renderAll();
+});
+
+renderAll();
+</script>

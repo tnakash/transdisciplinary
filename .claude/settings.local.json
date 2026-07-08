@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:intsoctransde.org)",
+      "WebSearch",
+      "WebFetch(domain:www.te2024.org.uk)",
+      "WebFetch(domain:www.te2022.org)",
+      "WebFetch(domain:www.researchgate.net)",
+      "WebFetch(domain:www.inderscience.com)",
+      "WebFetch(domain:ebooks.iospress.nl)",
+      "Bash(curl -sL -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0 Safari/537.36\" \"https://www.inderscience.com/info/inarticle.php?artid=98728\" -o /private/tmp/claude-501/-Users-nakashima-transdisciplinary/0a0a4944-d06b-4729-b88e-8c1f43035ae1/scratchpad/test1.html -w \"%{http_code}\\\\n\")",
+      "Bash(curl -s \"https://api.crossref.org/works?query.bibliographic=transdisciplinary+engineering&filter=type:journal-article&rows=100&select=DOI,title,container-title,published-print,published-online\")",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}

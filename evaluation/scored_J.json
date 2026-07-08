@@ -1,0 +1,741 @@
+[
+  {
+    "id": "J-001",
+    "title": "Transdisciplinary systems engineering: implications, challenges and research agenda",
+    "authors": "Nel Wognum, Cees Bil, Fredrik Elgh, Margherita Peruzzini, Josip Stjepandić, Wim J.C. Verhagen",
+    "year": 2019,
+    "venue": "International Journal of Agile Systems and Management, Vol. 12, No. 1, pp. 58-89",
+    "keywords": "transdisciplinary systems; transdisciplinary processes; transdisciplinary engineering; transdisciplinary research; engineering education; project-based learning; Industry 4.0; transdisciplinary collaboration; social relevance",
+    "abstract": "Transdisciplinary processes have been the subject of research since several decades already. Transdisciplinary processes are aimed at solving ill-defined and socially relevant problems. Many researchers have studied transdisciplinary processes and have tried to understand the essentials of transdisciplinarity. Many engineering problems can be characterised as ill-defined and socially relevant, too. Although transdisciplinary engineering cannot widely be found in the literature yet, a transdisciplinary approach is deemed relevant for many engineering problems. With this paper we aim to present an overview of the literature on research into transdisciplinary processes and investigate the relevance of a transdisciplinary approach in engineering domains. After a brief description of past research on transdisciplinarity, implications for engineering research, engineering practice, and engineering education are identified. In all three areas, the current situation is described, while challenges are identified that still exist. The paper ends with a research agenda for transdisciplinary engineering.",
+    "source_url": "https://www.inderscienceonline.com/doi/abs/10.1504/IJASM.2019.098728",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 5,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 4.0,
+    "M": 4,
+    "V": 1,
+    "domain": "Multiple",
+    "theme": "Systems Engineering",
+    "pairing": "Engineering×Social Science",
+    "rationale": "ill-defined・社会関連性の高い課題解決を目指す越境的プロセスとしてTEを明示的に定義し、研究・実務・教育の3領域とIndustry 4.0・工学教育にわたる協働の必要性を包括的にレビューしている。ただし文献レビュー・研究アジェンダの提示にとどまり実証は伴わない。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "J-002",
+    "title": "Concepts of transdisciplinary engineering: a transdisciplinary landscape",
+    "authors": "S. Lattanzio, A. Nassehi, G. Parry, L.B. Newnes",
+    "year": 2021,
+    "venue": "International Journal of Agile Systems and Management, Vol. 14, No. 2, pp. 292-312",
+    "keywords": "transdisciplinary; transdisciplinary engineering; definitions; transdisciplinary engineering landscape",
+    "abstract": "The term 'transdisciplinary' is receiving increased attention within engineering academic and research funding communities. We survey authors of papers presented at the 27th ISTE International Transdisciplinary Engineering Conference (TE2020) to answer two research questions: 1) How do authors define transdisciplinary engineering? 2) What do authors perceive differentiates interdisciplinary engineering research from transdisciplinary engineering research? Responses from thirty-four participants (50%), are qualitatively analysed. Results show that for the three characteristics commonly used in characterisations of transdisciplinarity (goal, collaboration and integration), multiple concepts exist. These range from generic expressions which overlap with how interdisciplinarity is defined within the general literature, to stronger, more definitive expressions. Conclusions find that rather than a single definition a transdisciplinary landscape exists. To enable users to define where they sit in the transdisciplinary landscape, we create a framework enabling users to map their position under the three key characteristics of goal, collaboration and integration.",
+    "source_url": "https://www.inderscienceonline.com/doi/abs/10.1504/IJASM.2021.118072",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 2.3,
+    "M": 4,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Other",
+    "pairing": "Other",
+    "rationale": "TEの定義そのものをTE2020会議参加者34名への調査で明らかにするメタ研究であり、対象は工学研究者コミュニティに限定され実際のwicked problemへの取り組みではないが、goal/collaboration/integrationの3軸による新たなランドスケープ・マッピング枠組みを提案している。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "J-003",
+    "title": "Transdisciplinarity within the academic engineering literature",
+    "authors": "S. Lattanzio, E. Carey, A. Hultin, R. Imani Asrai, M. McManus, N. Mogles, G. Parry, L.B. Newnes",
+    "year": 2020,
+    "venue": "International Journal of Agile Systems and Management, Vol. 13, No. 2, pp. 213-232",
+    "keywords": "transdisciplinary; trans-disciplinary; transdisciplinarity; engineering research; characterising transdisciplinarity; characterising transdisciplinary research; benchmark; societal value",
+    "abstract": "Despite increased discourse around transdisciplinary (TD) research, there is a perception it has received less attention within engineering. This is significant if, as generally accepted, TD increases the societal value of research. This paper benchmarks TD engineering research against the broader TD literature, addressing the question: How do the characteristics of the academic engineering TD literature compare to the TD academic literature in general? We analyse the chronology, source journals, and text of papers referencing TD within their abstract and compare this to papers that fall within the engineering subject area. The conclusions find that TD research is limited generally, and within engineering specifically. Historically, TD research focuses on sustainability challenges, a persistent trend within the general literature. Within engineering research, the focus of TD is wider and addresses operational and 'grand challenge' problems. TD remains poorly defined and future work should focus on clarifying meaning within the engineering discipline.",
+    "source_url": "https://www.inderscienceonline.com/doi/abs/10.1504/IJASM.2020.107922",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 2,
+    "I": 2,
+    "TE_index": 2.0,
+    "M": 3,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Other",
+    "pairing": "Other",
+    "rationale": "工学分野のTD文献を一般のTD文献とベンチマークするビブリオメトリクス・テキスト分析であり、実際の分野横断協働や方法論統合は行われず、既存の書誌分析手法をTE文献という新たな対象コーパスに適用したにとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "J-004",
+    "title": "Practicing Transdisciplinary Engineering in a Global Development Context: The Transferring, Translating and Transforming Approaches",
+    "authors": "John Bang Mathiasen, Rasmus Munksgaard Mathiasen",
+    "year": 2017,
+    "venue": "Journal of Industrial Integration and Management, Vol. 2, No. 4, 1750017",
+    "keywords": "",
+    "abstract": "The paper addresses the consequences of using a one-size-fits-all approach when practicing transdisciplinary engineering (TE) in a global development context and suggests a method to cope with these consequences. The theoretical conceptualization is a practice-based understanding of development activities, which entails knowledge being embodied and contextually embedded. Two cases, each addressing three TE projects, are studied. Each of the six TE projects embraces a parent company located in Denmark and one of two facilities abroad, located in the Far East and Eastern Europe, respectively. Two projects are conducted successfully. Significant drawbacks and thus costly iterations are necessary in three projects; the companies do not understand the consequences of a higher level of perceived newness and interdependence than anticipated from the outset. Similarly, the last project is terminated after some costly iterations. The analysis reveals a lack of TE competences to handle increasing newness/interdependence projects; practitioners' understanding habitually draws on existing solutions; because the nature of the handed-over knowledge differs, the one-size-fits-all approach to gain a convergent understanding is inappropriate. Three approaches to obtaining a convergent understanding are suggested: (1) transferring, (2) translating and (3) transforming.",
+    "source_url": "https://www.worldscientific.com/doi/abs/10.1142/S2424862217500178",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 4,
+    "C_score": 3,
+    "I": 4,
+    "TE_index": 3.7,
+    "M": 4,
+    "V": 4,
+    "domain": "Practice",
+    "theme": "Other",
+    "pairing": "Engineering×Management",
+    "rationale": "デンマーク本社と海外拠点間のグローバル開発における知識移転という産業的に重要な課題を扱い、実践知理論と工学実務を統合したtransferring/translating/transformingという新アプローチを、成功・失敗を含む6件の実プロジェクトで検証している。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Social Science",
+      "Management / Business"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "J-005",
+    "title": "Modeling of transdisciplinary engineering assets using the design platform approach for improved customization ability",
+    "authors": "Samuel André, Fredrik Elgh",
+    "year": 2018,
+    "venue": "Advanced Engineering Informatics, Vol. 38, pp. 277-290",
+    "keywords": "",
+    "abstract": "Original equipment suppliers (OES) that develop unique products are continuously faced with changing requirements during both the quotation and product development processes. This challenge is a difficulty for the development and use of design platforms, which rely on including formalised and structured pre-developed knowledge to support efficient and effective design of new product variants. In this paper, a modeling approach for design platforms is presented, addressing the need to model transdisciplinary engineering assets so as to improve customisation ability while retaining the benefits of platform-based development.",
+    "source_url": "https://doi.org/10.1016/j.aei.2018.07.006",
+    "pdf_status": "full_text",
+    "pdf_filename": "J-005_modeling_transdisciplinary_engineering_assets.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 2.3,
+    "M": 3,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Product Lifecycle/PLM",
+    "pairing": "Engineering×Engineering",
+    "rationale": "OESのカスタマイズ性向上という技術的な設計プラットフォーム課題が中心で社会的関連性への言及は乏しく、工学内の複数専門知識を設計プラットフォームへ体系的にモデル化する手法を提示しているが検証範囲は限定的とみられる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 1,
+    "DSI": 1.0
+  },
+  {
+    "id": "J-006",
+    "title": "How to manage and balance uncertainty by transdisciplinary engineering methods focusing on digital transformations of complex systems",
+    "authors": "Amy J.C. Trappey, Fan Li, Ching-Hung Lee, John P.T. Mo, Josip Stjepandić, Jianxin Jiao",
+    "year": 2024,
+    "venue": "Advanced Engineering Informatics, Vol. 59, 102330",
+    "keywords": "",
+    "abstract": "",
+    "source_url": "https://doi.org/10.1016/j.aei.2023.102330",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 3,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 3,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Digital Twin",
+    "pairing": "Engineering×Data Science",
+    "rationale": "アブストラクトが空欄のためタイトルのみから判断（信頼度低）。複雑システムのデジタル変革に伴う不確実性管理へのTE的手法という産業的課題設定は読み取れるが、協働の幅や検証内容の詳細は不明。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.33
+  },
+  {
+    "id": "J-007",
+    "title": "Transdisciplinary systems approach to realization of digital transformation",
+    "authors": "Muhammad Adnan Hashmi, John P.T. Mo, Ronald C. Beckett",
+    "year": 2021,
+    "venue": "Advanced Engineering Informatics, Vol. 49, 101316",
+    "keywords": "",
+    "abstract": "With advancement in technology and emergence of fast networks, operation of businesses and global companies increasingly depend on the Internet and digital transformation of their infrastructures. Adaptation to Industry 4.0 paradigm gives rise to societal, technological and communication issues due to challenges in product, services, social and inter-disciplinary interactions. A more fundamental approach that can mitigate complexity of the new business is necessary. This paper adopts a system of systems model embedded into a transdisciplinary system design to describe a typical X4.0 system where X can be any industry sector migrating to Industry 4.0 paradigm. Two industry sectors: Education 4.0 and Retail 4.0 are studied under the amalgamated transdisciplinary system of systems model. Results show that the four artifacts in X4.0 can form the foundation of new sectorial 4.0 development with focus on specific elements in Cyber Physical Systems and Work4.0 artifacts. The transdisciplinary system approach has the advantage of a self-improving model that drives realization of digital transformation in evolutionary cycles.",
+    "source_url": "https://doi.org/10.1016/j.aei.2021.101316",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 4,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 4.0,
+    "M": 4,
+    "V": 3,
+    "domain": "Multiple",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Management",
+    "rationale": "Industry 4.0移行に伴う社会・技術・コミュニケーション課題という複数ステークホルダーに関わる産業的問いを扱い、system of systemsモデルとTDシステム設計を統合した新フレームワークをEducation 4.0とRetail 4.0の2事例で例証している。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 3,
+    "DSI": 1.67
+  },
+  {
+    "id": "J-008",
+    "title": "Transdisciplinary Engineering Education and Research Model",
+    "authors": "A. Ertas, M.M. Tanik, T.T. Maxwell",
+    "year": 2000,
+    "venue": "Journal of Integrated Design and Process Science, Vol. 4, No. 4, pp. 1-11",
+    "keywords": "",
+    "abstract": "Since the medieval times the critical leading role of science has been a) to challenge the entrenched conceptions of human reason and b) to introduce new methods of investigation for deeper understanding of nature of things. Once again scientists, critical thinkers, and engineers are introducing new notions in the transdisciplinary arena from which new generation of intellectual and physical analysis and synthesis tools and techniques will be produced. These tools and techniques will take the form in which science, engineering, and management notions would be fused into a unified transdisciplinary entities. These developments in integrated design and process science would in turn, once again, transform the human scene beyond recognition.",
+    "source_url": "https://doi.org/10.3233/jid-2000-4401",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 3,
+    "I": 2,
+    "TE_index": 2.3,
+    "M": 1,
+    "V": 1,
+    "domain": "Multiple",
+    "theme": "Education",
+    "pairing": "Engineering×Management",
+    "rationale": "科学・工学・経営を融合した新しいTE概念を提唱するビジョナリーな論説であり、具体的な問題設定・統合手法・検証は示されず、方法論的貢献・実証水準ともに極めて低い。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Natural Science",
+      "Management / Business"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 3,
+    "DSI": 1.67
+  },
+  {
+    "id": "J-009",
+    "title": "A transdisciplinary engineering framework for analysing initial public offerings' financial behaviour",
+    "authors": "Carlos Mario Aldana, Federico Trigos",
+    "year": 2025,
+    "venue": "International Journal of Agile Systems and Management, Vol. 18, No. 1, pp. 112-132",
+    "keywords": "financial market dynamics; behavioural finance; real-time decision-making in finance; knowledge engineering in financial systems; systems thinking; adaptive control in financial markets; transdisciplinary financial analysis",
+    "abstract": "Effective decision-making is crucial amid uncertainty in the early stages of a business venture. Due to the lack of historical data, decision-makers face real-time challenges, relying on financial key performance indicators (KPIs) trends. This research addresses the need to overcome the uncertainty of initial public offerings (IPO) by analysing the trends using engineering control functions (first/second order with open/closed loop) to model the stock price in real-time, taking advantage of behavioural finance concepts. Stakeholders, including decision-makers, may anticipate and react to the initial steady state of a new venture in real-time. This approach sheds light on the role of behavioural factors and closed-loop adaptive control in shaping steady state outcomes in new market ventures. The contribution of this research is twofold: a) a transdisciplinary decision support framework to analyse the initial stage of IPOs and their behaviour; and b) two actual IPO analyses to illustrate the framework's capabilities.",
+    "source_url": "https://www.inderscienceonline.com/doi/abs/10.1504/IJASM.2025.144166",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 3,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 3.7,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Other",
+    "pairing": "Engineering×Management",
+    "rationale": "IPOの不確実性という産業的意思決定課題に対し、工学の制御理論と行動ファイナンスを統合した意思決定支援フレームワークを新たに提案し、実際のIPO2件で例証している点で統合深度・方法論的貢献ともに高い。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "objective_disciplines": [
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "J-010",
+    "title": "Transdisciplinary engineering development and integrated water management: an Australian case example",
+    "authors": "Ronald C. Beckett, John P.T. Mo",
+    "year": 2026,
+    "venue": "International Journal of Agile Systems and Management, Vol. 19, No. 1, pp. 106-133",
+    "keywords": "transdisciplinary engineering; sustainability; complex adaptive systems; socio-technical systems; integrated water management; Water 4.0",
+    "abstract": "Responses to complex sustainability issues and new technology emergence (e.g., industry 4.0) require consideration of both social and technology factors, as recognised in transdisciplinary practice. Drawing on a water industry longitudinal case study we suggest transdisciplinary engineering practice evolves through interaction within and between communities of place (social groups, government, business actors) and communities of practice (physical, ecological and social sciences actors) via experiential learning over diverse range of project activities. Consistent with the views of others, particular instances are influenced by the nature of the goal, the form of collaboration and the diversity of components to be integrated. Aspects of a water-energy-food nexus are observed. The utility of a 3PE architecture model in framing instances at various project phases is demonstrated. We identify enabling conditions as the maintenance of a strong innovation culture and a focus on strategic planning to support water climate change resilience.",
+    "source_url": "https://www.inderscienceonline.com/doi/abs/10.1504/IJASM.2026.150563",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 5,
+    "C_score": 5,
+    "I": 4,
+    "TE_index": 4.7,
+    "M": 4,
+    "V": 4,
+    "domain": "Practice",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Social Science",
+    "rationale": "水資源管理と気候変動レジリエンスという明示的なwicked problemを扱い、社会集団・行政・産業・物理/生態/社会科学者という多様なステークホルダーの共創プロセスを、豪州における長期縦断ケーススタディの実データで実証している。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science",
+      "Natural Science"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 3,
+    "DSI": 2.33
+  },
+  {
+    "id": "J-011",
+    "title": "A Framework for Transdisciplinary Engineering Research: Integrating Interactive Research and Design Methodologies",
+    "authors": "Kristina Säfsten, Fredrik Elgh, Gary Linnéusson, Roland Stolt, Paraskeva Wlazlak",
+    "year": 2025,
+    "venue": "Journal of Integrated Design and Process Science, Vol. 28, No. 4",
+    "keywords": "",
+    "abstract": "Conventional research typically adheres to established disciplinary methodologies, whereas transdisciplinary research demands a more flexible and adaptable approach. This paper presents and discusses a work procedure developed and successfully implemented to support collaboration and progress in a large-scale 4-year research project. The work procedure integrates the overall principles from interactive research with the structure of the design research methodology (DRM) framework. The focus here is on the potential of the developed work procedure to support transdisciplinary engineering research. We specifically investigate to what degree the requirements of relevant transdisciplinary research processes are met, i.e., the ability to a) understand and manage complexity, b) incorporate diverse perspectives, c) link abstract and practice-oriented knowledge for implementation and d) develop descriptive, normative, and practical knowledge. Several principles essential to fulfilling the requirements and succeeding with transdisciplinary research were encouraged and supported. Therefore, integrating knowledge from collaborative research, industry-academia partnerships and engineering design could be a promising strategy to strengthen transdisciplinary engineering research. We propose that the suggested work procedure, together with the identified best practices, could serve as support in this context as a transdisciplinary engineering research framework.",
+    "source_url": "https://journals.sagepub.com/doi/10.1177/10920617251368348",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 3.3,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Management",
+    "rationale": "TE研究プロセスそのものを対象化するメタ的な研究方法論論文で、産学連携による大規模4年プロジェクトで実装され協働・統合の水準は高いが、扱う対象自体は社会的wicked problemではなく研究プロセス設計であるためgoal特性は控えめ。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.33
+  },
+  {
+    "id": "J-012",
+    "title": "Systems Engineering Transformation: Transdisciplinary Endeavor",
+    "authors": "LynnDee Ford, Atila Ertas",
+    "year": 2024,
+    "venue": "Transdisciplinary Journal of Engineering & Science, Vol. 15",
+    "keywords": "",
+    "abstract": "System Engineering (SE) solves the most complex problems by bringing together societal issues, theoretical engineering, and the transformation of theory into products and services to better mankind and reduce suffering. The research of this paper utilizes transdisciplinary engineering to develop a SE methodology for the concept stage permitting proposal generation accuracy and expediency to provide solutions to counter regional aggressive threats. Today's world stage is witnessing superpower dominance over neighboring less military-capable nations. The societal impact goes beyond the borders of conflict and affects the world's global market. In the deterrence of dominance, the United States' posture is providing weapon systems to the victim in our increasingly unstable geopolitical environment. The main objective of this research is to develop a system engineering methodology for the concept stage to effectively understand the technical baseline maturity for proposals specific to International Customers.",
+    "source_url": "https://doi.org/10.22545/2024/00240",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 4,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 3,
+    "V": 2,
+    "domain": "Practice",
+    "theme": "Systems Engineering",
+    "pairing": "Engineering×Engineering",
+    "rationale": "地政学的な安全保障上の脅威という社会的重要性の高い課題を背景とするが、協働は主にシステムズエンジニアリング分野内にとどまり、国際顧客向け提案手法の開発という工学内的な貢献にとどまる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.33
+  },
+  {
+    "id": "J-013",
+    "title": "Revolutionizing Prosthetics: Extreme Transdisciplinary Systems Engineering",
+    "authors": "Jim Burck, John Bigelow",
+    "year": 2010,
+    "venue": "INSIGHT, Vol. 13, No. 4, pp. 25-28",
+    "keywords": "",
+    "abstract": "",
+    "source_url": "https://doi.org/10.1002/inst.201013425",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 4,
+    "C_score": 5,
+    "I": 4,
+    "TE_index": 4.3,
+    "M": 2,
+    "V": 2,
+    "domain": "Practice",
+    "theme": "Other",
+    "pairing": "Other",
+    "rationale": "アブストラクトが空欄のためタイトル（義肢工学の革新、Extreme Transdisciplinary Systems Engineering）とINSIGHT誌（実務者向け）の文脈から推測（信頼度低）。医療・神経科学・工学を横断する極めて広い協働が示唆されるが、具体的方法論・検証内容は短い実務誌記事のため限定的と推定。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Medicine / Health"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.33
+  },
+  {
+    "id": "J-014",
+    "title": "Transdisciplinary System Engineering: Exploiting Convergence in a Hyper-Connected World",
+    "authors": "William Miller",
+    "year": 2019,
+    "venue": "INSIGHT, Vol. 22, No. 2, pp. 77-78",
+    "keywords": "",
+    "abstract": "",
+    "source_url": "https://doi.org/10.1002/inst.12250",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 2,
+    "I": 2,
+    "TE_index": 2.0,
+    "M": 1,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Other",
+    "pairing": "Other",
+    "rationale": "アブストラクトが空欄で本文もごく短い（2頁）ため詳細不明（信頼度低）。タイトルから「ハイパーコネクテッドな世界での収斂」を論じる短い論説と推測され、具体的な統合手法や検証は含まれないと考えられる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 1,
+    "DSI": 1.0
+  },
+  {
+    "id": "J-015",
+    "title": "Toward Transdisciplinary Engineering Implications and Significance in ACS ES&T Engineering",
+    "authors": "Nancy G. Love",
+    "year": 2023,
+    "venue": "ACS ES&T Engineering, Vol. 3, No. 3, pp. 306-307",
+    "keywords": "",
+    "abstract": "",
+    "source_url": "https://doi.org/10.1021/acsestengg.3c00040",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 3,
+    "C_score": 2,
+    "I": 1,
+    "TE_index": 2.0,
+    "M": 1,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Social Science",
+    "rationale": "アブストラクトが空欄の環境科学・工学誌の巻頭言（信頼度低）。TEの意義を論じる短い論説と推測され、環境・社会的関連性は想定されるが具体的な統合や検証は含まれないと考えられる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Natural Science"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.33
+  },
+  {
+    "id": "J-016",
+    "title": "Exploring Maker Innovation: A Transdisciplinary Engineering Design Perspective",
+    "authors": "Wei Liu, Yancong Zhu, Min Liu, Yanru Li",
+    "year": 2021,
+    "venue": "Sustainability, Vol. 14, No. 1, 295",
+    "keywords": "",
+    "abstract": "Researchers, designers, and engineers embrace the ongoing maker movement and view 'grassroots innovation' as essentially important for staying competitive in both academia and in industry. The research team gives full play to its expertise on innovation and entrepreneurship education. In the past five years of actively participating in the China-U.S. Young Maker Competition, the team coached and worked with over five hundred student makers to create innovative engineering prototypes focusing on the areas of community development, education, environmental protection, health and fitness, energy, transportation, and other areas of sustainable development by combining innovative design and emerging technologies. Several conceptual designs and developments are described. A transdisciplinary engineering design and teaching approach is presented and discussed. Due to the limited time allowed by the competition, more thorough design and development iterations will take place in a future study.",
+    "source_url": "https://doi.org/10.3390/su14010295",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 4,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.7,
+    "M": 2,
+    "V": 3,
+    "domain": "Education",
+    "theme": "Social Innovation",
+    "pairing": "Engineering×Social Science",
+    "rationale": "メイカームーブメントを通じてコミュニティ開発・教育・環境保護等の社会的課題に取り組み、学生メイカー500名超との5年間にわたる産学・国際教育連携を示すが、提示される設計事例は今後さらなる反復が必要とされており方法論の成熟度はやや低い。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science",
+      "Medicine / Health"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 3,
+    "DSI": 2.33
+  },
+  {
+    "id": "J-017",
+    "title": "Editorial: Transdisciplinary engineering for sustainability decisions",
+    "authors": "Adam C. G. Cooper, Bryan Moser, Susan Krumdieck",
+    "year": 2026,
+    "venue": "Frontiers in Sustainability, Vol. 7",
+    "keywords": "aging, energy, government, industry, logistics, systems thinking, transport, waste",
+    "abstract": "Editorial introducing a Research Topic on transdisciplinary engineering for sustainability decisions. The editors state that sustainability challenges are as much a challenge of doing and making as it is a challenge of policy and regulation, and that transdisciplinary engineering centers engineering in this process, recognizing the special role engineering has in shaping societal outcomes. The editorial introduces six papers addressing transdisciplinary engineering approaches across multiple sectors including energy, transport, waste management, and agriculture, covering topics such as oil company business model transitions, ruminant farm emissions, electronic waste management, mobility for aging populations, vehicle routing optimization, and UK home energy policy.",
+    "source_url": "https://doi.org/10.3389/frsus.2026.1823059",
+    "pdf_status": "full_text",
+    "pdf_filename": "J-017_editorial_te_for_sustainability_decisions.pdf",
+    "G": 5,
+    "C_score": 4,
+    "I": 2,
+    "TE_index": 3.7,
+    "M": 1,
+    "V": 1,
+    "domain": "Multiple",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Social Science",
+    "rationale": "持続可能性に関する意思決定という社会・環境・経済に関わる課題群（石油企業の事業転換、家畜排出、電子廃棄物、高齢化モビリティ、政策等）を広く扱うが、6論文を紹介する巻頭言であり、統合や実証は論説自体では行われていない。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science",
+      "Management / Business"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 3,
+    "objective_span": 3,
+    "DSI": 2.67
+  },
+  {
+    "id": "J-018",
+    "title": "Transdisciplinary model-based systems engineering in the development of the Ruminant Farm Systems model",
+    "authors": "Haowen Hu, Clifford A. Whitcomb, Thomas E. Ploetz, Kristan F. Reed",
+    "year": 2025,
+    "venue": "Frontiers in Sustainability, Vol. 6",
+    "keywords": "",
+    "abstract": "This study adopts a transdisciplinary model-based systems engineering (MBSE) approach to support the development of the Ruminant Farm Systems (RuFaS) model, an advanced on-farm decision support tool. Using the cloud-based MBSE platform Innoslate (SPEC Innovations, Manassas, VA), we identified key stakeholders, constructed use cases, defined system boundaries, refined stakeholder requirements, and outlined the system architecture and subsystem interfaces for RuFaS. To demonstrate RuFaS's ability to meet stakeholder requirements, we selected a specific use case focused on comparing whole farm impacts across different manure management scenarios. RuFaS predictions were responsive to changes in scenario conditions, with whole farm greenhouse gas (GHG) emissions varying by region, bedding type, storage method, and diet-climate conditions. These findings highlight the complex interactions among RuFaS model components and confirm its ability to support effective comparisons of manure management practices to meet specific stakeholder needs. Our transdisciplinary MBSE approach provides a robust framework for ongoing RuFaS evaluation, ensuring alignment with stakeholder requirements. This study represents a pioneering milestone in the application of MBSE to agricultural system model development, highlighting its potential to advance decision-making in sustainable dairy farm management.",
+    "source_url": "https://doi.org/10.3389/frsus.2025.1561453",
+    "pdf_status": "full_text",
+    "pdf_filename": "J-018_transdisciplinary_mbse_ruminant_farm_systems.pdf",
+    "G": 4,
+    "C_score": 3,
+    "I": 4,
+    "TE_index": 3.7,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Other",
+    "rationale": "畜産システムの温室効果ガス排出という環境・持続可能性課題に対し、MBSEプラットフォームを用いてステークホルダー要求・システム境界・サブシステムを体系的に統合し、複数のマニュア管理シナリオの実データで検証している先駆的な適用事例。",
+    "author_disciplines": [
+      "Engineering",
+      "Natural Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Natural Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Natural Science",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 3,
+    "DSI": 2.33
+  },
+  {
+    "id": "J-019",
+    "title": "Exploring Transdisciplinarity in Systems Engineering to Develop Transdisciplinary Integration Capability and Process Meta-Level Conceptual Models",
+    "authors": "Ali Asghar Bataleblu, John Arthur Poirier, Julia Taylor",
+    "year": 2026,
+    "venue": "Systems, Vol. 14, No. 5",
+    "keywords": "",
+    "abstract": "Key challenges for the future Systems Engineering (SE) include practically converting concepts into actions that solve complex problems and implementing formalized Transdisciplinary Integration (TDI) approaches to achieve this. This paper starts with a literature review, which exposes specific gaps: Transdisciplinarity in SE as a mindset is not well established and Transdisciplinary Integration Processes (TDIP) are not formalized and rigorously applied. Challenges are collected with a focus on 'Transdisciplinarity in SE' as a meta-discipline in supporting TDI meta-model development. To this end, a TDI conceptual capability model comprising ends, ways, and means that coalesce transdisciplinary knowledge, methods, and stakeholder perspectives, and a TDIP model applicable across wide-ranging problem spaces and dimensions are proposed. A Disciplinarity Index (DI) is introduced to analyze a spectrum from Intra- to Alter-Disciplinarity; determine proportionality of problem dimensions, factors, and bounding aspects; and define a solution approach. The models are validated by applying the DI to four socio-technical problem domains ranging in scope and scale. This study concludes that the diverse challenges are approachable using the proposed conceptual foundation and models, which are unique in establishing a mechanism to blend disciplines, meet the challenges, and achieve Transdisciplinarity in the SE community while forming relations in the broader systems and transdisciplinary communities.",
+    "source_url": "https://doi.org/10.3390/systems14050516",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 4,
+    "C_score": 3,
+    "I": 4,
+    "TE_index": 3.7,
+    "M": 5,
+    "V": 4,
+    "domain": "Research",
+    "theme": "Systems Engineering",
+    "pairing": "Engineering×Engineering",
+    "rationale": "複雑な問題解決のための形式化されたTransdisciplinary Integrationプロセスの欠如という課題に対し、TDI能力モデル・プロセスモデル・Disciplinarity Indexという新規モデル群を提案し、4つの社会技術的問題領域に適用して検証しており、方法論的貢献・統合深度ともに高い。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "J-020",
+    "title": "The Transdisciplinary Product Development Lifecycle model",
+    "authors": "Bulent Gumus, Atila Ertas, Derrick Tate, Ismail Cicek",
+    "year": 2008,
+    "venue": "Journal of Engineering Design, Vol. 19, No. 3, pp. 185-200",
+    "keywords": "",
+    "abstract": "In this paper, a new product development lifecycle model, the Transdisciplinary Product Development Lifecycle (TPDL) model, is explained. This new model is based on the axiomatic design (AD) method developed by Suh; hence it inherits the benefits of applying AD to product development. In this model, the AD method is extended to cover the whole product development lifecycle, including the test domain, and new domain characteristic vectors are introduced to systematically capture and manage the input constraints and system components. The TPDL model helps develop, capture, and present both the big-picture and a detailed view of the product development knowledge, including design and requirement traceability knowledge. The objectives of the TDPL model are to guide the designers, developers, and other members of a transdisciplinary product development team throughout the development effort as well as to help capture, maintain, and manage the knowledge produced during the product development process. The TDPL model aims to improve the quality of the design, requirements management, change management, project management, and communication between stakeholders as well as to shorten the development time and reduce the development cost.",
+    "source_url": "https://doi.org/10.1080/09544820701232436",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 2.3,
+    "M": 4,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Product Lifecycle/PLM",
+    "pairing": "Engineering×Engineering",
+    "rationale": "公理的設計を製品開発ライフサイクル全体に拡張する技術的な新モデルの提案であり、社会的関連性やステークホルダーの多様性への言及は乏しく、実証（ケーススタディ等）も明示されていない。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 1,
+    "DSI": 1.0
+  }
+]

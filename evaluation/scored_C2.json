@@ -1,0 +1,1308 @@
+[
+  {
+    "id": "C2-001",
+    "title": "When and Where Is Transdisciplinary Engineering Applied in Projects? A Case Study",
+    "authors": "Alexander Kharlamov, Glenn Parry, Linda Newnes",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "Transdisciplinary engineering (TE) is gaining attention in academic literature and comes with the underlying assumption of being the next evolutionary step for incorporating engineering solutions in practice. We seek to answer the question of when TE is appropriate and what the conditions are for efficient applications of TE in practice. A framework for analysis is constructed integrating TE with theory of communication and strategic paradox. The framework is used as a lens in a single explorative case of an multi-university research project. The project brings together researchers from a diverse range of disciplines, working together to create a novel device that could have a transformative impact on specific cancer healthcare. Data is collected using structured interviews with project researchers. The main finding from the case study is that TE does not appear to be employed at all levels of abstraction. In this case TE is found to be employed at the strategic level, while tactical and operational levels adopt traditional approaches to working. Effective TE relies heavily on the relationship between specialisation and generalisation. We identify two main roles when it comes to people; specialists and generalists. Specialists (e.g. healthcare, pharmaceuticals & biotechnology) must be able to understand the general picture while the Generalists (e.g. business; operations) must be aware of the requirements and limitations of Specialists. Generalisations for practice and further research are discussed. The main contribution of the work is a framework for analysis of TE.",
+    "source_url": "https://doi.org/10.3233/ATDE190102",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-001_when_and_where_is_transdisciplinary_engi.pdf",
+    "G": 4,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 4.0,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Management",
+    "rationale": "がん医療機器開発という社会的に重要な複数大学共同プロジェクトを対象に、コミュニケーション理論と戦略的パラドックス理論を統合した分析枠組みを提示し、インタビューによる単一事例検証を行っている点でG・C・Iともに高い。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Social Science",
+      "Management / Business"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C2-002",
+    "title": "Smart Product-Service Systems: A Novel Transdisciplinary Sociotechnical Paradigm",
+    "authors": "Pai Zheng, Zuoxu Wang, Chun-Hsien Chen",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "The third-wave of IT competition have embraced a promising market of low cost, high performance smart, connected products (SCP). Owing to their unique capabilities, SCPs together with their generated smart services, as a solution bundle can fulfil the everchanging individual user’s needs. Meanwhile, manufacturers/service providers leverage massive user generated data and product sensed data via the Internet-of-Things (IoT) for evergreen design innovation. This emerging IT-driven transdisciplinary engineering paradigm is named Smart Product-Service Systems (Smart PSS), which is an ecosystem consisting of various stakeholders as the key players for open innovation (social aspect), intelligent systems as the infrastructure to enable smartness and connectedness (technical aspect), and digital servitization as the value proposition to make higher profits (business aspect). Though similar terminologies have been utilized to describe such paradigm, none of them emphasizes its transdisciplinary essence, as a sociotechnical system. Moreover, scarcely any work addresses its lifecycle perspectives for sustainability concerns. Aiming to fill these gaps, this research provides a fundamental basis of Smart PSS by summarizing typical works from technical, social, and business aspects, respectively. Furthermore, its lifecycle perspectives in a circular economy is depited to motivate more in-depth research in the near future.",
+    "source_url": "https://doi.org/10.3233/ATDE190128",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-002_smart_product_service_systems_a_novel_tr.pdf",
+    "G": 3,
+    "C_score": 3,
+    "I": 2,
+    "TE_index": 2.7,
+    "M": 2,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Product Lifecycle/PLM",
+    "pairing": "Engineering×Management",
+    "rationale": "Smart PSSを技術・社会・ビジネスの3側面から概観する文献要約型の論文であり、統合は並置にとどまり実証もないため、IとVは低い。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science",
+      "Management / Business"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 3,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-003",
+    "title": "Applying Transdisciplinary Engineering (TE) Design Research Methodology to the Challenge of Managing Decision Support Tool Performance",
+    "authors": "Susan Lattanzio, Linda B. Newnes, Marcelle McManus, Alex Hultin, Derrick Dunkley",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "Over the past few decades there has been increasing dialogue around transdisciplinary (TD) research. However, within engineering it has received less attention and there remains a lack of consensus over both the definition, and the methods through which to conduct transdisciplinary engineering (TE). Within this paper we describe and outline the salient points of TD and the Design Research Methodology (DRM) and create a proposal to combine the two. A case study of National Grid Electric Transmissions (NGET) demonstrates application. The case study shows that through TE DRM a conceptual process for managing decision support tool (DST) performance is created. This process integrates academic and non-academic perspectives. Evaluation, by NGET subject matter experts found the process to be logical and useable within NGET, with approval given to proceed to implementation. Conclusions find that application of TE DRM increases the possibility of industry uptake and the potential impact of academic research.",
+    "source_url": "https://doi.org/10.3233/ATDE190131",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-003_applying_transdisciplinary_engineering_t.pdf",
+    "G": 4,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 4.0,
+    "M": 4,
+    "V": 3,
+    "domain": "Multiple",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Management",
+    "rationale": "電力会社(NGET)の意思決定支援ツール管理という実務課題に対し、TDとDesign Research Methodologyを統合した新フレームワークを提案し、産業専門家による評価まで行っている点で協働性・統合度が高い。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-004",
+    "title": "Ill-Defined Knowledge Boundaries; A Battlefield for Transdisciplinary Engineering",
+    "authors": "Nikki Kaasgaard Jepsen, John Bang Mathiasen",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "Relying on an one-year longitudinal study of developing a product to be assembled in refugee camps around the globe, this paper aims at studying whether a battlefield exists among the practitioners involved, caused by ill-defined knowledge boundaries and how to penetrate these. The paper juxtaposes the empirical material with the theoretical conceptualisation of affordance to show that the drawbacks of knowledge boundaries emerged after long and intense discussions rather late in the development. Indeed, it was necessary to arrange a workshop in which the practitioners gained hands-on experience to reveal the drawbacks of knowledge boundaries. To mitigate drawbacks of knowledge boundaries, this paper suggests that transdisciplinary engineering should be a fundamental activity, which takes place throughout the development. Practitioners facing ill-defined knowledge boundaries should adapt and apply a common framework including various artefacts to guide both the practical work and their discussions to gain hands-on experience.",
+    "source_url": "https://doi.org/10.3233/ATDE190162",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-004_ill_defined_knowledge_boundaries_a_battl.pdf",
+    "G": 5,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 4.0,
+    "M": 3,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Social Innovation",
+    "pairing": "Engineering×Social Science",
+    "rationale": "難民キャンプ向け製品開発という人道的課題を対象に、アフォーダンス理論と実務家の知識境界を突き合わせた1年間の縦断研究であり、社会的目標志向は非常に高いが統合は理論適用レベルにとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Social Science",
+      "Humanities"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C2-005",
+    "title": "A Platform-Based OEM-Supplier Collaboration Ecosystem Development",
+    "authors": "Alain Biahmou, Tomislava Majić, Josip Stjepandić, Nel Wognum",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "Innovative products and services are key success factors for the manufacturing industry. Development of such products and services usually takes place in partnerships in which the original equipment manufacturer (OEM) distributes the development of new products to many locations in several countries across the world. Suppliers, especially first-tier suppliers (FTSs) are involved in the development process as early as possible, because they have knowledge that is strategically important for developing the new product and services. Historically, the OEM-supplier relationship is characterized by a sequential interaction whereby the OEM gives product and production requirements to the supplier and the supplier delivers his product or service to the OEM. However, collaboration between FTS and OEM is essential to fruitfully use the knowledge of the FTS, anticipate potential downstream errors, and reduce costs and risks. The paper presents recent developments in this part of the supply chain with particular attention to the design of a shared platforms, which is part of an OEM-supplier ecosystem. The development process of such an ecosystem can be seen as a transdisciplinary engineering process, because not only IT engineers are needed to build such a platform-base ecosystem but also people with knowledge of supply chain organization and coordination, especially in product development processes.",
+    "source_url": "https://doi.org/10.3233/ATDE190150",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-005_a_platform_based_oem_supplier_collaborat.pdf",
+    "G": 2,
+    "C_score": 3,
+    "I": 2,
+    "TE_index": 2.3,
+    "M": 2,
+    "V": 1,
+    "domain": "Practice",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Management",
+    "rationale": "OEM-サプライヤー間のIT共有プラットフォーム構築という実務事例であり、TDと位置づけているが方法論の統合や実証の記述は乏しく概念的説明にとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C2-006",
+    "title": "Sociotechnical Systems for High Rise Detention",
+    "authors": "Hugh D. Lester, Graham B. McKay, Ellyn A. Lester",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "Society deems detention facilities successful when total life cycle cost is minimized without compromising safe, secure, and constitutional incapacitation. However, this consensus view represents only a minor subset of the potential of jails. System boundaries should be expanded, and a much larger set of outcomes considered. This case study of the design of a high-rise jail embodies transdisciplinary exploration of operational integration, architectural design, and engineering disciplines. The resulting 1,200-bed facility will rise 193.5 feet (59 meters) and cost an estimated $1.4 billion dollars. Sociotechnical systems ultimately determine conditions of confinement and the successful administration of justice within facilities that incarcerate. While organizational and detainee culture contribute to the criminogenic | rehabilitative continuum of outcomes, design can rise to the level of organizational culture, psychological drivers, and policies, procedures, and post orders in its potential to influence outcomes. Justice facilities are complex adaptive systems that cannot be directly controlled. We can—at best—influence their evolution, nudging them toward desired goal states.",
+    "source_url": "https://doi.org/10.3233/ATDE190138",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-006_sociotechnical_systems_for_high_rise_det.pdf",
+    "G": 4,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 4.0,
+    "M": 3,
+    "V": 4,
+    "domain": "Practice",
+    "theme": "Other",
+    "pairing": "Engineering×Social Science",
+    "rationale": "1200床・14億ドル規模の実在する拘置所建設における建築・工学・運用統合を扱う事例研究で、社会技術システムとして正義制度という社会的課題を扱い、実プロジェクトとしての実証水準も高い。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-007",
+    "title": "Engineering of Complex Social Realities",
+    "authors": "German Urrego-Giraldo, Gloria-Lucia Giraldo, Diana-Margot  López",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "The creation and application of processes and resources realized by Engineering show important results in the exploitation of natural resources and in industry. Essentially, Engineering has been developed to satisfy the requirements of social agents but not to intervene in society itself. Artifacts produced by Engineering are used by society, but the elaboration of artifacts for managing directly society’s own processes is not considered, in general, as an issue of Engineering. We introduce concepts of Supra Disciplinary Engineering aiming at Total Engineering and its central expression in Engineering for Society. It searches to offer methods of classical Engineering to intervene, together with those of social and human sciences, in own processes of society and human beings, considering empirical evidence, objective information, reasoning and the respect of fundamental rights of society, in a responsible relationship with the natural world.",
+    "source_url": "https://doi.org/10.3233/ATDE190172",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-007_engineering_of_complex_social_realities.pdf",
+    "G": 5,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 4.0,
+    "M": 2,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Social Innovation",
+    "pairing": "Engineering×Social Science",
+    "rationale": "工学を社会そのものへ介入させる「Supra Disciplinary Engineering」という概念を提唱する哲学的・思想的論考であり、目標志向は極めて高いが具体的な統合方法論や実証は伴わない。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Humanities"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-008",
+    "title": "The New World IoT Is Bringing Forth",
+    "authors": "Shuichi Fukuda",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "The current discussion about IoT is basically an advanced RFID framework along the line of traditional engineering, i.e., machines and humans work separately. Humans are outside of the machine system and give instructions. Machines respond to them. But true IoT removes the wall between humans and machines and they start fo work together as members on the same team. Fhus, IoT calls fof communication between humans and machines. Machines do not wait for human instructions and they understand what humans expect from them and act accordingly. This paper describes how true IoT will change our world and create the new world, World 2.0, where humans and machines form a team to respond to the frequently and widely changing environments and situations.",
+    "source_url": "https://doi.org/10.3233/ATDE190140",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-008_the_new_world_iot_is_bringing_forth.pdf",
+    "G": 3,
+    "C_score": 2,
+    "I": 2,
+    "TE_index": 2.3,
+    "M": 1,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Data Science",
+    "rationale": "IoTによる人間と機械の協調に関するFukudaの思想的エッセイであり、具体的な分野横断の協働や方法論の統合、実証は行われていない。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.33
+  },
+  {
+    "id": "C2-009",
+    "title": "Development of Workshop Environment for Supporting Collaborative Problem Framing",
+    "authors": "Shinnosuke Wanaka, Kazuo Hiekata, Bryan R. Moser",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "The objective of this paper is to develop a collaborative workshop environment for decision-making to improve collaboration in a cross-cultural team. Final goal of this research is to improve collaboration in a cross-cultural team, and this paper approaches a problem of communication and group performance among the team members during problem framing stage. To achieve the goal, we utilized systems approach and workshop monitoring system. Systems approach is utilized to fill the gap between the cross-cultural team members and to improve the communication efficiency. To make it applicable to non-experts of system modeling, an information system to support the modeling tasks is developed. The workshop monitoring system accumulates log data related to the collaboration, and provides feedback about the teamwork during the workshop. In a case study, as a part of demonstration of the proposed workshop environment, an experiment to show the usefulness of the monitoring and automatic visualization system is conducted.",
+    "source_url": "https://doi.org/10.3233/ATDE190116",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-009_development_of_workshop_environment_for.pdf",
+    "G": 3,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Management",
+    "rationale": "異文化間チームの協働的問題設定を支援するワークショップ環境とモニタリングシステムを開発し、実験によるデモンストレーションを行っている新規性の高い研究。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-010",
+    "title": "Problem Exploration with Bias Breaking Ideation for Maritime Emissions Reduction",
+    "authors": "Sixiong Peng, Lorena Pelegrin, Patricia Arnal Luna, Hideyuki Horii, Bryan R. Moser",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "This papers presents a quasi-experiment on the characteristics of innovation teams during the early stages of a project, with an emphasis on number and categries of ideas generate with quality throgh a bias-breaking ideation exercise. This quasi-experiment raised several interesing questions on the combination of individual and collective ideation and its relationshop to more innovative outcomes (e.g., quantity of ideas, originality, transformation potential) than solely individual or group thought. Is there an optimal combination of individual and group work that fosters better outcomes? Further, the timing, quantity and quality of communication between team members is also expected to influence the outcomes of ideation processes, and constitutes another focus of this research. What are the characteristics of communication conducive to innovation?",
+    "source_url": "https://doi.org/10.3233/ATDE190114",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-010_problem_exploration_with_bias_breaking_i.pdf",
+    "G": 4,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 3.3,
+    "M": 3,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Social Science",
+    "rationale": "海事排出削減という環境課題を題材に、バイアス崩しのアイデア創出手法を用いた準実験を実施しており、目標の社会的意義と実証データはあるが分野統合は行動科学的手法の適用にとどまる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Natural Science"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-011",
+    "title": "Modular Approach to Technical Risk Management in Product Lifecycle Management",
+    "authors": "Roberto Riascos, Tomislava Majić, Egon Ostrosi, Josip Stjepandić",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "The current trend in product development is toward usage and integration of different advanced technologies which are increasingly embedded in a comprehensive PDM system as a company-wide information back-bone. With such an approach, the transparency is increased and many business processes accelerated. While modularization is a mega-trend, the modular approach is also used to align development processes with the workflows in PDM. The goal of an effective risk management system is to allow continuous business running and achieving the goals of an organization. In order to achieve this, it is necessary, as far as it is possible, to identify and to analyze risks the organization is confronting and to evaluate their effects on the business. In this paper, an approach is presented on how to integrate the technical risk management in Product Lifecycle Management by definition of an additional software module and its implementation.",
+    "source_url": "https://doi.org/10.3233/ATDE190144",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-011_modular_approach_to_technical_risk_manag.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 2,
+    "TE_index": 2.0,
+    "M": 2,
+    "V": 2,
+    "domain": "Practice",
+    "theme": "Product Lifecycle/PLM",
+    "pairing": "Engineering×Engineering",
+    "rationale": "PLMシステムへのリスク管理モジュール追加という技術的インテグレーションであり、単一分野内の技術的課題でTEらしさは低い。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-012",
+    "title": "Roles of MSIE Graduates to Support Thailand Sustainable Smart Industry",
+    "authors": "Pisut Koomsap, Huynh T. Luong, Rui M. Lima, Tomasz Nitkiewicz, Wichai Chattinnawat, Duangthida Hussadintorn Na Ayutthaya",
+    "year": 2019,
+    "venue": "26th ISTE International Conference on Transdisciplinary Engineering (TE2019)",
+    "keywords": "",
+    "abstract": "The way business run has changed in recent decades due to technology advancement, and it has become more explicit in many parts of the world that companies have been moving from stand-alone technology exploitation towards holistically integrated technology exploitation. Thailand’s government has also foreseen the need for change from a production-based economy to a value-based economy and has encouraged the Thai industry to focus more on producing innovative products and services which require high potential and skilled knowledge workers. Consequently, their roles will never be the same. This paper presents findings on the expected roles of graduates with a Master degree in Industrial Engineering (MSIE) drawn from an industry survey on industry needs to attain Industry 4.0 conducted with companies based in Thailand and in three European countries participating in Erasmus+ Capacity Building in Higher Education project on Curriculum Development of Master’s Degree Program in Industrial Engineering for Thailand Sustainable Smart Industry (MSIE 4.0). From the survey results, top-three technologies for being competitive and areas of applications to attain industry 4.0 in the companies’ perspective were identified. Roles of MSIE graduates were determined for individual potential applications generated from identified technology-application relationships. According to the findings, the graduates are expected in general to play an important role in effective utilization of big data and real-time data for better decision making on various industrial practical problems as well as for better responsiveness to customers. The same procedure can be applied in other disciplines for identifying the roles of their graduates.",
+    "source_url": "https://doi.org/10.3233/ATDE190110",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-012_roles_of_msie_graduates_to_support_thail.pdf",
+    "G": 3,
+    "C_score": 4,
+    "I": 2,
+    "TE_index": 3.0,
+    "M": 3,
+    "V": 3,
+    "domain": "Education",
+    "theme": "Education",
+    "pairing": "Engineering×Management",
+    "rationale": "タイと欧州企業への産業調査に基づき、Industry 4.0に対応した大学院教育のあり方を検討しており、産学連携の幅は広いが統合は調査結果のマッピングにとどまる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-013",
+    "title": "Transdisciplinary System of Systems Development in the Trend to X4.0",
+    "authors": "John P.T. Mo, Ronald C. Beckett",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Since the announcement of Industry 4.0 in 2012, multiple variants of this industry paradigm have emerged and built on the common platform of Internet of Things. Traditional engineering driven industries such as aerospace and automotive are able to align with Industry 4.0 and operate on requirements of the Internet of Things platform. Process driven industries such as water treatment and food processing are more influenced by societal perspectives and evolve into Water 4.0 or Dairy 4.0. In essence, the main outcomes of these X4.0 (where X can be any one of Quality, Water or a combination of) paradigms are facilitating communications between socio-technical systems and accumulating large amount of data. As the X4.0 paradigms are researched, defined, developed and applied, many real examples in industries have demonstrated the lack of system of systems design consideration, e.g. the issue of training together with the use of digital twin to simulate operation scenarios and faults in maintenance may lag behind events triggered in the hostile real world environment. This paper examines, from a high level system of systems perspective, how transdisciplinary engineering can incorporate data quality on the often neglected system elements of people and process while adapting applications to operate within the X4.0 paradigms.",
+    "source_url": "https://doi.org/10.3233/ATDE200055",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-013_transdisciplinary_system_of_systems_deve.pdf",
+    "G": 3,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 2,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Data Science",
+    "rationale": "Industry 4.0の派生形(X4.0)におけるシステムオブシステムズの観点から人・プロセス要素の欠如を論じる概念的考察であり、実証は伴わない。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.33
+  },
+  {
+    "id": "C2-014",
+    "title": "Mapping the Competencies of Design Engineers Against the Jantsch’s Hierarchical System",
+    "authors": "Jana Sajdakova, Linda Newnes, Emily Carey, Vimal Dhokia",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Presented in this paper are the results of a systematic literature review to identify the competencies required by design engineers to work in increasingly complex societal projects. These competencies are then mapped against the four levels of a hierarchical system defined by Jantsch to ascertain the disciplinarity of these competencies. The results from this mapping form the first phase in the creation of a Designer Readiness Level for transdisciplinary engineering. To date current research has identified that to meet these future needs, defined as Grand Challenges for Engineering by the National Academy of Engineering, it will be necessary to adopt transdisciplinary methods of working. However, there is little in the literature that identifies how to assess the transdisciplinarity of people, tools or project teams. Although literature and learned societies do highlight that engineers are crucial to meet these societal needs, how do we determine whether an engineer is able to work in a transdisciplinary manner? A total of 2398 papers were included in the review and twenty-nine papers selected for full-text review. A final seven focussing on practicing design engineers were used to create a current list of competencies. The paper continues by describing the analysis method and results of mapping the competencies identified against Jantsch’s four levels. The paper concludes with a summary of the next stage required to create a Designer Readiness Level for transdisciplinary engineering.",
+    "source_url": "https://doi.org/10.3233/ATDE200056",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-014_mapping_the_competencies_of_design_engin.pdf",
+    "G": 3,
+    "C_score": 2,
+    "I": 2,
+    "TE_index": 2.3,
+    "M": 1,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Education",
+    "pairing": "Engineering×Engineering",
+    "rationale": "TD人材に必要なコンピテンシーについての系統的文献レビューであり、Jantschの階層構造へのマッピングは行うが、実際の協働や統合の実証はない。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Humanities"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-015",
+    "title": "Classifying the Disciplinarity of Engineering Academic Literature",
+    "authors": "Susan Lattanzio, Nataliya Mogles, Emily Carey, Alex Kharlamov, Glenn Parry, Ben Hicks, Linda Newnes",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Based on the appearance of the term within the academic literature, it would appear that transdisciplinarity (TD) approaches are receiving increased research attention. However, the literature suggests a lack of consensus over how TD is defined and classified. This could give rise to inconsistency and papers that claim to be TD which are not, and alternatively papers that fail to mention TD but which might be classified as such. This is significant and creates a challenge in identifying the true level of TD research. This work contributes towards understanding the state of TD within engineering. Explicitly, we address the research question: Is the engineering academic literature claiming to be TD, actually TD? Within this study we operationalise the work of Jantsch and use this as a means to classify the disciplinarity of 177 engineering journal papers which reference TD within their abstract. The results show only 24% to be TD. The majority (64%) are classified as interdisciplinary. Conclusions find that to improve consistency, a clear definition and rules for differentiation between TD and ID research are required. Future work calls for: (1) comparative studies which apply different methods for assessing disciplinarity across the dataset used within this study and which use the method employed within this study across different fields. (2) Research to analyse whether TD working is being undertaken in engineering without it being referenced within the paper.",
+    "source_url": "https://doi.org/10.3233/ATDE200057",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-015_classifying_the_disciplinarity_of_engine.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 2.3,
+    "M": 3,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Other",
+    "pairing": "Engineering×Engineering",
+    "rationale": "177本のTD論文をJantschの枠組みで分類したメタ分析であり、TDと自称する文献の大半が実際にはIDにとどまることを明らかにした点で方法論的な貢献はあるが、対象自体が文献であり協働・統合の実践ではない。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Data Science / CS",
+      "Humanities"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Humanities"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C2-016",
+    "title": "TRansdisciplinary ENgineering Design (TREND): Towards a Transdisciplinary Engineering Index",
+    "authors": "Linda Newnes, Susan Lattanzio, Emily Carey, Ben Hicks, Aydin Nassehi, Glenn Parry",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Manufacturing is undergoing rapid change. Whether through the creation of smart materials and products, or utilising data, information and knowledge, the requirement for different ways of working is increasing. To meet future manufacturing needs, design and manufacturing skills and tools must transcend disciplines and industrial sectors. Transdisciplinary Engineering Design (TREND) aims to enable the rapid uptake of emerging technologies across manufacturing sectors and the constitute disciplines. Within this paper, we provide an overview of the TREND research group and their preliminary research towards a Transdisciplinary Engineering Index.",
+    "source_url": "https://doi.org/10.3233/ATDE200059",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-016_transdisciplinary_engineering_design_tre.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 2,
+    "TE_index": 2.0,
+    "M": 2,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Engineering",
+    "rationale": "TREND研究グループの概要とTE指標構築に向けた予備的研究を紹介する序論的論文であり、具体的な統合や実証はまだ提示されていない。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 1,
+    "objective_span": 1,
+    "DSI": 1.33
+  },
+  {
+    "id": "C2-017",
+    "title": "An Appraisal and Classification of the Transdisciplinarity of Existing Design Tools",
+    "authors": "Mark Goudswaard, Ben Hicks, Linda Newnes",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Transdisciplinary (TD) working offers the potential to bring together potentially disparate elements of engineering projects permitting them to concomitantly be addressed on empirical, pragmatic, normative and purposive levels. Whilst the importance and potential benefits of working in this manner are widely accepted, a key inhibitor to the adoption and embedding of TD working in practice is the variety and diversity of design tools employed and their relative levels of ability to support TD working. To explore what can be thought of as the enabling or inhibiting roles of design tools, this paper appraises common design tools and classifies them according to the level of transdisciplinary working that they permit. This is achieved by considering the capturable level of design rationale for each design tool as per Jantsch and contextualising each within the design process. The discussion considers how these findings are reflected in practice and how chains of particular tools could be employed to support TD working across the different phases of the design process. In total 41 tools are appraised with 6 acting as enablers of interdisciplinary working but none identified as truly TD. Most notably, a much greater proportion of TD enabling design tools are available to support the early phases of design. Further work might consider how education can be used to ensure effective use of current design tools and how knowledge transfer can and should be, applied to enable use of TD tool chains in industry.",
+    "source_url": "https://doi.org/10.3233/ATDE200060",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-017_an_appraisal_and_classification_of_the_t.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 2.3,
+    "M": 3,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Engineering",
+    "rationale": "41種のデザインツールをJantschの基準で分類し、真にTDなツールが存在しないことを明らかにした体系的な評価研究。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Humanities"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.33
+  },
+  {
+    "id": "C2-018",
+    "title": "Transdisciplinary Approach to Hyper-Transparency",
+    "authors": "Mark Wever, Nel Wognum, Munir Shah, Mostafa Sharifi, Marlon M. Reis",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Over the last decade, transparency schemes have started to undergo a radical transformation. This transformation is driven by advancements in cloud computing, cryptography and automated measurement technology, which have made it possible to develop shared information management systems (SIMS). These SIMS form the backbone of the latest, state-of-the-art in the transparency space: hyper-transparency schemes. These new transparency schemes and associated SIMS offer companies, both small and large, the opportunity to redesign their supply chains and to establish more direct relationships with their second- and third-tier trading partners, as well as with the consumer. However, the companies also face various challenges in implementing and operating such hyper-transparency schemes. There are legitimate concerns about privacy, ownership and access to data and, related to this, who controls the SIMS. The present paper discusses the ongoing development of a SIMS. The objective of this SIMS is to: (1), help empower smallholders in agri-food supply chains to establish more direct connections with the consumer; and (2), help empower consumers to get more direct insight into the manner in which their food stuff is being produced. The paper presents the design of the SIMS and discusses its transdisciplinary development processes.",
+    "source_url": "https://doi.org/10.3233/ATDE200061",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-018_transdisciplinary_approach_to_hyper_tran.pdf",
+    "G": 4,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.7,
+    "M": 3,
+    "V": 2,
+    "domain": "Practice",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Social Science",
+    "rationale": "農産物サプライチェーンにおける小規模生産者と消費者を含む透明性システム(SIMS)を設計しており、多様なステークホルダーのエンパワーメントを目指す点で協働性・目標志向が高い。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 3,
+    "DSI": 2.33
+  },
+  {
+    "id": "C2-019",
+    "title": "Towards a Practical Approach for TE Education: A Pilot Study at the University of Bath",
+    "authors": "Susan Lattanzio, Jana Sajdakova, Richard Burke, Glenn Parry, Linda Newnes",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Recent decades have seen increased interest in transdisciplinary (TD) research. To deliver on the promise of TD working there has been a call for the expansion of TD education in emerging literature. The challenge with proposed approaches is that they are often difficult to implement requiring significantly changed courses structures, and the coordination of teams of academic and industry experts to deliver. This creates a barrier to the main-streaming of TD education. Our research aims to create a practical approach for Transdisciplinary Engineering (TE) education which can be easily incorporated within existing course designs and in doing so facilitate wider disseminated. This paper presents the design and pilot of a TE session with MRes students from the University of Bath’s, Centre of Doctoral Training in Advanced Automotive Propulsion Systems. The session is evaluated by way of student feedback. The results show broad satisfaction with the session. Six of the eight indicated that they were satisfied with the quality of the session (two students were neutral). All students considered that the course material was presented in a clear and understandable way. All students considered that the course was accessible to their level of understanding. Future work will see the session delivered within additional engineering MSc courses at Bath and internationally with informal agreements in place with Universities in Colombia, Korea and Poland.",
+    "source_url": "https://doi.org/10.3233/ATDE200063",
+    "pdf_status": "full_text",
+    "pdf_filename": "C2-019_towards_a_practical_approach_for_te_educ.pdf",
+    "G": 2,
+    "C_score": 3,
+    "I": 2,
+    "TE_index": 2.3,
+    "M": 3,
+    "V": 2,
+    "domain": "Education",
+    "theme": "Education",
+    "pairing": "Engineering×Management",
+    "rationale": "バース大学でのTE教育セッションのパイロット実施であり、8名の学生アンケートによる小規模な予備的評価にとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C2-020",
+    "title": "evoDash – A Transdisciplinary Vision for an Education Platform and a Simulation-Based Vehicle Development Process",
+    "authors": "Lucas Kuentzer, Marcel Schwarzenbarth, Daniel Siladjev, Georg Rock",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "In the wake of environmental disasters and accelerating climate change the challenges facing humanity seem bigger than ever. In the public eye private transport and mobility are two of the most apparent fields in need of a sustainable evolution. Around the globe car manufacturers and developers of innovative mobility solutions are hard at work in shaping the future of transport and travel. Like many modern problems these fields require a transdisciplinary approach and collaboration of disciplines in order to design a solution. At Trier University of Applied Sciences, the student team proTRon has been building highly efficient mobility concepts since 2005 and developing the prototype for a law- and safety-compliant urban vehicle concept since 2015. In this industry-oriented collaboration project the students get the chance to work in a realistic environment emulating a vehicle development process, preparing them for a job in the mobility industry as the next generation of system developers and engineers with a transdisciplinary attitude. Within the framework of this project students acquire competencies in communication and cooperation as well as gain expertise in areas like sustainability, efficiency, and organization. This paper introduces “evoDash”, a human-vehicle interface prototype for the urban vehicle concept proTRon EVOLUTION with a focus on usability and modularity. Designed and developed by students it is a software architecture based on Android and central part of a vision for a transdisciplinary education platform, which provides the foundation for future software and hardware development projects working towards an innovative and sustainable human-vehicle interface. The modular architecture of the platform provides the necessary interfaces and layout options for the functionalities that result from innovative ideas and student projects, embedding them into a usable and individually adjustable framework that will be subject to continuous iterations in order to optimize usability, safety and security. This paper proposes a simulation-based process model focused on rapid prototyping. It aims at providing a possible framework for transdisciplinary engineering projects and education.",
+    "source_url": "https://doi.org/10.3233/ATDE200066",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 3,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 3,
+    "V": 3,
+    "domain": "Education",
+    "theme": "Education",
+    "pairing": "Engineering×Engineering",
+    "rationale": "学生プロジェクトによる都市型モビリティ車両開発のための教育プラットフォームで、産業志向の実プロトタイプ開発を伴うが、目標は主に教育・技術面に限定される。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.33
+  },
+  {
+    "id": "C2-021",
+    "title": "Transdisciplinary Assessment Matrix to Design Human-Machine Interaction",
+    "authors": "Fabio Grandi, Margherita Peruzzini, Roberto Raffaeli, Marcello Pellicciari",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Successful interaction with complex systems is based on the system ability to satisfy the user needs during interaction tasks, mainly related to performances, physical comfort, usability, accessibility, visibility, and mental workload. However, the “real” user experience (UX) is hidden and usually difficult to detect. The paper proposes a Transdisciplinary Assessment Matrix (TAS) based on collection of physiological, postural and visibility data during interaction analysis, and calculation of a consolidated User eXperience Index (UXI). Physiological data are based on heart rate parameters and eye pupil dilation parameters; postural data consists of analysis of main anthropometrical parameters; and interaction data from the system CAN-bus. Such a method can be adopted to assess interaction on field, during real task execution, or within simulated environments. It has been applied to a simulated case study focusing on agricultural machinery control systems, involving users with a different level of expertise. Results showed that TAS is able to validly objectify UX and can be used for industrial cases.",
+    "source_url": "https://doi.org/10.3233/ATDE200076",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 2.7,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Social Science",
+    "rationale": "生理・姿勢・システムデータを統合したTransdisciplinary Assessment Matrixを提案し、農業機械のHMI評価に適用して検証しており、新規指標(UXI)の開発という方法論的貢献が高い。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Medicine / Health",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 3,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C2-022",
+    "title": "Transdisciplinary Design Aspects of an Air Mobile Stroke Unit",
+    "authors": "David Chipperfield, Michael Cheesman, Cees Bil, Greg Hanlon",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Stroke is highly treatable but time critical. The greatest opportunity to improve outcomes is in the first ‘Golden Hour’ after onset. Pre-hospital care for stroke in Australia is patchy and poorly coordinated, resulting in gross disparities in clinical outcomes between rural and urban Australians. Clinical outcomes are at least twice as poor for rural Australians compared to their urban counterparts. A proposed solution is an Air MSU, an aircraft configured for rapid response to stroke victims so that diagnosis and treatment can commence onsite. This concept follows the tradition of the Royal Flying Doctors Service who have been providing medical services to rural Australians since 1928. This paper discusses the conflicting medical and aerospace requirements for an aircraft equipped with a CT-scanner including supporting equipment and personnel.",
+    "source_url": "https://doi.org/10.3233/ATDE200083",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 5,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 4.0,
+    "M": 2,
+    "V": 1,
+    "domain": "Practice",
+    "theme": "Other",
+    "pairing": "Other",
+    "rationale": "都市部と地方の脳卒中治療格差という深刻な社会的課題に対し、医療と航空工学の要求の衝突を論じる概念設計研究であり、目標志向は非常に高いが実証はまだない。",
+    "author_disciplines": [
+      "Engineering",
+      "Medicine / Health"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Medicine / Health"
+    ],
+    "objective_disciplines": [
+      "Medicine / Health",
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 3,
+    "DSI": 2.33
+  },
+  {
+    "id": "C2-023",
+    "title": "Design Entropy Theory: A Novel Transdisciplinary Design Methodology for Smart PSS Development",
+    "authors": "Jingchen Cong, Pai Zheng, Chun-Hsien Chen",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Smart product-service systems (Smart PSS), as an emerging transdisciplinary paradigm, leverages smart, connected products (SCPs) and their generated services as a solution bundle to meet individual customer needs across different engineering fields. Owing to the advanced information and communication technologies, Smart PSS development differs from the existing product and/or service design mainly in three aspects: 1) closed-loop design/redesign iteration; 2) value co-creation in the context; and 3) design with context-awareness. These unique characteristics bring up new engineering design challenges, and to the authors’ best knowledge, none of the existing design theories can address them well. Aiming to fill this gap, a novel design entroy theory is proposed by adapting the information theory with engineering design. In this context, Smart PSS can be regarded as the information container. Hence, the closed-loop design/redesign iteration can be treated as the dynamic change of information and entropy in a balanced system. Meanwhile, the value co-creation process is considered as the exchange of accumulated information via the container. Lastly, the design context-awareness represents the process of eliminating entropy. As a novel prescriptive design theory, it follows Shannon’s information theory to determine the best solutions by considering the three characteristics integrally. It is envisioned this appraoch can largely facilitate today’s industrial companies’ digital servitization towards Industry 4.0 with better performance and user satisfaction.",
+    "source_url": "https://doi.org/10.3233/ATDE200100",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 3,
+    "I": 4,
+    "TE_index": 3.0,
+    "M": 4,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Data Science",
+    "rationale": "シャノンの情報理論をSmart PSSデザインに応用した新しい設計理論(Design Entropy Theory)を提案しており、方法論的独自性は高いが実証的検証はない。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-024",
+    "title": "From Control to Coordination: Mahalanobis Distance – Pattern Approach to Strategic Decision Making",
+    "authors": "Shuichi Fukuda",
+    "year": 2020,
+    "venue": "27th ISTE International Conference on Transdisciplinary Engineering (TE2020, virtual)",
+    "keywords": "",
+    "abstract": "Up to now, our engineering has been control-based. The goal was clear, We made efforts to get to the goal faster and more effectively. This was possible because changes were smooth, so we could differentiate them mathematically. Therefore, we could predict the future. But today, changes become sharp and unpredictable. Therefore, adaptability becomes more important than efficiency. Or to describe it another way, we need to find an appropriate goal first by trial and error. Yesterday tactics was important, but today strategy becomes important. But our world becomes so complex and complicated that we need to work as a team. And the formation of this team must vary from situation to situation to win the game. Therefore, we must develop a truly adaptive network. This paper proposes that if we introduce non-Euclidean Mahalanobis Distance (MD) and combine it with patterns, then we can develop a holistic and quantitative performance indicator. It evaluates our performance in a very short time for almost any number of dimensions, because it is free from the constraints of orthonormality and units in Euclidean Space. Thus, this Mahalanobis Distance-Pattern (MDP) Approach helps us to make an approriate strategic decision.",
+    "source_url": "https://doi.org/10.3233/ATDE200086",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 2.3,
+    "M": 4,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Systems Engineering",
+    "pairing": "Engineering×Data Science",
+    "rationale": "マハラノビス距離とパターン認識を組み合わせた戦略的意思決定指標を提案するFukudaの理論的論考であり、新規性はあるが実証や分野横断の協働実績は乏しい。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-025",
+    "title": "Towards a Transdisciplinary Approach to Systemic Risk Detection",
+    "authors": "Mark Wever, Nel Wognum, Munir Shah, Niall O’Leary, George Onofrei",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "Systemic risks are potentially harmful events, that could severely disrupt an entire industry or economy. Examples include the bankruptcy of keystone companies and biosecurity incursions. According to the United Nations, detecting and managing systemic risk represents one of the main challenges of the 21st century. Due to increasing complexity and interconnectedness of today’s social-technological-biophysical systems, stakeholders relying on individual disciplines to systemic risk detection, or a combination of disciplines that are not well coordinated, will fail to promptly identify key early warning signals of threats. Our paper argues that transdisciplinary approaches are required to make comprehensive and integrative assessments of complex systems. To support stakeholders undertaking such assessments, we propose a framework that will assist them in: (1) better understanding their system and the risks to which it is exposed; (2) selecting complementary disciplines, theories and methods that are relevant to the system and risks in question; and (3) integrating knowledge from these different disciplines to detect a wide range of early warning signals of systemic risk. The framework can be used as a foundation to build transdisciplinary approaches to risk detection.",
+    "source_url": "https://doi.org/10.3233/ATDE210076",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 5,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 4.3,
+    "M": 4,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Other",
+    "rationale": "経済・産業の破綻連鎖等のシステミックリスク検知という国連レベルの重大な社会的課題に対し、複数分野の理論・手法を統合するTD枠組みを提案しているが、まだ概念段階で実証はない。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Management / Business",
+      "Social Science",
+      "Natural Science"
+    ],
+    "objective_disciplines": [
+      "Management / Business",
+      "Natural Science",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 3,
+    "objective_span": 3,
+    "DSI": 2.67
+  },
+  {
+    "id": "C2-026",
+    "title": "Infrastructuring Transdisciplinary Problem Solving in Translational Research",
+    "authors": "Santosh Basapur, Keiichi Sato, Raj C. Shah, Sherry Robison",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "Translational Research in the health sciences endeavors to bring biomedical discoveries into clinical applications that improve human health. This work is complex and long-term with a substantial risk of failure. A key step of clinical trials is needed to evaluate the effects of those interventions on human biomedical or behavioral outcomes. Timely recruitment of human subjects and meeting recruitment milestones is recognized as one of the most significant contributors to delays and failures. Quality and Design approaches have been tried to address the problem but the scope has been limited. We proposed to determine how Quality and Design may lead to complementary solutions for these barriers of Translational Research. The first ten studios using this approach are presented here. Three themes emerged: (1) problems were investigated similarly but there was a difference in insights, (2) quality process-based solutions tended to be specific to the issue discussed whereas the design process often yielded solutions broader or even tangential, and (3) quality solutions demonstrated more immediacy while design solutions showed more systemic ideas. In conclusion, the paper demonstrates how Design and Quality in a transdisciplinary studio may lead to solutions with different characteristics for clinical trials and advance translational science.",
+    "source_url": "https://doi.org/10.3233/ATDE210077",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 4,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 4.0,
+    "M": 4,
+    "V": 4,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Social Science",
+    "rationale": "がん臨床試験の被験者募集という実務課題に対し、Quality手法とDesign手法を組み合わせた10件のスタジオ実践を報告しており、複数事例による実証と手法統合の両面で高評価。",
+    "author_disciplines": [
+      "Engineering",
+      "Medicine / Health"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Medicine / Health"
+    ],
+    "objective_disciplines": [
+      "Medicine / Health"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-027",
+    "title": "Foraging for Transdisciplinary Challenges: Emergent Industrial Themes",
+    "authors": "Emily Carey, Linda Newnes, Susan Lattanzio, Alex Hultin, Nataliya Mogles",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "This paper presents our findings from thirteen industrial interviews, to investigate the significance of transdisciplinarity (TD) in an industrial context. Thus to gain insight into the resilience of industrial manufacturing in rapidly changing environments and establish what enabling or disabling practices may currently exist. The interviews were conducted as an initial part of a wider case study approach being undertaken by the TREND research team and were semi-structured in format. We present the background and research questions being addressed and outline our exploratory research approach. The analysis of interview transcriptions is provided answering our research questions and identifying any emerging themes. Of the industry interviews, only five interviewees had heard of the term TD, the definition of TD varied between companies and did not align with the primordial system of Jantsch’s work. A number of focal enabling and disabling industrial themes emerge from the interviews and related discourse such as the positive and negative human contribution(s) and growing global teams involved in manufacture. For industry to be resilient and meet rapid technological and societal change, these themes should be core for manufacturing solutions. Secondary studies should investigate literature and collaborate with engineering industries to test any potential TD interventions.",
+    "source_url": "https://doi.org/10.3233/ATDE210078",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 3,
+    "C_score": 4,
+    "I": 2,
+    "TE_index": 3.0,
+    "M": 2,
+    "V": 3,
+    "domain": "Multiple",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Management",
+    "rationale": "TREND研究の一環として13件の産業インタビューを行い、TDという用語の産業界での認知度や実践の実態を明らかにした探索的研究。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.33
+  },
+  {
+    "id": "C2-028",
+    "title": "Transdisciplinary Engineering for Market Development",
+    "authors": "Shuichi Fukuda",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "Transdisciplinary engineering is composed of analysis and synthesis. Most of current engineering is focused on analysis and based on Euclidean Space, mathematical solutions are developed for product development. But if we pay attention to synthesis or design, we cannot satisfy the requirements of orthonormality and Euclidean distance with units. This paper discuss how we can challenge transdisciplinary engineering for market development, which requires Non-Euclidean Space approach.",
+    "source_url": "https://doi.org/10.3233/ATDE210079",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 2,
+    "I": 2,
+    "TE_index": 2.0,
+    "M": 2,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Data Science",
+    "rationale": "市場開発における分析から総合への転換を論じるFukudaの概念的論考であり、非ユークリッド空間アプローチを提起するが具体的方法論の実装や実証はない。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.33
+  },
+  {
+    "id": "C2-029",
+    "title": "The Transdisciplinary Engineering Index: Towards a Disciplinary Maturity Grid",
+    "authors": "Susan Lattanzio, Emily Carey, Alex Hultin, Reza Imani Asrai, Aydin Nassehi, Glenn Parry, Linda Newnes",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "The adoption of transdisciplinary capabilities within UK manufacturing could strengthen resilience in response to system disruptions. We propose a Disciplinary Maturity Grid (DMG) as a means through which industry can assess the disciplinarity of their engineering capability. The design of methods to assess maturity of disciplinary working is hindered by a lack of empirical evidence to support identification of the important dimensions. A workshop involving twelve academic experts was used to create a maturity grid. Workshop tasks focussed on defining the appropriate number of maturity levels, the dimensions of those levels, and the maturity assessment questions. The DMG contains five maturity levels and seven dimensions, providing a preliminary design from which to build in future studies.",
+    "source_url": "https://doi.org/10.3233/ATDE210080",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 3,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 3,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Management",
+    "rationale": "英国製造業のレジリエンス向上を目的に、12名の学術専門家によるワークショップでDisciplinary Maturity Gridの予備設計を行っており、産業実装はまだ将来課題。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C2-030",
+    "title": "A Transdisciplinary Approach for the Design Optimization of Medical Simulations",
+    "authors": "Agnese Brunzini, Margherita Peruzzini, Michele Germani, Daniele Messi, Pamela Barbadoro",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "Simulation in healthcare is rapidly replacing more traditional educational methods, becoming a fundamental step in the medical training path. Medical simulations have a remarkable impact not only on learners’ competencies and skills but also on their attitudes, behaviors, and emotions such as anxiety, stress, mental effort, and frustration. All these aspects are transferred to the real practice and reflected on patients’ safety and outcomes. The design of medical simulations passes through a careful analysis of learning objectives, technology to be used, instructor’s and learners’ roles, performance assessment, and so on. However, an overall methodology for the simulation assessment and consequent optimization is still lacking. The present work proposes a transdisciplinary framework for the analysis of simulation effectiveness in terms of learners’ performance, ergonomics conditions, and emotional states. It involves collaboration among different professional figures such as engineers, clinicians, specialized trainers, and human factors specialists. The aim is to define specific guidelines for the simulation optimization, to obtain enhanced learners’ performance, improved ergonomics, and consequently positively affect the patient treatment, leading to cost savings for the healthcare system. The proposed framework has been tested on a low-fidelity simulation for the training of rachicentesis and has allowed the definition of general rules for its enhancement.",
+    "source_url": "https://doi.org/10.3233/ATDE210082",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 3,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 3.7,
+    "M": 4,
+    "V": 3,
+    "domain": "Multiple",
+    "theme": "Education",
+    "pairing": "Engineering×Social Science",
+    "rationale": "医療シミュレーションの最適化のため、エンジニア・臨床家・訓練担当者・人間工学専門家が協働する枠組みを提案し、実際の低忠実度シミュレーションで検証している点で協働性・統合度・実証水準がバランス良く高い。",
+    "author_disciplines": [
+      "Engineering",
+      "Medicine / Health"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Medicine / Health",
+      "Humanities"
+    ],
+    "objective_disciplines": [
+      "Medicine / Health",
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 3,
+    "objective_span": 2,
+    "DSI": 2.33
+  },
+  {
+    "id": "C2-031",
+    "title": "Fostering Design Thinking in Transdisciplinary Engineering Education",
+    "authors": "Jo-Yu Kuo, Xue Ting Song, Chun-Hsien Chen, Chandrakant D. Patel",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "Disruptive technologies such as 3D printing, artificial intelligence (AI), and robotics have changed how people think, learn, and work fundamentally. Engineering education must adapt to this digital transformation. There has been increasing interest in integrating design in the engineering curriculum around the world. While traditional problem solving is a linear and structured approach, design thinking is set by a human-centered innovation process which leads to better products and services. This concept is well aligned with the educational vision of transdisciplinary engineering. However, it is challenging to teach the mindset of design thinking for people with various domain knowledge. In this paper, the differences in how industrial designers and design engineers tackle a design project are explained. We intend to share a few successful examples regarding how design methodology captures customer requirements and explores creative solutions in the product development lifecycle within the current engineering curriculum. Also, the user experience research in response to the trend of cyberphysical integration is discussed. Finally, we conclude with the need for a holistic curriculum design in digital manufacturing as a case study to illustrate the role of design thinking for future transdisciplinary engineering education.",
+    "source_url": "https://doi.org/10.3233/ATDE210083",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 3,
+    "I": 2,
+    "TE_index": 2.3,
+    "M": 2,
+    "V": 1,
+    "domain": "Education",
+    "theme": "Education",
+    "pairing": "Engineering×Social Science",
+    "rationale": "デザイン思考をTE教育に取り入れる事例を紹介する論考であり、具体的な検証や新規手法の提示は限定的。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Humanities"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Humanities"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-032",
+    "title": "Product Lifecycle Management and Sustainable Development in the Context of Industry 4.0: A Systematic Literature Review",
+    "authors": "Michele Marcos De Oliveira, Luisa Geraldi Andreatta, Josip Stjepandić, Osiris Canciglieri Junior",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "The Fourth Industrial Revolution and its disruptive technologies are emerging massively. With various motivations for its implementation such as elevation of speed, reducing costs, mitigating errors, and other different factors, more and more technology are being employed to solve business problems and increase profit. Through the years, product lifecycles have been shorted as a good reason to reduce production costs and give to consumers the experience of replacing goods in shorter periods. This linear cycle of “produce-use-dispose” reached a massive success in the last decades, but have started to show lack of sustainability for consumer and industry. This work aims to conduct a Systematic Literature Review about the future challenges for Product Lifecycle Management and Sustainable Development, considering the context of Industry 4.0. The expected outcome for this study is to find elements that can support the use of 4.0 technologies in Product Lifecycle Management with a strong background for Sustainable Development.",
+    "source_url": "https://doi.org/10.3233/ATDE210100",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 3,
+    "C_score": 2,
+    "I": 2,
+    "TE_index": 2.3,
+    "M": 1,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Product Lifecycle/PLM",
+    "pairing": "Engineering×Management",
+    "rationale": "Industry 4.0下でのPLMと持続可能な開発に関する系統的文献レビューであり、既存文献の整理にとどまり実証や統合の新規性は低い。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Natural Science"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.33
+  },
+  {
+    "id": "C2-033",
+    "title": "Benchmark on Human Simulation Tools: A Transdisciplinary Approach",
+    "authors": "Fabio Grandi, Sara Cavallaro, Margherita Peruzzini, Roberto Raffaeli, Marcello Pellicciari",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "Nowadays companies have to face a competitive market that requires small volumes with a high level of customisations. In this context, assembly quality and timeliness is crucial. To guarantee flexibility and personalization, manual operations still have a crucial role for a lot of manufacturing sectors, so that workers’ conditions and ergonomics are important factors to achieve a better product quality and overall cost reduction. Ergonomics evaluation in manufacturing is a challenging and expensive activity that requires a transdisciplinary approach, to merge technical and social sciences to finally have a consolidated and reliable evaluation. This paper compared two digital human simulations tools offered by Siemens Tecnomatix: Jack and Process Simulate. They were applied on the same industrial case study, concerning the hood assembly of an agricultural machine, comparing results on ergonomics reports and usage time. Results confirmed the advantage of adopting a digital approach to predict the human effort and ergonomic risk related to a series of tasks. At the same time, they showed the major strengths and weaknesses of the two analysed tools and defined how they can be successfully adopted by companies. The paper finally provided guidelines to drive companies in choosing the best tool according to their needs.",
+    "source_url": "https://doi.org/10.3233/ATDE210114",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 2,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 2.7,
+    "M": 2,
+    "V": 3,
+    "domain": "Practice",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Social Science",
+    "rationale": "農業機械の組立作業を対象に2種のデジタルヒューマンシミュレーションツール(Jack, Process Simulate)を比較するベンチマーク研究で、人間工学と技術評価を統合しているが手法自体は既存ツールの適用比較にとどまる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Medicine / Health"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C2-034",
+    "title": "Integration Across Knowledge Boundaries During New Product Introduction",
+    "authors": "Paraskeva Wlazlak, Daniel Hussmo, Kristina Säfsten",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "New product introduction refers to all activities that are required to make a product possible to produce in planned volumes. To ensure smooth new product introduction, product and production developers work in a cross-functional and integrated way. Because of high degree of novelty during new product introduction and interdependencies between those involved knowledge boundaries are created. As prior research argues, different types of knowledge boundaries require different integration processes. For example, integration at a syntactic boundary is established by transfer of domain-specific knowledge across a boundary, while coping with semantic boundary requires a process of translation where learning about the differences and dependencies at the boundary is required. To be able to understand how to integrate product and production development across knowledge boundaries and hence support new product introduction it is important to understand what types of boundaries need to be crossed. To overcome the shortcomings of the prior research, this paper focuses on knowledge boundaries and prerequisites for successful integration in new product introduction. It is based on success stories from three large Swedish companies. This paper addresses transdisciplinary challenges and contributes to literature on boundary crossing during new product introduction and to practice.",
+    "source_url": "https://doi.org/10.3233/ATDE210120",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 3,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 3,
+    "V": 4,
+    "domain": "Practice",
+    "theme": "Product Lifecycle/PLM",
+    "pairing": "Engineering×Management",
+    "rationale": "スウェーデン大手3社の事例をもとに、新製品導入時の知識境界(統語的・意味的)を横断する統合プロセスを分析しており、複数の実企業データによる実証水準は高い。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C2-035",
+    "title": "Enhancing Human Perspectives in CPS Models: Application to Collaborative Problem-Solving in Translational Medicine",
+    "authors": "Keiichi Sato, Fei Hu, Santosh Basapur, Raj C. Shah, Gunnar Hartvigsen",
+    "year": 2021,
+    "venue": "28th ISTE International Conference on Transdisciplinary Engineering (TE2021)",
+    "keywords": "",
+    "abstract": "Cyber Physical Systems (CPS) have been developed for providing seamless, resilient and high-fidelity services in areas such as manufacturing, healthcare, agriculture, transportation and everyday living. Yet, conceptual and methodological frameworks of CPS that effectively incorporate human perspectives have not been well addressed in research and practice. The success of system design can only be achieved when all stakeholders can mentally and behaviorally position the system in the complex environments and situations by forming user knowledge and meanings through the system lifecycle. Such close human-system collaboration in CPS would enable the real-world system performance such as adaptivity, robustness and resilience in dynamic environments. The goal of this research is to enhance human perspectives by introducing a semiotic framework for representing different aspects of human and organizational meaning formation. It also intends to explore how the semiotic approach can be integrated with Human System Integration (HSI), CPS or Cyber Physical Human Systems (CPHS) methodologies to further enhance human perspectives in CPS lifecycles by transdisciplinary approaches. The paper then introduces an early stage of the project that applies the approach to represent a collaborative problem-solving infrastructure for clinical research process innovation in a multi-institutional translational medicine organization.",
+    "source_url": "https://doi.org/10.3233/ATDE210133",
+    "pdf_status": "abstract_only",
+    "pdf_filename": null,
+    "G": 4,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 4.0,
+    "M": 4,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Systems Engineering",
+    "pairing": "Engineering×Social Science",
+    "rationale": "医療機関間の橋渡し研究における協調的問題解決基盤の構築に向け、記号論的フレームワークをCPS/HSIに統合する提案を行っているが、プロジェクトはまだ初期段階で実証は限定的。",
+    "author_disciplines": [
+      "Engineering",
+      "Medicine / Health"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Humanities",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Medicine / Health",
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 3,
+    "objective_span": 2,
+    "DSI": 2.33
+  }
+]

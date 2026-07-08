@@ -1,0 +1,1269 @@
+[
+  {
+    "id": "C3-001",
+    "title": "A Transdisciplinary Method for Requirements and BOMs Engineering and Their Chaining Toward CAD Models",
+    "authors": "Alain-Jérôme Fougères, Egon Ostrosi, Josip Stjepandić",
+    "year": 2022,
+    "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)",
+    "keywords": "",
+    "abstract": "The interconnectedness of knowledge implies the need for a transdisciplinary attitude between humans and computers. This paper proposes a method for requirements and BOMs engineering and their chaining toward CAD models. Agents and multi-agent systems are considered and modelled as transdisciplinary concepts. The cooperative and agent-based platform F-EGEON (Fuzzy Engineering desiGn sEmantics elabOration and applicatioN) is developed for requirements and BOMs engineering. F-EGEON agents structure data into fuzzy BOMs: Fuzzy Requirement BOM (r-BOM), Fuzzy Function BOM (f-BOM), Fuzzy Component (c-BOM) and Fuzzy Parameters BOM (t-BOM). Then, a specific F-EGEON agent generates the Fuzzy cad-BOM to be transmitted to the CAD models. The prospect of equipping intelligent requirements engineering with systems like F-EGEON should not only aim to represent designer proposals, but also to support positive actions or behaviors in the design environment. An intelligent requirement engineering system must be capable of identifying (and even analyzing) false (even imprecise, incomplete, contradictory) statements and biased representations.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/61424",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-001_TransdisciplinaryMethodBOMs.pdf",
+    "G": 2,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 2.7,
+    "M": 4,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Data Science",
+    "rationale": "要求工学とCADモデルを繋ぐマルチエージェント手法の技術提案であり、社会的関連性への言及がなく問題設定はGoalが低い。工学とマルチエージェント情報科学の統合はあるが実証は概念的なデモンストレーションにとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-002",
+    "title": "Requirements Handling in Multidisciplinary Product Development – A Company Study",
+    "authors": "Roland Stolt, Samuel André",
+    "year": 2022,
+    "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)",
+    "keywords": "",
+    "abstract": "When developing new products there are a multitude of requirements from different domains to consider making it a multidisciplinary activity. The paper examines how a major industrial manufacturer formalizes and manages heterogeneous requirements across product development stages. The investigation found that while regulatory compliance receives robust support, other requirement areas lack standardized approaches and IT integration, raising development cycle risks. The authors recommend enhanced formalization practices and improved software system capabilities for both product and production development phases.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/61427",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-002_RequirementsHandlingMultidisciplinary.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 2,
+    "TE_index": 2.0,
+    "M": 2,
+    "V": 3,
+    "domain": "Practice",
+    "theme": "Product Lifecycle/PLM",
+    "pairing": "Engineering×Engineering",
+    "rationale": "単一製造企業内の要求管理の実態調査であり、社会的関連性や分野を超えた真の統合の記述が乏しく、複数工学分野内の並置的な比較にとどまる。単一企業ケーススタディとしての実証水準は中程度。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 1,
+    "DSI": 1.0
+  },
+  {
+    "id": "C3-003",
+    "title": "Challenges of a Transdisciplinary Team in the Design of a Lithium-Ion Battery Pack for Small Urban Electric Vehicles: Lessons Learned",
+    "authors": "Samuel Henrique Werlich, Joelton Deonei Gotz, Fernanda Cristina Corrêa, Milton Borsato",
+    "year": 2022,
+    "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)",
+    "keywords": "",
+    "abstract": "Electric vehicles (EVs) are becoming a viable alternative to eliminate emissions, reduce dependence on fossil fuels, and gradually replace vehicles with an internal combustion engine (ICE). The work examines how a cross-disciplinary research group of 29 scientists from three Brazilian institutions and two automotive subsidiaries collaborated to create a lithium-ion battery system with management components for an urban vehicle under the Route 2030 program. The findings emphasize that collaborative work across disciplines proves essential for standardizing team expertise, defining performance targets using quality assessment methods, selecting appropriate cell materials, arranging module configurations, and establishing battery management protocols.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/61428",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-003_TransdisciplinaryTeamBatteryPack.pdf",
+    "G": 4,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.7,
+    "M": 3,
+    "V": 3,
+    "domain": "Practice",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Engineering",
+    "rationale": "EVによる排出削減という社会的関連性を持つ課題に対し、3大学と2自動車会社29名という産学連携の広い協働が明示されている一方、統合は専門知識の標準化・すり合わせのレベルにとどまり単一ケースの教訓としての報告である。",
+    "author_disciplines": [
+      "Engineering",
+      "Natural Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Natural Science"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-004",
+    "title": "Modelling for the UK's Utility-Scale Solar Regulation Change: Lessons for Transdisciplinary Engineering in Policy Practice",
+    "authors": "Laurent Liote",
+    "year": 2022,
+    "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)",
+    "keywords": "",
+    "abstract": "Meeting the UK's net-zero greenhouse gases target by 2050 requires transdisciplinary engineering; it requires efficient exchange and collaboration between engineering and social science, between engineers and policy makers within the national government. The paper examines how a technical model was developed through collaboration between engineering advisors and policy experts at the UK's Department for Business, Energy and Industrial Strategy. Through ethnographic research, the author analyzes how the generation of mutual trust and development of interactional knowledge between engineers and policy advisers enables TE in policy practice, demonstrating how the modeling process facilitated resolution of technical and social concerns in utility-scale solar regulation.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/61435",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-004_UKSolarRegulationTEPolicy.pdf",
+    "G": 5,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 4.3,
+    "M": 3,
+    "V": 3,
+    "domain": "Practice",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Social Science",
+    "rationale": "net-zero目標という明確に社会・環境に関わるwicked problemを扱い、政府内の政策担当者と技術者間の相互信頼・相互作用的知識の生成をエスノグラフィで実証しており統合の深さも高い。ただし単一の政策事例研究であり方法論としての一般化はやや弱い。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C3-005",
+    "title": "Instrumenting Weick's Seven Properties to Measure Collective Sensemaking in Engineering Teams",
+    "authors": "Ignacio Vazquez, Fahim Faruque, Bryan Moser",
+    "year": 2022,
+    "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)",
+    "keywords": "",
+    "abstract": "As engineering systems become more complex, there is a growing need for interdisciplinary collaboration to achieve design and business objectives. The research addresses how cross-functional teams develop shared understanding during complex systems work. The authors propose measurement approaches that connect sensemaking concepts to observable team practices, using a questionnaire-based study to correlate teamwork instances with observable behaviors. They outline plans to integrate these measurements into engineering workshops for real-time, non-intrusive sensemaking detection.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/61446",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-005_WeickSevenPropertiesSensemaking.pdf",
+    "G": 2,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Social Science",
+    "rationale": "組織心理学（Weickのセンスメイキング理論）を工学チームの計測に応用する新しい測定枠組みを提案しており分野統合の質は高いが、対象課題自体は社会的関連性の明示がなく技術的なチーム運営の問題にとどまる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-006",
+    "title": "Simultaneous Interdisciplinary Teamwork on Digital Twins in a 3D Collaborative Environment",
+    "authors": "Nicolai Beisheim, Matthias Rädle, Julian Reichwald, Markus Linde, Tobias Ott, Sebastian Amann, Kevin Kastner",
+    "year": 2022,
+    "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)",
+    "keywords": "",
+    "abstract": "Digital twins of product and production processes are being used more and more frequently. The reason for this are the benefits for all departments involved. The paper addresses the necessity of shared IT infrastructure enabling multiple departments to collaboratively develop digital twins. Key requirements include simultaneous multi-user access in virtual environments, integration of communication tools (voice and video chat), and support for varied end devices. The solution was developed using Unity3D as the foundational platform for this collaborative 3D environment.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/61456",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-006_InterdisciplinaryTeamworkDigitalTwins.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 2.3,
+    "M": 3,
+    "V": 2,
+    "domain": "Practice",
+    "theme": "Digital Twin",
+    "pairing": "Engineering×Data Science",
+    "rationale": "社内複数部門のデジタルツイン共同作業を支えるUnity3D基盤の技術的ソリューションであり、社会的課題としての設定は薄く、実証も開発段階のデモンストレーションにとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-007",
+    "title": "Transdisciplinary Evaluation of Simulation Software for Industry 4.0 Assembly Lines",
+    "authors": "Jacopo Lettori, Milton Borsato, Roberto Raffaeli, Marcello Pellicciari, Fabio Grandi, Margherita Peruzzini",
+    "year": 2022,
+    "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)",
+    "keywords": "",
+    "abstract": "Industry 4.0 is driving the revolution of manufacturing processes by combining innovative technologies and new interaction paradigms among systems and operators. In particular, the layout, tasks and work sequences of assembly lines are designed according to several transdisciplinary Design Principles (DPs), such as process efficiency, product quality, ergonomics, safety and operators' workload. A large variety of simulation software can be employed for evaluations. However, the related ability to assess multidisciplinary factors must be evaluated. The paper aims to provide a framework for guiding the assessment of simulation software in the context of Industry 4.0 assembly lines. Process requirements are first analyzed and mapped to select DPs, prioritized according to design goals by an analytical hierarchy process. Then, suitable simulation software is determined accordingly, and the virtual model is realized. Finally, the possibility of the software to provide meaningful elaborations for the selected DPs is assessed. The framework has been tested on a prototypal Industry 4.0 assembly line composed of automated logistic systems, cobots and systems to guide the execution of tasks. The line has been modeled in Siemens Process Simulate, analyzing the completeness and appropriateness of the functionalities of this software according to the defined DPs.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/61460",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-007_TDEvaluationSimulationSoftwareI4.pdf",
+    "G": 3,
+    "C_score": 3,
+    "I": 4,
+    "TE_index": 3.3,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Engineering",
+    "rationale": "生産効率・人間工学・安全性など複数の学際的設計原則を体系的にAHPで統合するフレームワークを提案し、プロトタイプ組立ラインで検証している点で統合深度と方法論的貢献が高い。ただし単一プロトタイプでの検証に限定される。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.33
+  },
+  {
+    "id": "C3-008",
+    "title": "Community Biology Labs in Practice: A Pasteur's Quadrant Perspective",
+    "authors": "Ibrahim Aldulijan, S. Nisa Asgarali-Hoffman, Foad Hamidi, Lydia Stamato, Justice Walker, Mo Mansouri, Lisa Scheifele",
+    "year": 2022,
+    "venue": "29th ISTE International Conference on Transdisciplinary Engineering (TE2022)",
+    "keywords": "",
+    "abstract": "Donald Stokes developed a paradigm that categorizes research into three quadrants based on two dimensions: the pursuit of basic understanding and consideration of utility. The work examines where community labs situate themselves within this framework. Through interviews and literature review, the authors demonstrate that community labs predominantly function in Pasteur's quadrant — use-inspired basic research. They identify key strengths: community labs' ability to integrate diverse expertise, pivot between basic and applied work quickly, support collaboration, and focus on local priorities makes them valuable additions to this quadrant and to the scientific research community.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/61433",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-008_CommunityBiologyLabsPasteursQuadrant.pdf",
+    "G": 3,
+    "C_score": 5,
+    "I": 2,
+    "TE_index": 3.3,
+    "M": 2,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Social Innovation",
+    "pairing": "Other",
+    "rationale": "市民参加型のコミュニティバイオラボという学術・市民の多様なステークホルダーの共創の場を扱い協働の幅は非常に広いが、既存のPasteur's Quadrantという枠組みを当てはめる位置づけ分析にとどまり方法論統合は限定的である。",
+    "author_disciplines": [
+      "Natural Science",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Natural Science",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-009",
+    "title": "The Impact of Cultural Change: A Transdisciplinary Engineering Case Study",
+    "authors": "Harley Beattie, Linda B. Newnes, Vimal Dhokia, David Nickerson, Paul Crabtree",
+    "year": 2023,
+    "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)",
+    "keywords": "",
+    "abstract": "Engineering Change Management (ECM) is a complex process requiring transdisciplinary working across the entire business and product lifecycle. Core to achieving successful transdisciplinary working are collaborative teams focusing on a common goal. However, much of the research and studies presented tend to be academic in nature and often focused on education and health, with a small number of papers providing industrial engineering examples. In this paper, we present an Engineering Change Management case study of a small UK-based automotive business and reflect on the importance of a transdisciplinary engineering approach. We place focus on the importance of social sciences, people and culture, in gaining success i.e. a people-focused approach to ECM. We hypothesized that by using a transdisciplinary approach where people and culture were key, we could accelerate the Engineering Change Management process. Within this paper, we introduce ECM and Quick Release's role in assisting companies with their engineering change management processes. This is followed by a summary of the case study context and the two-phased approach to the analysis; Diagnostic (Phase 1) and Acceleration sprint (Phase 2). The results of the case study estimated a process throughput increase of a factor of three and a reduction in ECM process time from a 64-day average to approximately 22 days. This eliminated a potential 8-week program delay, valued at over €5 million in engineering costs alone for the case study company.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/65183",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-009_CulturalChangeTECaseStudy.pdf",
+    "G": 3,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.3,
+    "M": 3,
+    "V": 4,
+    "domain": "Practice",
+    "theme": "Product Lifecycle/PLM",
+    "pairing": "Engineering×Social Science",
+    "rationale": "エンジニアリング変更管理に人・文化という社会科学的観点を明示的に取り入れ、産業的な課題を背景に据えている。実際の英国自動車企業での定量的な効果測定（工程時間短縮、コスト削減）を伴う点で実証水準は比較的高い。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C3-010",
+    "title": "Design of a Lithium-Ion Battery Pack for a Small Urban Electric Vehicle: Challenges and Lessons Learned by a Transdisciplinary Team",
+    "authors": "Samuel Henrique Werlich, Joelton Deonei Gotz, Fernanda Cristina Corrêa, Milton Borsato",
+    "year": 2023,
+    "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)",
+    "keywords": "",
+    "abstract": "Electric vehicles present a promising alternative to reduce emissions and fossil fuel dependence. The paper examines the challenges a multidisciplinary research group faced when developing a lithium-ion battery with management system for a compact urban vehicle under Brazil's Rota 2030 Program. The authors note that the team encountered difficulties locating information regarding commercial electric vehicle systems, such as battery sizing details and cell configurations. Their work reveals the substantial complexity inherent in designing battery systems that satisfy electric vehicle requirements.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/65174",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-010_LithiumBatteryTransdisciplinaryTeam.pdf",
+    "G": 4,
+    "C_score": 3,
+    "I": 2,
+    "TE_index": 3.0,
+    "M": 2,
+    "V": 3,
+    "domain": "Practice",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Engineering",
+    "rationale": "C3-003と同一プロジェクトの関連報告で、EV普及という社会的関連性は高いが、本稿は情報収集の困難さや設計上の複雑さを記述するにとどまり方法論の統合や新規性は限定的である。",
+    "author_disciplines": [
+      "Engineering",
+      "Natural Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Natural Science"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-011",
+    "title": "Transdisciplinary Setup Guide for Automated Maintenance Training Generation in Virtual Reality from Virtual Commissioning",
+    "authors": "Sascha Quast, Kathrin Konkol",
+    "year": 2023,
+    "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)",
+    "keywords": "",
+    "abstract": "The research describes a three-year initiative addressing cost-effective maintenance training in automated production through virtual reality simulations. Rather than manual configuration, the project developed an automated system generating gamified maintenance training scenarios in VR based on existing virtual commissioning setups within the automotive sector. The solution provides guidance for three user groups: commissioners generate VR scenes from virtual commissioning data; trainers configure maintenance training scenarios; and trainees engage in virtual machine practice. The system connects real machine behavior from Programmable Logic Controllers and Numerical Control systems to VR interfaces including touchscreens and physical machine components. The demonstrator received positive feedback from key users of the automotive industry and should be tested for their training in the next steps.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/65175",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-011_TDSetupGuideMaintenanceTrainingVR.pdf",
+    "G": 2,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 2.7,
+    "M": 4,
+    "V": 2,
+    "domain": "Practice",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Data Science",
+    "rationale": "自動化保全トレーニング生成のためのVR自動化システムを新規提案し、コミッショナー・トレーナー・訓練生という複数の役割を統合する枠組みを持つが、社会的関連性は限定的で検証も現場ユーザーの初期フィードバックに留まる。",
+    "author_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-012",
+    "title": "Team Composition, Recomposition, and Role Selection in Long-Term Educational Programs: A Theoretical Framework Using Multiple Criteria Approach",
+    "authors": "Krissada Chalermsook, Chutiporn Anutariya",
+    "year": 2023,
+    "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)",
+    "keywords": "",
+    "abstract": "The topic of team composition, recomposition, and role selection in long-term educational programs that comprise of multiple smaller courses, such as coding bootcamps, has received limited attention in the literature, despite its importance. However, the rise of large-scale online learning environments such as MOOCs has highlighted the need for effective strategies to address the high drop-out rates and low quality graduates observed in these contexts. In this paper, we propose to build a theoretical framework by using a multiple-criteria technique that incorporates personalities, agile, and gamification to address this problem. This framework will be used to better understand the dynamics of team composition, recomposition, and role selection in virtual teams within such educational programs.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/65177",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-012_TeamCompositionEducationalPrograms.pdf",
+    "G": 2,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 4,
+    "V": 1,
+    "domain": "Education",
+    "theme": "Education",
+    "pairing": "Engineering×Social Science",
+    "rationale": "パーソナリティ心理学・アジャイル・ゲーミフィケーションを組み合わせた理論的フレームワークを新規提案しており分野統合の企図は明確だが、実証データによる検証がなく概念的議論の段階にとどまる。",
+    "author_disciplines": [
+      "Data Science / CS"
+    ],
+    "method_disciplines": [
+      "Humanities",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.33
+  },
+  {
+    "id": "C3-013",
+    "title": "Engagement Mechanisms in Workshops for Sustainable Community Development",
+    "authors": "Bruce A. Hecht, Ted Halsey, Mai Nguyen, Bryan R. Moser",
+    "year": 2023,
+    "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)",
+    "keywords": "",
+    "abstract": "Sustainable development for cities and communities presents challenges planning for economic and environmental resiliency. Workshops can bring stakeholders' local knowledge in combination with planning experts' professional knowledge. This paper proposes a system model for workshops operating as transdisciplinary problem-solving systems of functions, processes, and roles. The identified mechanisms link to three steps: first, stakeholders define the relevant problems; second, stakeholders and planning experts contribute to exploring a range of possible decisions. Finally, decision methods illuminate and prioritize options for selecting concepts of desired solutions. An approach to examine and test the workshop system model for a site-specific example focuses on land-use at transit stations. The research aims to improve human capacity to address the growing complexity in cities increasing social equity with economic and environmental resilience.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/65181",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-013_EngagementWorkshopsSustainableCommunity.pdf",
+    "G": 4,
+    "C_score": 5,
+    "I": 4,
+    "TE_index": 4.3,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Social Science",
+    "rationale": "社会的公平性・経済・環境レジリエンスという都市の複雑な課題に対し、住民の地域知と計画専門家の専門知を統合するワークショップシステムモデルを提案しており、市民参加による共創プロセスを含む点で協働の幅・統合深度ともに高い。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C3-014",
+    "title": "Leveraging Transdisciplinary Engineering Through the Coalescence of Digital Twins and XR-Technologies",
+    "authors": "Kevin Kastner, Joel Lehmann, Felix Wuehler, Sebastian Amann, Nicolai Beisheim, Matthias Raedle, Julian Reichwald",
+    "year": 2023,
+    "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)",
+    "keywords": "",
+    "abstract": "Digital Twins (DTs) as a disruptive technology of digital transformation are emerging as a true game changer in several application fields. The paper describes developing a DT system capable of self-adaptation based on user requirements, paired with a cross-compatible application for real-time sensor visualization and remote device control. The researchers equipped a seminar room with air quality sensors in 3D-printed housings, transmitting data through corresponding DTs accessible across multiple platforms — HoloLens 2, Varjo XR-3, computers, and mobile devices. The bidirectional data flow between physical and digital environments enables users to influence physical devices remotely, demonstrating applications in teaching or industrial environments.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/65191",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-014_LeveragingTEDigitalTwinsXR.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 2.3,
+    "M": 4,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Digital Twin",
+    "pairing": "Engineering×Data Science",
+    "rationale": "デジタルツインとXR技術を複数プラットフォーム間で双方向連携させる新規システムを開発しており技術統合の水準は高いが、対象課題自体は技術デモンストレーションであり社会的関連性への言及は薄く、検証も1教室での実演にとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-015",
+    "title": "Leveraging Digital Twin Based on Artificial Intelligence as a Service in Digital Business Ecosystem",
+    "authors": "Sergej Bondar, Philipp Kremer, Johannes Lützenberger, Josip Stjepandić",
+    "year": 2023,
+    "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)",
+    "keywords": "",
+    "abstract": "The process of creating value includes the creation of new offerings. Such a procedure needs to be conceptually designed and practically carried out. Here, the emphasis is on how to add value for the client. A suitably established business model is the key aspect. The work examines product and service value dimensions within business planning frameworks. The authors present how digital twins — which offer 3D and spatial information — benefit stakeholders managing complex industrial assets. The paper employs the business canvas methodology to develop a conceptual strategy for introducing novel services within a digital business ecosystem using transdisciplinary approaches.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/65188",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-015_DigitalTwinAIaaSBusinessEcosystem.pdf",
+    "G": 2,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 2,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Digital Twin",
+    "pairing": "Engineering×Management",
+    "rationale": "デジタルツイン技術とビジネスキャンバス手法という経営学的手法を組み合わせた概念的戦略提案であり工学×経営の統合は見られるが、検証を伴わない概念的議論にとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C3-016",
+    "title": "Digital Twin as Enabler of Sustainability and Risk Management of Medical Devices",
+    "authors": "Roberto Riascos, Tomislava Majić, Egon Ostrosi, Jean-Claude Sagot, Josip Stjepandić",
+    "year": 2023,
+    "venue": "30th ISTE International Conference on Transdisciplinary Engineering (TE2023)",
+    "keywords": "",
+    "abstract": "This paper discusses how the implementation of a digital twin approach can assist organizations in attaining two related but non-competitive objectives: promoting transparent risk-based decision-making and demonstrating that sustainability objectives can be accomplished in a more direct and cost-effective way. When developing a digital twin, it is crucial to consider its intended use, anticipated advantages for the organization's personnel and processes, and usage. Creating a digital twin of a medical device, its aggregates, and components has significant downstream impacts, including affecting supplier partnerships and influencing design and manufacturing processes. Through its simulation and training features, it can bolster users' and patients' confidence in using the technology and simplify the medical staff's job. Furthermore, a digital twin can serve as a repository for the knowledge required for treatment, medicine, and monitoring the patient's condition's progress. This paper highlights a digital twin implementation which is case-focused or goal-driven, thereby simplifying activities such as collaborating with a supplier. However, it also necessitates the participation of multiple stakeholders and may affect their behavior.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/65202",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-016_DigitalTwinSustainabilityRiskMedicalDevices.pdf",
+    "G": 3,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.3,
+    "M": 3,
+    "V": 2,
+    "domain": "Practice",
+    "theme": "Digital Twin",
+    "pairing": "Engineering×Social Science",
+    "rationale": "医療機器のリスク管理・サステナビリティという産業的・社会的課題を扱い、サプライヤー・医療従事者・患者という多様な関係者への影響を論じている点で協働特性は高いが、実証は概念的な導入事例の紹介にとどまる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Medicine / Health"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.33
+  },
+  {
+    "id": "C3-017",
+    "title": "Adapting a Transdisciplinary Approach to Regional Development in the Case of Facilitating Planning of Energy Systems",
+    "authors": "Magnus Fredricson, Gary Linnéusson, Tehseen Aslam",
+    "year": 2024,
+    "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)",
+    "keywords": "",
+    "abstract": "In this paper, we aim to facilitate regional development through collaborative meta-governance processes, involving municipalities, energy companies and more actors. The case in point involves increased electrification through the development of local energy systems in a sub-region comprising 15 municipalities and 21 grid owners and is an exemplary case where a transdisciplinary engineering approach is not only suitable but the only path forward. The complex problem landscape comprises interdependencies across different roles, such as politicians, civil servants, and engineers at energy companies, where autonomous entities act independently. We employ a design science research approach to create artefacts to support the meta-governance mechanisms needed to accelerate social change processes. One artefact is a system dynamics simulation model to analyze scenarios considering the electrification of vehicles and implementing large wind and solar energy units to enable the establishment of new industries. We provide brief overviews of how three artefacts assist in visualizing 1) roles, 2) structures, and 3) scenarios to the decision-makers, to facilitate various transdisciplinary decision-making processes in regional development. In the discussion, we synthesize our learnings into a model to support mitigating powerlessness in this complex multi-stakeholder context. Finally, we lay out future research to further contribute to the social change and regional development we believe is necessary.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/70865",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-017_TDApproachRegionalDevelopmentEnergy.pdf",
+    "G": 5,
+    "C_score": 5,
+    "I": 4,
+    "TE_index": 4.7,
+    "M": 4,
+    "V": 3,
+    "domain": "Multiple",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Social Science",
+    "rationale": "15市町村・21配電事業者にまたがる地域エネルギー政策という明確なwicked problemを扱い、政治家・行政職員・エンジニアという多様なステークホルダーのメタガバナンスをデザインサイエンスリサーチで支援する三つの成果物を統合的に提案している。単一地域の事例検証にとどまる点でVはやや控えめ。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C3-018",
+    "title": "Building Consensus in the Circular Economy: A Transdisciplinary Framework for Developing Collaborative Decision-Making Tools",
+    "authors": "Mohamed Elnourani, Anna Öhrwall Rönnbäck",
+    "year": 2024,
+    "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)",
+    "keywords": "",
+    "abstract": "The transition towards a circular economy requires an overarching perspective that recognises the dynamic and interdisciplinary nature of our current economic growth landscape. Circular economy inherently involves numerous stakeholders across the product life cycle. To establish efficient circular economy practices among these actors, this study suggests a novel framework for developing collaborative and interdisciplinary decision-making tools. By looking into relevant literature, organising a workshop, and analysing standard tools used in a circular economy like KPIs, risk analysis, Cost-Benefit Analysis, etc., we managed to capture the multidisciplinary challenges and dynamics faced by stakeholders of the circular business model. The contribution of this paper is the development of a framework that bridges requirement management techniques from product development practices with circular economy principles to facilitate effective decision-making processes. The framework effectively balances diverse stakeholder requirements, addressing uncertainties and multi-ownership challenges through product life cycles. This framework may be used to validate existing tools used by businesses and systematically develop new ones when needed. By facilitating collaboration around the circular economy, this framework not only reduces the environmental impact of economic growth but also encourages society to move towards more collective efforts to achieve sustainability. Finally, this article highlights the importance of a transdisciplinary approach in a systematic and effective transition to a circular economy.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/70867",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-018_BuildingConsensusCircularEconomy.pdf",
+    "G": 4,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 4.0,
+    "M": 4,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Management",
+    "rationale": "サーキュラーエコノミーという環境・経済にまたがる社会的課題に対し、製品開発の要求管理手法とサーキュラーエコノミー原則を橋渡しする新規フレームワークを提案している。ただし検証はワークショップと文献分析による例示にとどまり、実データでの実証はない。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C3-019",
+    "title": "Engineering Community Resilience: A Transdisciplinary Early Career Researcher's Journey in Cultivating Bottom-Up Energy Initiatives Amidst Uncertainty",
+    "authors": "Vanja Djinlev",
+    "year": 2024,
+    "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)",
+    "keywords": "",
+    "abstract": "Navigating the evolving landscape of energy systems demands a multifaceted approach that combines engineering expertise with a holistic understanding of societal, economic, and environmental considerations. The paper explores how early career researchers bridge engineering and social sciences to develop energy communities. It addresses barriers including regulatory ambiguities, market fluctuations, technological changes, and financial constraints. A case study from North Macedonia examining the nation's inaugural energy community illustrates practical implementation challenges and solutions for advancing community-driven, sustainable energy transitions.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/70874",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-019_EngineeringCommunityResilience.pdf",
+    "G": 4,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.7,
+    "M": 3,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Social Science",
+    "rationale": "コミュニティ主導のエネルギー移行という社会・経済・環境にまたがる課題を扱い、工学と社会科学の橋渡しを明示しているが、北マケドニアの単一事例に基づく実践的課題の記述が中心で方法論の一般化までは至っていない。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C3-020",
+    "title": "ARCTIC: Empowering Transdisciplinary Engineering Education Through Immersive Augmented Reality Experiences",
+    "authors": "Kevin Kastner, Felix Wuehler, Florian Kolb, Julian Reichwald, Matthias Raedle, René Eiswirth",
+    "year": 2024,
+    "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)",
+    "keywords": "",
+    "abstract": "In the pursuit of modern and future-thinking education, students must be more oriented towards research and the practice-oriented development of products and processes. Experts from various disciplines are currently forced to use complex measurement and equipment infrastructure but are unable to adequately combine and visualize the increasingly complex results from the various fields in a suitable form. To explain these complex phenomena to students as intuitively as possible, the augmented reality app ARCTIC (\"Augmented Reality Comes To Interactive Campus\") was designed for practice-oriented lectures. This approach enables the projection of (simulation) data into physical spaces using smartphones and facilitates user interaction with 3D models. By using open-source principles, the app promotes collaboration and enables experts from different fields to provide cost-effective solutions for teaching individually. This approach not only improves the accessibility of the app but also promotes a community-oriented, sustainable development model. The app was tested under pedagogical supervision in real conditions with students from various disciplines of chemical and process engineering, as well as AEC companies. The evaluation showed that students and company representatives are extremely open to the developed AR solution. They would strongly support the further integration of the app into teaching. This was also evident from the surveys, in which students participated constructively and contributed further ideas. Augmented reality is a promising technology with the potential to revolutionize teaching. ARCTIC is a successful example of how AR can be integrated into the classroom to explain complex phenomena intuitively and interactively to students.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/70880",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-020_ARCTIC_TEEducationAR.pdf",
+    "G": 2,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 4,
+    "V": 3,
+    "domain": "Multiple",
+    "theme": "Education",
+    "pairing": "Engineering×Data Science",
+    "rationale": "化学・プロセス工学の学生とAEC企業の実務者が参加する教育用ARアプリを新規開発し、実際の授業条件下でアンケート評価まで行っている点で実証水準・方法論的貢献ともに一定の水準がある一方、課題設定自体の社会的関連性は限定的。",
+    "author_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-021",
+    "title": "A Transdisciplinary Approach to Holographic Indoor Navigation Using Mixed Reality and Cloud Computing",
+    "authors": "Alessio Morganti, Fabio Grandi, Riccardo Karim Khamaisi, Margherita Peruzzini",
+    "year": 2024,
+    "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)",
+    "keywords": "",
+    "abstract": "The advent of Industry 4.0 has led to the need to train highly skilled operators in complex and dynamic environments, through the convergence of physical and digital technologies. The study presents a Holographic Navigation methodology leveraging spatial computing and cloud infrastructure for indoor navigation applications. Implemented on Microsoft HoloLens 2 using Azure Spatial Anchors and Cloud Storage, the approach enables operator training in advanced industrial settings. The researchers applied this methodology through a warehouse tour case study designed to help new personnel orient themselves within facility areas, demonstrating how mixed reality can enhance training effectiveness and safety.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/70881",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-021_HolographicIndoorNavigationMR.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 2,
+    "TE_index": 2.0,
+    "M": 4,
+    "V": 3,
+    "domain": "Practice",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Data Science",
+    "rationale": "複合現実とクラウド技術を用いた屋内ナビゲーション手法という技術寄りの提案であり、社会的関連性への言及がなく分野統合も単一の技術領域内にとどまる。倉庫案内の単一ケースで検証されている。",
+    "author_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-022",
+    "title": "The Digital Transformation Competences for Brazilian Automotive Managers: A Transdisciplinary Engineering Approach",
+    "authors": "Vagner Batista Ribeiro, Jorge Muniz Jr., Elaine Mosconi, Davi Nakano",
+    "year": 2024,
+    "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)",
+    "keywords": "",
+    "abstract": "New technologies related to Digital Transformation (DT) and the Industry 4.0 (I4.0) modify the way business and productive processes are carried out, generating complex changes for industry and engineering, establishing new tasks and human roles, and interacting with the characteristics of Transdisciplinary. Digital engineering managers play an integrative role by relating and using the organisation's digital technological knowledge to generate better business results. The characterization of managers' competences to guide and stimulate value creation in industrial sectors is still not sufficiently investigated and emerges as a critical element for industrial development in the digital age. This research fulfils this gap and aims to rank four types of necessary competences for engineering managers facing the DT/I4.0 in the automotive sector. The methodological approach adopted is quantitative, based on the judgement of engineering managers from the Brazilian automotive sector, which is globally representative in terms of productivity. An Analytic Hierarchy Process (AHP) is applied in the data treatment. Results are based on a sample of 35 interviews from six automotive companies with different levels of complexity in production operations and formal programs for DT/I4.0 implementation. Findings indicate the relative priority for the digital technical, managerial, social, and motivational competences, presenting insights with implications to guide the development of the digital engineering managers.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/70889",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-022_DigitalTransformationBrazilianAutoManagers.pdf",
+    "G": 3,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 3.3,
+    "M": 3,
+    "V": 4,
+    "domain": "Practice",
+    "theme": "Industry 4.0",
+    "pairing": "Engineering×Management",
+    "rationale": "デジタル化人材のマネジメント能力という工学×経営学の融合課題を扱い、6社35名へのインタビューとAHP分析という複数企業の実データに基づく検証を行っている点で実証水準は高いが、統合はAHPという既存手法の適用にとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C3-023",
+    "title": "Supporting Transdisciplinary Research: Combining Design Research with Interactive Research",
+    "authors": "Kristina Säfsten, Fredrik Elgh, Roland Stolt, Gary Linneusson, Joel Johansson",
+    "year": 2024,
+    "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)",
+    "keywords": "",
+    "abstract": "The paper presents a work procedure created to facilitate collaboration in the IDEAL research project, which ran from April 2020 to January 2024 and involved 13 researchers, five manufacturing companies, and one software supplier. The \"IDEAL work procedure\" integrates interactive research principles with design research methodology framework. It provided structural organization for four interconnected sub-projects addressing a shared research question. The authors assessed the procedure's effectiveness through workshops and interviews with industry participants. Findings demonstrate how this approach could expand support for transdisciplinary research initiatives.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/70897",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-023_SupportingTDResearchDesignInteractive.pdf",
+    "G": 2,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 3.3,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Social Science",
+    "rationale": "13名の研究者・5製造企業・1ソフトウェア供給企業からなる産学連携プロジェクトにおいて、インタラクティブリサーチとデザインリサーチという異なる研究方法論を体系的に統合した「IDEAL work procedure」を提案している。研究運営プロセスそのものが対象のため課題設定の社会的関連性はやや弱い。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C3-024",
+    "title": "Topological Analysis to Enhance the Understanding of Transdisciplinary Engineering",
+    "authors": "Lauren E.J. Thomas-Seale, Barnaby Hawthorn, Sabrina Kombrink, Tony Samuel, John R. Bryson, Harriet Thomson, Thomas D. Montenegro-Johnson",
+    "year": 2024,
+    "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)",
+    "keywords": "",
+    "abstract": "In engineering, the design of a product relies heavily on a design specification; a co-creation of customer and engineer which captures the requirements. Subjectivity is intrinsic to this process. Whilst engineers typically have a high appreciation of the technical aspects of design, the detailed knowledge of environmental and socioeconomic (ESE) implications are often held elsewhere. As such, efficient and effective design is critically dependent on the processes underpinning knowledge transfer. However, the information interfaces between engineering and the requirements of our swiftly changing civilization remain indirect and suboptimal, and the unintended consequences of design choices are becoming increasingly serious. Transdisciplinary engineering bridges knowledge boundaries interfacing with engineering (e.g. social science). This paper explores whether topology (a branch of pure mathematics) presents an opportunity to analyse the complex interdependency of transdisciplinary engineering information. Topology and geometry describe the structure of objects such as connectedness or the number of holes and have recently provided a suite of powerful and robust tools for analysing high-dimensional data sets. However, the real-world implementation of the term topology is still evolving. Interviews with engineering organisations revealed that topology is predominately interpreted as 'Topology Optimisation' in the context of advanced design and manufacturing. To date, mathematical processes for critically and systematically examining the topology of systems have not been transferred through to the engineering industry. This paper contrasts how topology is interpreted by the engineering industry compared to academic literature and reflects on the opportunities of applying the mathematical theory of topological analysis to transdisciplinary engineering data.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/70900",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-024_TopologicalAnalysisTE.pdf",
+    "G": 3,
+    "C_score": 4,
+    "I": 2,
+    "TE_index": 3.0,
+    "M": 2,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Other",
+    "rationale": "工学と社会経済的知識の間の情報伝達という課題に純粋数学（トポロジー）を橋渡しする可能性を探る探索的論文であり、分野の組み合わせは独創的だが、業界インタビューで現状のギャップを示すのみで実際の統合手法の適用や検証には至っていない。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science",
+      "Natural Science"
+    ],
+    "method_disciplines": [
+      "Social Science",
+      "Natural Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 3,
+    "method_span": 2,
+    "objective_span": 2,
+    "DSI": 2.33
+  },
+  {
+    "id": "C3-025",
+    "title": "Transdisciplinary Platform Assets – A Boundary Object Perspective",
+    "authors": "Daniel Hussmo, Dag Raudberget",
+    "year": 2024,
+    "venue": "31st ISTE International Conference on Transdisciplinary Engineering (TE2024)",
+    "keywords": "",
+    "abstract": "In product platforms, reusable assets play an important role in supporting the realization of new products and systems. Asset governance is key to ensure their relevance and useability. Assets can have different aims for different stakeholders, where design engineers might use design guidelines as platform assets within their organizational function, while other assets aim to support transdisciplinary collaboration, such as the production preparation process. Although assets used within functions have received previous attention, the literature has not yet presented a clear path forward for how the transdisciplinary perspective on platform asset governance can be supported. To shed light on this topic, we therefore introduce the concept of Transdisciplinary Platform Assets. We do this by conceptualizing these Transdisciplinary Platform Assets from a boundary object perspective. Boundary objects can enable transdisciplinary collaboration and integration of knowledge across diverse communities. By viewing assets from a boundary object perspective, we can illuminate how assets can be tailored for transdisciplinary usage; subsequently becoming more effective. In this paper we put forward a way to classify assets based on the width of the transdisciplinary gap between the users. The concept is further illuminated in its implications through an illustrative discussion on A3 templates. We conclude by highlighting potential paths for future research and potential industrial use cases.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/70901",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-025_TDPlatformAssetsBoundaryObject.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 2.3,
+    "M": 3,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Social Science",
+    "rationale": "科学技術社会論由来の境界オブジェクト概念を製品プラットフォームの資産管理に応用する概念的提案であり分野を跨いだ理論の転用は見られるが、社会的課題としての設定は薄く、検証もA3テンプレートの例示的議論にとどまる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.33
+  },
+  {
+    "id": "C3-026",
+    "title": "Functional Complexity Quantification for Transdisciplinary Engineered Systems",
+    "authors": "Lal Bahadur, Eric Rebentisch",
+    "year": 2025,
+    "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)",
+    "keywords": "",
+    "abstract": "Accurately assessing the scope of effort required to complete the development of new transdisciplinary engineered systems is important to creating a development strategy and planning the allocation of resources over the development lifecycle. Doing this in the earliest phases of the development lifecycle is particularly challenging, where more may be known about the problem space than the solution space. The desired system functions may be characterized, but the elements of the system or even the system's physical architecture may not yet have been established. One potential way to characterize the scope of work and to differentiate between different system concepts is to characterize their respective functional complexity. Functional complexity has been explored from several different perspectives, unfortunately, often without producing practical methods to use it in a transdisciplinary engineering context. This research identifies gaps in existing functional complexity assessment methods through a review of academic literature and insights from a practitioner's perspective. A set of measures and a framework for characterizing the relative complexity of a system is presented, along with possible scenarios where this approach might be used during the early stages of the development of a new transdisciplinary system when little more than its desired functions are known.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/75466",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-026_FunctionalComplexityTESystems.pdf",
+    "G": 2,
+    "C_score": 2,
+    "I": 3,
+    "TE_index": 2.3,
+    "M": 4,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Systems Engineering",
+    "pairing": "Engineering×Engineering",
+    "rationale": "システム開発初期段階の機能的複雑性を定量化する新規フレームワークを提案しているが、社会的関連性への言及はなく、シナリオによる仮想的な適用可能性の議論にとどまり実データでの検証はない。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 1,
+    "objective_span": 1,
+    "DSI": 1.0
+  },
+  {
+    "id": "C3-027",
+    "title": "Enhancing Consensus for Transdisciplinary Engineering Design Challenges: A Delphi Study Voting Schema",
+    "authors": "Ella Maule, Mark Goudswaard, Hemma Philamore",
+    "year": 2025,
+    "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)",
+    "keywords": "",
+    "abstract": "The Delphi method is used to build expert consensus on complex, transdisciplinary issues, yet the selection and reporting of voting schemas remain inconsistent, affecting transparency and comparability. The paper presents a framework for voting schema selection, tested through a study with eleven participants examining three vote elicitation methods and four consensus analysis approaches. Key contributions include a novel heuristic with five requirements for schema selection, a recommended approach combining Likert scales with frequency count heat maps and consensus measures, and practical implementation guidelines for transdisciplinary engineering contexts.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/75472",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-027_EnhancingConsensusTEDelphi.pdf",
+    "G": 2,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 2.7,
+    "M": 4,
+    "V": 2,
+    "domain": "Research",
+    "theme": "Design Methodology",
+    "pairing": "Engineering×Management",
+    "rationale": "複数分野の専門家合意形成のためのデルファイ法投票スキーマという方法論的貢献自体は新規性が高いが、対象課題自体は合意形成の手続きに関するメタ的な研究であり、社会的課題そのものへの言及は薄く11名の参加者による小規模検証にとどまる。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering"
+    ],
+    "author_span": 1,
+    "method_span": 2,
+    "objective_span": 1,
+    "DSI": 1.33
+  },
+  {
+    "id": "C3-028",
+    "title": "A Transdisciplinary Approach to Reducing Transportation Costs and Enhancing Production Planning in Industrial Chemical Services",
+    "authors": "Ricardo Rodriguez Ramirez, Adrian Ramirez-Nafarrate, Agustin Perez-Araos",
+    "year": 2025,
+    "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)",
+    "keywords": "",
+    "abstract": "This paper describes a project conducted in a company that provides chemical water treatment services for industrial cooling systems across Mexico. The project addresses the challenge of rising transportation costs and inefficient production planning in a dynamic service environment. The work examines how a firm grappling with transportation expenses exceeding inflation rates by more than double implemented integrated methodologies including Hoshin Kanri, project management, time series analysis, and control charts. The initiative resulted in transportation expense reductions of 20-25% alongside establishing protocols for anticipatory production scheduling and shipment oversight, demonstrating how statistical rigor combined with operational management creates logistical improvements.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/75482",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-028_TDApproachTransportationCosts.pdf",
+    "G": 2,
+    "C_score": 3,
+    "I": 4,
+    "TE_index": 3.0,
+    "M": 3,
+    "V": 4,
+    "domain": "Practice",
+    "theme": "Other",
+    "pairing": "Engineering×Management",
+    "rationale": "方針管理(Hoshin Kanri)・プロジェクトマネジメント・時系列分析・管理図といった複数の方法論を体系的に統合して実企業の輸送コスト20-25%削減という定量的成果を実データで実証している点で統合深度・実証水準は高いが、課題自体は一企業の業務改善であり社会的関連性は限定的。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Management / Business",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 3,
+    "objective_span": 2,
+    "DSI": 2.33
+  },
+  {
+    "id": "C3-029",
+    "title": "A Transdisciplinary Framework for Handling Disruptions in Vehicle Routing with Customer Time Windows",
+    "authors": "Max Otto Berth, Federico Trigos",
+    "year": 2025,
+    "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)",
+    "keywords": "",
+    "abstract": "The vehicle routing problem (VRP) consists of servicing several locations within a period under some requirements (customer time windows, work shifts, etc.). Unforeseen changes in those requirements during plan execution, alias disruptions, are common in practice. The authors propose a framework addressing multiple stakeholders across management and engineering disciplines. The work demonstrates how operational deviations impact carbon footprint and overall sustainability while showing the framework's practical application through an industrial case study.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/75486",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-029_TDFrameworkVehicleRoutingDisruptions.pdf",
+    "G": 3,
+    "C_score": 3,
+    "I": 3,
+    "TE_index": 3.0,
+    "M": 4,
+    "V": 3,
+    "domain": "Practice",
+    "theme": "Sustainability/Resilience",
+    "pairing": "Engineering×Management",
+    "rationale": "車両配送計画の混乱対応に経営学と工学の複数分野のステークホルダーを組み込んだ新規フレームワークを提案し、カーボンフットプリントというサステナビリティへの含意にも触れているが、実証は単一の産業ケーススタディにとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Management / Business",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 3,
+    "objective_span": 2,
+    "DSI": 2.33
+  },
+  {
+    "id": "C3-030",
+    "title": "A Systematic Framework for Measuring Team Performance and Group Decision-Making: Pitfalls, Solutions, and Transdisciplinary Insights",
+    "authors": "Ignacio Vazquez, Hüseyin Akdogan, Marc-Olivier del Grosso, Natalia Zwarts",
+    "year": 2025,
+    "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)",
+    "keywords": "",
+    "abstract": "Evaluating and enhancing team performance is a cornerstone of transdisciplinary engineering, yet the absence of a formal method to categorize and assess the efficacy of group performance experiments remains a significant challenge. The study proposes a structured framework integrating cognitive measurements, statistical rigor, and meta-analytical evaluations. The researchers demonstrate the framework's utility through analysis of two team performance experiments, identifying methodological pitfalls and offering strategies for enhanced experimental design. The work aims to support researchers and practitioners developing reproducible methodologies for assessing team dynamics across multiple disciplines.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/75487",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-030_SystematicFrameworkTeamPerformance.pdf",
+    "G": 2,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 3.3,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Other",
+    "pairing": "Engineering×Social Science",
+    "rationale": "認知科学的測定・統計的手法・メタ分析を体系的に統合したチームパフォーマンス評価フレームワークを提案し2件の実験データで検証しているが、課題設定自体はチーム運営という組織内の技術的問題であり社会的関連性は薄い。",
+    "author_disciplines": [
+      "Engineering"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Humanities",
+      "Data Science / CS"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 1,
+    "method_span": 3,
+    "objective_span": 2,
+    "DSI": 2.0
+  },
+  {
+    "id": "C3-031",
+    "title": "Addressing Challenges of Teamworking and Communication Skills in International Transdisciplinary Projects Contexts",
+    "authors": "Mauryn C. Nweke, Lillian Luk, Irina Lazar, Chen Ye",
+    "year": 2025,
+    "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)",
+    "keywords": "",
+    "abstract": "Transdisciplinary engineering involves integrating knowledge, methods, and tools from multiple disciplines to address complex engineering challenges. The research examines pedagogical strategies at University College London and The University of Hong Kong for developing teamwork and communication competencies among engineering students. The investigation reveals that cultural differences in Western v Eastern education systems and UK economic drivers that adversely impact language and communication levels at admission are where difficulties in upskilling are rooted. The authors aim to develop methods supporting Chinese students transitioning to UK environments and Western students in Hong Kong to succeed in transdisciplinary learning contexts.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/75488",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-031_TeamworkCommunicationSkillsIntlTD.pdf",
+    "G": 2,
+    "C_score": 4,
+    "I": 2,
+    "TE_index": 2.7,
+    "M": 2,
+    "V": 1,
+    "domain": "Education",
+    "theme": "Education",
+    "pairing": "Engineering×Social Science",
+    "rationale": "英中の国際教育連携における文化差・言語コミュニケーションという教育上の課題を扱い工学教育と異文化理解の連携は見られるが、比較・観察的な考察が中心で統合手法は明確でなく、今後の手法開発は将来課題として述べられるにとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-032",
+    "title": "Managing Interfaces in Wicked Problems: A Transdisciplinary Engineering Calling",
+    "authors": "Gary Linnéusson, Ainhoa Goienetxea, Magnus Fredricson",
+    "year": 2025,
+    "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)",
+    "keywords": "",
+    "abstract": "This paper wrestles with how to manage prominent global transition challenges on local and regional scales to co-create a better world. The authors propose using relational interfaces to enhance understanding across knowledge domains in addressing complex societal challenges. The work examines cases from healthcare system development and energy transition planning, demonstrating how identifying and managing interfaces between different actors and contributions can unlock collaborative solutions to persistent challenges.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/75501",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-032_ManagingInterfacesWickedProblems.pdf",
+    "G": 5,
+    "C_score": 4,
+    "I": 4,
+    "TE_index": 4.3,
+    "M": 4,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Systems Engineering",
+    "pairing": "Engineering×Social Science",
+    "rationale": "グローバルな移行課題という明示的なwicked problemを扱い、より良い社会の共創を目標に掲げている点でGoalが最高水準。医療システムとエネルギー移行という異なる領域の事例を横断して関係的インターフェースという統合概念を適用しているが、それぞれ簡潔な事例紹介にとどまる。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science",
+      "Medicine / Health"
+    ],
+    "author_span": 2,
+    "method_span": 2,
+    "objective_span": 3,
+    "DSI": 2.33
+  },
+  {
+    "id": "C3-033",
+    "title": "Supporting Early-Career Researchers: Strategies in Transdisciplinary Project Design",
+    "authors": "Susan Lattanzio, Annali Bamber-Jones, Yee Mey Goh, Linda Newnes",
+    "year": 2025,
+    "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)",
+    "keywords": "",
+    "abstract": "A growing body of academic literature highlights the inherent challenges in conducting transdisciplinary (TD) research. These challenges, particularly the institutional and cultural barriers, can be especially detrimental to those who are early in their academic career. To ensure the success of transdisciplinary efforts and prevent those involved from being disadvantaged, it is critical to develop practical actions to address these challenges. This paper presents a case study of the Made Smarter Innovation: Centre for People-Led Digitalisation, a $5 million, engineering led, transdisciplinary research centre. Drawing on prior experience of running TD projects, the Executive Team have implemented organisational and management strategies aimed at mitigating the negative impact on researchers. As the funding nears its conclusion, we conduct a focus group involving twelve Research Associates and Assistants, either currently or recently employed in the centre, to capture their reflections on these initiatives. The findings illustrate that organisational and management strategies can mitigate the challenges faced by researchers. Establishing a clear mission and vision for the project while giving researchers the freedom to design their studies and the journals they target, empowers them to manage their individual career path. Additionally, to alleviate the additional burden of industry outputs, it is essential to allocate funding for administrative and impact support within the project. Future efforts should focus on creating more structured career development programs which can be tailored to the career aspirations of the individual researcher.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/75510",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-033_SupportingEarlyCareerResearchersTD.pdf",
+    "G": 2,
+    "C_score": 4,
+    "I": 2,
+    "TE_index": 2.7,
+    "M": 3,
+    "V": 3,
+    "domain": "Research",
+    "theme": "Other",
+    "pairing": "Engineering×Management",
+    "rationale": "工学主導の500万ドル規模のTD研究センターにおける若手研究者支援策をフォーカスグループで検証した事例研究であり、産学連携の組織運営に関する知見を提供するが、対象課題は研究組織のマネジメント問題であり方法論の統合というより組織的施策の記述が中心。",
+    "author_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "method_disciplines": [
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Management / Business"
+    ],
+    "author_span": 2,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.67
+  },
+  {
+    "id": "C3-034",
+    "title": "Transformative Outcomes, Engineering Policy and Engineering Education: Strengthening the Impact of TE on Socially-Relevant Problems",
+    "authors": "Adam Cooper, Bipashyee Ghosh, Irina Lazar",
+    "year": 2025,
+    "venue": "32nd ISTE International Conference on Transdisciplinary Engineering (TE2025)",
+    "keywords": "",
+    "abstract": "Engineering in the coming decades need to address wicked problems of environmental sustainability and social justice. Engineers and engineering practice could enable major transformations in the systems of basic service provision, such as energy, mobility, food, housing and healthcare. Transdisciplinary engineering (TE) provides alternatives for reconfiguring engineering with the demands of meeting these wicked problems, many of which have been created or exacerbated with traditional engineering. Supporting approaches from wider society include engineering policy and engineering education. But how can we judge if TE is supporting the reconfiguration of engineering effectively? And how can we identify actions within engineering policy and engineering education that could support this? To understand this, we explore the use of the Transformative Outcomes framework (TOF) to appraise progress and identify possible actions to support TE in the UK.",
+    "source_url": "https://ebooks.iospress.nl/volumearticle/75514",
+    "pdf_status": "full_text",
+    "pdf_filename": "C3-034_TransformativeOutcomesTEPolicyEducation.pdf",
+    "G": 5,
+    "C_score": 4,
+    "I": 3,
+    "TE_index": 4.0,
+    "M": 2,
+    "V": 1,
+    "domain": "Research",
+    "theme": "Other",
+    "pairing": "Engineering×Social Science",
+    "rationale": "環境サステナビリティと社会正義という明示的なwicked problemに対しエンジニアリングの再構成を論じ、イノベーション研究由来のTransformative Outcomes Frameworkを政策・教育の文脈に適用しているが、既存フレームワークの適用可能性を探る概念的議論であり実証データは伴わない。",
+    "author_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "method_disciplines": [
+      "Social Science"
+    ],
+    "objective_disciplines": [
+      "Engineering",
+      "Social Science"
+    ],
+    "author_span": 2,
+    "method_span": 1,
+    "objective_span": 2,
+    "DSI": 1.67
+  }
+]
