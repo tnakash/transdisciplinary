@@ -1,0 +1,343 @@
+<title>評価ルーブリック | Transdisciplinary Engineering</title>
+<meta charset="utf-8">
+<style>
+  :root {
+    --surface-1: #fcfcfb; --page: #f9f9f7; --text-primary: #0b0b0b; --text-secondary: #52514e;
+    --text-muted: #898781; --gridline: #e1e0d9; --baseline: #c3c2b7; --border: rgba(11,11,11,0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface-1: #1a1a19; --page: #0d0d0d; --text-primary: #ffffff; --text-secondary: #c3c2b7;
+      --text-muted: #898781; --gridline: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+    }
+  }
+  :root[data-theme="dark"] {
+    --surface-1: #1a1a19; --page: #0d0d0d; --text-primary: #ffffff; --text-secondary: #c3c2b7;
+    --text-muted: #898781; --gridline: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+  }
+  :root[data-theme="light"] {
+    --surface-1: #fcfcfb; --page: #f9f9f7; --text-primary: #0b0b0b; --text-secondary: #52514e;
+    --text-muted: #898781; --gridline: #e1e0d9; --baseline: #c3c2b7; --border: rgba(11,11,11,0.10);
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--page); color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    margin: 0; padding: 24px 20px 60px; line-height: 1.65;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  .back { display: inline-block; font-size: 13px; color: var(--text-secondary); text-decoration: none; margin-bottom: 16px; }
+  .back:hover { color: var(--text-primary); }
+  h1 { font-size: 22px; margin: 0 0 20px; }
+  h2 { font-size: 17px; margin: 32px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { font-size: 14px; margin: 20px 0 6px; }
+  p, li { font-size: 13px; color: var(--text-secondary); }
+  a { color: inherit; }
+  strong { color: var(--text-primary); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 18px; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--gridline); vertical-align: top; }
+  thead th { color: var(--text-secondary); font-weight: 600; border-bottom: 1px solid var(--baseline); }
+  h2:target, h3:target { background: var(--gridline); border-radius: 4px; }
+</style>
+<div class="wrap">
+  <a class="back" href="./te_mapping.html">← 文献マッピングに戻る</a>
+  <h1 id="transdisciplinary-engineering">Transdisciplinary Engineering 評価指標（ルーブリック）</h1>
+<p><a href="./01_definition_and_framework.md">定義・構成要素フレームワーク</a>（A. Goal / B. Collaboration / C. Integration / D. 適用領域）に基づき、収集した論文を評価するための指標を以下に定義する。各論文はTitle/Abstract/Keywords（PDF入手可の場合は本文も参照）から判定する。</p>
+<h2 id="_1">評価方針</h2>
+<ul>
+<li>3つの中核指標（Goal / Collaboration / Integration）は <strong>1〜5点の順序尺度</strong> で評価し、その論文が「どれだけTEらしいか（transdisciplinarityの実践度）」を測る。</li>
+<li>2つの補助指標（方法論的貢献・実証水準）は研究としての <strong>成熟度・質</strong> を測る。</li>
+<li>適用領域はカテゴリ変数として付与し、マッピング時の色分け等に用いる。</li>
+<li>合議的な単一の「正解スコア」ではなく、Lattanzio et al. (2021) の "landscape" 概念に倣い、<strong>多次元の位置づけ（マップ）</strong> として結果を提示する。</li>
+</ul>
+<h2 id="te">中核指標（TEらしさ）</h2>
+<h3 id="g-goal-orientation-15">G. Goal Orientation（目標特性）— 1〜5点</h3>
+<p>問題設定が ill-defined／wicked problem であり、社会的関連性を明示しているか。</p>
+<table>
+<thead>
+<tr>
+<th>点数</th>
+<th>基準</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>単一分野内の明確に構造化された技術的問題（社会的関連性の言及なし）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>技術的問題が中心だが、応用先や社会的背景に軽く言及</td>
+</tr>
+<tr>
+<td>3</td>
+<td>産業・社会的課題を背景として明示し、部分的にill-definedな問題を扱う</td>
+</tr>
+<tr>
+<td>4</td>
+<td>複数のステークホルダーに関わる社会的・産業的に重要な課題を明確に定義</td>
+</tr>
+<tr>
+<td>5</td>
+<td>明示的にwicked/ill-defined problemとして定義し、社会・環境・経済への影響を核心に据える</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-collaboration-breadth-15">C. Collaboration Breadth（協働特性）— 1〜5点</h3>
+<p>分野横断の幅とステークホルダーの多様性。</p>
+<table>
+<thead>
+<tr>
+<th>点数</th>
+<th>基準</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>単一の工学専門分野内での研究</td>
+</tr>
+<tr>
+<td>2</td>
+<td>工学内の複数専門分野（例：機械×電気）の連携</td>
+</tr>
+<tr>
+<td>3</td>
+<td>工学と隣接分野（情報科学、管理工学等）の連携</td>
+</tr>
+<tr>
+<td>4</td>
+<td>工学と社会科学・人文科学（経営学、心理学、政策科学等）の連携、または産学連携を明示</td>
+</tr>
+<tr>
+<td>5</td>
+<td>学術・産業・行政・市民/エンドユーザーなど多様なステークホルダーの共創プロセスを含む</td>
+</tr>
+</tbody>
+</table>
+<h3 id="i-integration-depth-15">I. Integration Depth（統合特性）— 1〜5点</h3>
+<p>知識・方法論・プロセスの統合の深さ。</p>
+<table>
+<thead>
+<tr>
+<th>点数</th>
+<th>基準</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>各分野の知見を並置するのみ（統合なし）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>分野間の情報参照・比較はあるが、方法論の統合はない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>特定の方法論・ツールを分野横断的に適用（例：mixed methodsの部分的採用）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>複数分野の方法論・データ・プロセスを体系的に統合するフレームワークを提案</td>
+</tr>
+<tr>
+<td>5</td>
+<td>存在論・認識論を超えた真の知識統合（学術知×実践知の共創）を達成・実証</td>
+</tr>
+</tbody>
+</table>
+<p><strong>TE-Index（複合指標）</strong> = (G + C + I) / 3 （0.5刻み、最大5点）。TEの中核概念にどれだけ合致しているかの総合スコア。</p>
+<h2 id="_2">補助指標（研究の成熟度）</h2>
+<h3 id="m-methodological-contribution-15">M. Methodological Contribution（方法論的貢献）— 1〜5点</h3>
+<table>
+<thead>
+<tr>
+<th>点数</th>
+<th>基準</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>既存手法のレビュー・解説のみ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>既存手法の小規模な改良・適用</td>
+</tr>
+<tr>
+<td>3</td>
+<td>新しい適用事例・ケーススタディの提示</td>
+</tr>
+<tr>
+<td>4</td>
+<td>新しいフレームワーク／手法／ツールの提案</td>
+</tr>
+<tr>
+<td>5</td>
+<td>新しいフレームワークの提案かつ他分野・他ケースへの一般化可能性を議論</td>
+</tr>
+</tbody>
+</table>
+<h3 id="v-validation-level-15">V. Validation Level（実証水準）— 1〜5点</h3>
+<table>
+<thead>
+<tr>
+<th>点数</th>
+<th>基準</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>概念的議論のみ（検証なし）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>簡易な例示（illustrative example）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>単一ケーススタディによる検証</td>
+</tr>
+<tr>
+<td>4</td>
+<td>複数ケース／実データによる検証</td>
+</tr>
+<tr>
+<td>5</td>
+<td>産業実装・長期運用や定量的効果測定を伴う実証</td>
+</tr>
+</tbody>
+</table>
+<h2 id="author-method-objective-add-on">追加指標：分野横断度（Author / Method / Objective）— Add-on</h2>
+<p>既存のCollaboration Breadth（C）は「協働の広さ」を1つの順序尺度で捉えるが、<strong>誰が(Author)・どんな方法で(Method)・何を目指して(Objective)分野を跨いでいるか</strong>をそれぞれ独立に可視化するための追加指標。既存のG/C/I/M/Vとは独立に付与し、既存フィールドは変更しない。</p>
+<h3 id="taxonomy8">分野taxonomy（8分類）</h3>
+<p>論文のAuthor / Method / Objectiveそれぞれについて、該当する分野を以下の8分類から<strong>複数選択（multi-label）</strong>で付与する。</p>
+<ol>
+<li>Engineering（工学：機械・電気・土木・航空宇宙・産業工学等）</li>
+<li>Natural Science（自然科学：物理・化学・生物・材料科学等）</li>
+<li>Social Science（社会科学：社会学・経済学・政策科学・人類学等）</li>
+<li>Management / Business（経営学・組織論・マーケティング等）</li>
+<li>Data Science / CS（情報科学・計算機科学・統計・AI等）</li>
+<li>Humanities（人文学：哲学・心理学・デザイン理論・倫理等）</li>
+<li>Medicine / Health（医学・公衆衛生・看護等）</li>
+<li>Other（上記に当てはまらない分野）</li>
+</ol>
+<h3 id="_3">評価軸</h3>
+<ul>
+<li><strong>Author disciplines</strong>：著者の所属・専門性から読み取れる分野（著者リストの所属学部、共著構成、論文の記述スタイルから判断）。</li>
+<li><strong>Method disciplines</strong>：採用されている方法論・手法・ツールが由来する分野（例：エスノグラフィー→Social Science、有限要素解析→Engineering、機械学習→Data Science）。</li>
+<li><strong>Objective disciplines</strong>：研究の目的・問題設定が属する分野（例：製造効率の改善→Engineering、ユーザー行動の理解→Social Science、材料特性の解明→Natural Science）。</li>
+</ul>
+<p>各軸について、該当する分野をリストアップし、その <strong>分野数（span）</strong> を算出する。</p>
+<table>
+<thead>
+<tr>
+<th>span値</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>単一分野（disciplinary）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2分野にまたがる（inter-disciplinary的）</td>
+</tr>
+<tr>
+<td>3以上</td>
+<td>3分野以上にまたがる（trans-disciplinary的な広がり）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disciplinary Span Index (DSI)</strong> = (author_span + method_span + objective_span) / 3 。Author・Method・Objectiveの3軸を通じてどれだけ分野を横断しているかを示す総合指標（既存のTE-Indexとは独立の補助指標として併記する）。</p>
+<h2 id="_4">カテゴリ変数（マッピング用メタデータ）</h2>
+<ul>
+<li><strong>Domain（適用領域）</strong>：Research / Practice / Education / Multiple（Wognum et al. 2019の3領域）</li>
+<li><strong>Application Theme（応用テーマ）</strong>：例）Industry 4.0, Sustainability/Resilience, Social Innovation, Product Lifecycle/PLM, Systems Engineering, Design Methodology, Education, Digital Twin, Other</li>
+<li><strong>Disciplinary Pairing（統合分野の組み合わせ）</strong>：例）Engineering×Engineering, Engineering×Social Science, Engineering×Management, Engineering×Data Science 等</li>
+</ul>
+<h2 id="papersmetadata">評価シートのフィールド定義（papers/metadata の各レコード）</h2>
+<table>
+<thead>
+<tr>
+<th>フィールド</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>論文ID（連番）</td>
+</tr>
+<tr>
+<td>title</td>
+<td>タイトル</td>
+</tr>
+<tr>
+<td>authors</td>
+<td>著者</td>
+</tr>
+<tr>
+<td>year</td>
+<td>出版年</td>
+</tr>
+<tr>
+<td>venue</td>
+<td>掲載媒体（会議 or ジャーナル）</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>キーワード</td>
+</tr>
+<tr>
+<td>abstract</td>
+<td>要旨</td>
+</tr>
+<tr>
+<td>pdf_status</td>
+<td>full_text / abstract_only</td>
+</tr>
+<tr>
+<td>pdf_path</td>
+<td>PDFファイルパス（入手時）</td>
+</tr>
+<tr>
+<td>G, C, I, TE_index</td>
+<td>中核指標スコア</td>
+</tr>
+<tr>
+<td>M, V</td>
+<td>補助指標スコア</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>適用領域カテゴリ</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>応用テーマカテゴリ</td>
+</tr>
+<tr>
+<td>pairing</td>
+<td>統合分野の組み合わせ</td>
+</tr>
+<tr>
+<td>rationale</td>
+<td>スコアリングの根拠（1-2文）</td>
+</tr>
+<tr>
+<td>author_disciplines, method_disciplines, objective_disciplines</td>
+<td>Author/Method/Objectiveそれぞれの分野リスト（8分類からの複数選択）</td>
+</tr>
+<tr>
+<td>author_span, method_span, objective_span, DSI</td>
+<td>各軸の分野横断数と複合指標（Disciplinary Span Index）</td>
+</tr>
+</tbody>
+</table>
+</div>
